@@ -18,6 +18,16 @@ The required packages are as follows:
 * scipy: 1.1.0
 * tensorboard: 2.4.0
 
+
+## Code
+* main.py: All python code to reproduce UltraGCN
+* dataset_name_config.ini: The configuration file which includes parameter settings for reproduction on the specific dataset.
+
+```bash
+python main.py --config_file dataset_config.ini
+```
+
+
 ## Reproduction
 See _benchmarks_ folder to reproduce the results.
 For example, we show the detail reproduce steps for the results of UltraGCN on AmazoonBooks dataset in _UltraGCN_amazonbooks_x0.md_ file.
