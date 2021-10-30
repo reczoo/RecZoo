@@ -2,7 +2,7 @@
 
 A notebook to benchmark UltraGCN on Gowalla dataset.
 
-Author: Kelong Mao, Tsinghua University
+Author: Kelong Mao, Renmin University
 
 Edited by [XUEPAI Team](https://github.com/xue-pai)
 
