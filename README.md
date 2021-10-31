@@ -30,7 +30,7 @@ python main.py --config_file dataset_config.ini
 
 ## Reproduction
 See _benchmarks_ folder to reproduce the results.
-For example, we show the detail reproduce steps for the results of UltraGCN on AmazoonBooks dataset in _UltraGCN_amazonbooks_x0.md_ file.
+For example, we show the detailed reproduce steps for the results of UltraGCN on the AmazoonBooks dataset in _UltraGCN_amazonbooks_x0.md_ file.
 
 
 
