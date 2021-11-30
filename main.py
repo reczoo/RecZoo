@@ -211,8 +211,8 @@ def load_data(train_file, test_file):
     beta_uD = (np.sqrt(users_D + 1) / users_D).reshape(-1, 1)
     beta_iD = (1 / np.sqrt(items_D + 1)).reshape(1, -1)
 
-    constraint_mat = torch.from_numpy(beta_uD.dot(beta_iD))  # n_user * m_item
-    constraint_mat = constraint_mat.flatten()
+    constraint_mat = {"beta_uD": torch.from_numpy(beta_uD).reshape(-1),
+                      "beta_iD": torch.from_numpy(beta_iD).reshape(-1)}
 
     return train_data, test_data, train_mat, n_user, m_item, constraint_mat
 
@@ -297,14 +297,14 @@ class UltraGCN(nn.Module):
     def get_omegas(self, users, pos_items, neg_items):
         device = self.get_device()
         if self.w2 > 0:
-            pos_weight = self.constraint_mat[users * self.item_num + pos_items].to(device)
+            pos_weight = torch.mul(self.constraint_mat['beta_uD'][users], self.constraint_mat['beta_iD'][pos_items]).to(device)
             pow_weight = self.w1 + self.w2 * pos_weight
         else:
             pos_weight = self.w1 * torch.ones(len(pos_items)).to(device)
         
-        users = (users * self.item_num).unsqueeze(0)
+        # users = (users * self.item_num).unsqueeze(0)
         if self.w4 > 0:
-            neg_weight = self.constraint_mat[torch.cat([users] * neg_items.size(1)).transpose(1, 0) + neg_items].flatten().to(device)
+            neg_weight = torch.mul(torch.repeat_interleave(self.constraint_mat['beta_uD'][users], neg_items.size(1)), self.constraint_mat['beta_iD'][neg_items.flatten()]).to(device)
             neg_weight = self.w3 + self.w4 * neg_weight
         else:
             neg_weight = self.w3 * torch.ones(neg_items.size(0) * neg_items.size(1)).to(device)
