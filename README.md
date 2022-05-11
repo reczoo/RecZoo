@@ -1,6 +1,14 @@
+# UltraGCN
+
+This is Pytorch implementation for our SIGIR 2020 paper:
+
+> Kelong Mao, Jieming Zhu, Xi Xiao, Biao Lu, Zhaowei Wang, Xiuqiang He. UltraGCN: Ultra Simplification of Graph Convolutional Networks for Recommendation. [Paper in arXiv](https://arxiv.org/pdf/2110.15114.pdf).
+
+
 
 ## Introduction
 In this work, we propose an ultra-simplified formulation of GCN, dubbed UltraGCN. UltraGCN skips explicit message passing and directly approximate the limit of infinite message passing layers.
+
 
 
 ## Environment Requirement
@@ -10,11 +18,12 @@ The required packages are as follows:
 * numpy: 1.19.2
 * scipy: 1.1.0
 * tensorboard: 2.4.0
-In this work, we propose TagGNN, a heterogeneous graph neural network for more accurate item tagging under information retrieval scenario.
 
 
 ## Code
-@@ -26,18 +17,3 @@ The required packages are as follows:
+* main.py: All python code to reproduce UltraGCN
+* dataset_name_config.ini: The configuration file which includes parameter settings for reproduction on the specific dataset.
+
 ```bash
 python main.py --config_file dataset_config.ini
 ```
