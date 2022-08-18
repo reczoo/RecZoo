@@ -1,6 +1,6 @@
 # UltraGCN
 
-This is Pytorch implementation for our SIGIR 2020 paper:
+This is Pytorch implementation for our CIKM 2021 paper:
 
 > Kelong Mao, Jieming Zhu, Xi Xiao, Biao Lu, Zhaowei Wang, Xiuqiang He. UltraGCN: Ultra Simplification of Graph Convolutional Networks for Recommendation. [Paper in arXiv](https://arxiv.org/pdf/2110.15114.pdf).
 
