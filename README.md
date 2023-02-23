@@ -39,6 +39,7 @@ To reproduce our experimental results, we strongly suggest to use the following 
 |:-----------|:----------:|:----------:|
 |     NGCF [[SIGIR'19](https://arxiv.org/abs/1905.08108)]    |   0.0579   |   0.0477   |
 |   LightGCN [[SIGIR'20](https://arxiv.org/abs/2002.02126)]  |   0.0649   |   0.0530   |
+|  SGL-ED [[SIGIR'21](https://arxiv.org/pdf/2010.10783.pdf)]  |   0.0675  |   0.0555   |
 |   UltraGCN [[CIKM'21](https://arxiv.org/abs/2110.15114)]  |   **0.0683**   |   **0.0561**   |
 
 + Follow the script below to reproduce the results
