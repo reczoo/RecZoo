@@ -1,4 +1,35 @@
-from IPython import embed
+# =========================================================================
+# Copyright (C) 2020-2023. The UltraGCN Authors. All rights reserved.
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# NOTICE: This program bundles some third-party utility functions (hit, ndcg, 
+# RecallPrecision_ATk, MRRatK_r, NDCGatK_r, test_one_batch, getLabel) under
+# the MIT License.
+#
+# Copyright (C) 2020 Xiang Wang
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+# =========================================================================
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -32,7 +63,6 @@ def data_param_prepare(config_file):
 
     params['enable_tensorboard'] = config.getboolean('Model', 'enable_tensorboard')
     
- 
     initial_weight = config.getfloat('Model', 'initial_weight')
     params['initial_weight'] = initial_weight
 
@@ -62,7 +92,6 @@ def data_param_prepare(config_file):
     params['negative_num'] = negative_num
     params['negative_weight'] = negative_weight
 
-
     gamma = config.getfloat('Training', 'gamma')
     params['gamma'] = gamma
     lambda_ = config.getfloat('Training', 'lambda')
@@ -70,8 +99,6 @@ def data_param_prepare(config_file):
     sampling_sift_pos = config.getboolean('Training', 'sampling_sift_pos')
     params['sampling_sift_pos'] = sampling_sift_pos
     
-    
-
     test_batch_size = config.getint('Testing', 'test_batch_size')
     params['test_batch_size'] = test_batch_size
     topk = config.getint('Testing', 'topk') 
@@ -87,7 +114,6 @@ def data_param_prepare(config_file):
     params['user_num'] = user_num
     params['item_num'] = item_num
 
-
     # mask matrix for testing to accelarate testing speed
     mask = torch.zeros(user_num, item_num)
     interacted_items = [[] for _ in range(user_num)]
@@ -100,8 +126,7 @@ def data_param_prepare(config_file):
     for (u, i) in test_data:
         test_ground_truth_list[u].append(i)
 
-    
-    # Compute \Omega to extend UltraGCN to the item-item occurrence graph
+    # Compute \Omega to extend UltraGCN to the item-item co-occurrence graph
     ii_cons_mat_path = './' + dataset + '_ii_constraint_mat'
     ii_neigh_mat_path = './' + dataset + '_ii_neighbor_mat'
     
@@ -116,10 +141,7 @@ def data_param_prepare(config_file):
     return params, constraint_mat, ii_constraint_mat, ii_neighbor_mat, train_loader, test_loader, mask, test_ground_truth_list, interacted_items
 
 
-
-
 def get_ii_constraint_mat(train_mat, num_neighbors, ii_diagonal_zero = False):
-    
     print('Computing \\Omega for the item-item graph... ')
     A = train_mat.T.dot(train_mat)	# I * I
     n_items = A.shape[0]
@@ -145,7 +167,6 @@ def get_ii_constraint_mat(train_mat, num_neighbors, ii_diagonal_zero = False):
     return res_mat.long(), res_sim_mat.float()
 
     
-
 def load_data(train_file, test_file):
     trainUniqueUsers, trainItem, trainUser = [], [], []
     testUniqueUsers, testItem, testUser = [], [], []
@@ -186,7 +207,6 @@ def load_data(train_file, test_file):
                 n_user = max(n_user, uid)
                 testDataSize += len(items)
 
-
     train_data = []
     test_data = []
 
@@ -202,7 +222,6 @@ def load_data(train_file, test_file):
     for x in train_data:
         train_mat[x[0], x[1]] = 1.0
 
-
     # construct degree matrix for graphmf
 
     items_D = np.sum(train_mat, axis = 0).reshape(-1)
@@ -216,11 +235,6 @@ def load_data(train_file, test_file):
 
     return train_data, test_data, train_mat, n_user, m_item, constraint_mat
 
-
-
-'''
-Useful functions
-'''
 
 def pload(path):
 	with open(path, 'rb') as f:
@@ -257,11 +271,6 @@ def Sampling(pos_train_data, item_num, neg_ratio, interacted_items, sampling_sif
 	return pos_train_data[0], pos_train_data[1], neg_items	# users, pos_items, neg_items
 
 
-
-'''
-Model Definition
-'''
-
 class UltraGCN(nn.Module):
     def __init__(self, params, constraint_mat, ii_constraint_mat, ii_neighbor_mat):
         super(UltraGCN, self).__init__()
@@ -285,14 +294,11 @@ class UltraGCN(nn.Module):
         self.ii_neighbor_mat = ii_neighbor_mat
 
         self.initial_weight = params['initial_weight']
-
-
         self.initial_weights()
 
     def initial_weights(self):
         nn.init.normal_(self.user_embeds.weight, std=self.initial_weight)
         nn.init.normal_(self.item_embeds.weight, std=self.initial_weight)
-
 
     def get_omegas(self, users, pos_items, neg_items):
         device = self.get_device()
@@ -312,8 +318,6 @@ class UltraGCN(nn.Module):
 
         weight = torch.cat((pow_weight, neg_weight))
         return weight
-
-
 
     def cal_loss_L(self, users, pos_items, neg_items, omega_weight):
         device = self.get_device()
@@ -335,8 +339,6 @@ class UltraGCN(nn.Module):
       
         return loss.sum()
 
-
-
     def cal_loss_I(self, users, pos_items):
         device = self.get_device()
         neighbor_embeds = self.item_embeds(self.ii_neighbor_mat[pos_items].to(device))    # len(pos_items) * num_neighbors * dim
@@ -354,7 +356,6 @@ class UltraGCN(nn.Module):
             loss += torch.sum(parameter ** 2)
         return loss / 2
 
-
     def forward(self, users, pos_items, neg_items):
         omega_weight = self.get_omegas(users, pos_items, neg_items)
         
@@ -363,7 +364,6 @@ class UltraGCN(nn.Module):
         loss += self.lambda_ * self.cal_loss_I(users, pos_items)
         return loss
 
-
     def test_foward(self, users):
         items = torch.arange(self.item_num).to(users.device)
         user_embeds = self.user_embeds(users)
@@ -371,16 +371,12 @@ class UltraGCN(nn.Module):
          
         return user_embeds.mm(item_embeds.t())
 
-
     def get_device(self):
         return self.user_embeds.weight.device
 
 
-
-'''
-Train
-'''
 ########################### TRAINING #####################################
+
 def train(model, optimizer, train_loader, test_loader, mask, test_ground_truth_list, interacted_items, params): 
     device = params['device']
     best_epoch, best_recall, best_ndcg = 0, 0, 0
@@ -394,7 +390,6 @@ def train(model, optimizer, train_loader, test_loader, mask, test_ground_truth_l
     
     if params['enable_tensorboard']:
         writer = SummaryWriter()
-    
 
     for epoch in range(params['max_epoch']):
         model.train() 
@@ -455,32 +450,7 @@ def train(model, optimizer, train_loader, test_loader, mask, test_ground_truth_l
     print('Training end!')
 
 
-# The below 7 functions (hit, ndcg, RecallPrecision_ATk, MRRatK_r, NDCGatK_r, test_one_batch, getLabel) follow this license.
-# MIT License
-
-# Copyright (c) 2020 Xiang Wang
-
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
 ########################### TESTING #####################################
-'''
-Test and metrics
-'''
 
 def hit(gt_item, pred_items):
 	if gt_item in pred_items:
@@ -544,7 +514,6 @@ def NDCGatK_r(test_data, r, k):
 	return np.sum(ndcg)
 
 
-
 def test_one_batch(X, k):
     sorted_items = X[0].numpy()
     groundTrue = X[1]
@@ -591,14 +560,12 @@ def test(model, test_loader, test_ground_truth_list, mask, topk, n_user):
         Precision += precision
         NDCG += ndcg
         
-
     Precision /= n_user
     Recall /= n_user
     NDCG /= n_user
     F1_score = 2 * (Precision * Recall) / (Precision + Recall)
 
     return F1_score, Precision, Recall, NDCG
-
 
 
 if __name__ == "__main__":
@@ -608,14 +575,12 @@ if __name__ == "__main__":
 
     print('###################### UltraGCN ######################')
 
-
-    print('1. Loading Configuration...')
+    print('Loading Configuration...')
     params, constraint_mat, ii_constraint_mat, ii_neighbor_mat, train_loader, test_loader, mask, test_ground_truth_list, interacted_items = data_param_prepare(args.config_file)
     
     print('Load Configuration OK, show them below')
     print('Configuration:')
     print(params)
-
 
     ultragcn = UltraGCN(params, constraint_mat, ii_constraint_mat, ii_neighbor_mat)
     ultragcn = ultragcn.to(params['device'])
