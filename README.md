@@ -7,7 +7,7 @@ UltraGCN is an ultra-simplified formulation of graph convolutional networks for 
 
 ## Model Overview
 
-Graph Convolutional Networks (GCN) have been widely used for collaborative filtering. GCN models allow to capture higher-order  connections between users and items through its recursive message passing mechanism to aggregate neighborhood information. However, this message passing mechanism largely slows down the convergence of GCNs, especially when mini-batch neighbor sampling is necessary on large graphs. [LightGCN](https://arxiv.org/abs/2002.02126) reduces GCN models by removing feature transformations and nonlinear activations. In our work, UltraGCN was developed as an ultra-simplified formulation of GCNs, which skips explicit message passing and instead approximates infinite-layer graph convolutions using a constraint loss.
+Graph Convolutional Networks (GCN) have been widely used for collaborative filtering. GCN models allow to capture higher-order  connections between users and items through its recursive message passing mechanism to aggregate neighborhood information. However, this message passing mechanism largely slows down the convergence of GCNs, especially when mini-batch sub-graph sampling is applied on large graphs. [LightGCN](https://arxiv.org/abs/2002.02126) reduces GCN models by removing feature transformations and nonlinear activations. In our work, UltraGCN was developed as an ultra-simplified formulation of GCNs, which skips explicit message passing and instead approximates infinite-layer graph convolutions using a constraint loss.
 
 
 <div align="center">
