@@ -24,8 +24,8 @@ To reproduce our experimental results, we strongly suggest to use the following 
 
 ## Code Structure
 
-+ `main.py`: The design of UltraGCN is concise, and we organize all the code in a single file to make it easy to run. 
-+ `ultragcn_dataset_id.ini`: Each configuration file in the `./config/` directory includes parameter settings for a specific dataset.
++ ***main.py***: We organize all the code in a single file to make it easy to run UltraGCN. 
++ ***config/ultragcn_xxx.ini***: Each configuration file specifies parameter settings for a target dataset.
 
 ## Results
 
