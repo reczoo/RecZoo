@@ -304,7 +304,7 @@ class UltraGCN(nn.Module):
         device = self.get_device()
         if self.w2 > 0:
             pos_weight = torch.mul(self.constraint_mat['beta_uD'][users], self.constraint_mat['beta_iD'][pos_items]).to(device)
-            pow_weight = self.w1 + self.w2 * pos_weight
+            pos_weight = self.w1 + self.w2 * pos_weight
         else:
             pos_weight = self.w1 * torch.ones(len(pos_items)).to(device)
         
@@ -316,7 +316,7 @@ class UltraGCN(nn.Module):
             neg_weight = self.w3 * torch.ones(neg_items.size(0) * neg_items.size(1)).to(device)
 
 
-        weight = torch.cat((pow_weight, neg_weight))
+        weight = torch.cat((pos_weight, neg_weight))
         return weight
 
     def cal_loss_L(self, users, pos_items, neg_items, omega_weight):
