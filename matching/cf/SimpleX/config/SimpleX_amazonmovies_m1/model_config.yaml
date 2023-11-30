@@ -1,0 +1,41 @@
+Base:
+    model_root: './checkpoints/'
+    num_workers: 3
+    verbose: 1
+    patience: 3
+    save_best_only: True
+    eval_interval_epochs: 1
+    debug_mode: False
+
+SimpleX_amazonmovies_m1:
+    model: SimpleX
+    dataset_id: amazonmovies_m1_88b8a00d
+    metrics: ['Recall(k=20)', 'Recall(k=50)', 'NDCG(k=20)', 'NDCG(k=50)', 'HitRate(k=20)', 'HitRate(k=50)']
+    optimizer: adam
+    learning_rate: 1.e-3
+    batch_size: 1024
+    num_negs: 800
+    embedding_dim: 64
+    aggregator: mean
+    gamma: 1
+    user_id_field: user_id
+    item_id_field: item_id
+    user_history_field: user_history
+    embedding_regularizer: 1.e-6
+    net_regularizer: 0
+    net_dropout: 0
+    attention_dropout: 0
+    enable_bias: False
+    similarity_score: cosine
+    loss: CosineContrastiveLoss
+    margin: 0.9
+    negative_weight: 30
+    sampling_num_process: 1
+    fix_sampling_seeds: True
+    ignore_pos_items: False
+    epochs: 100
+    shuffle: True
+    seed: 2019
+    monitor: 'Recall(k=20)'
+    monitor_mode: 'max'
+    

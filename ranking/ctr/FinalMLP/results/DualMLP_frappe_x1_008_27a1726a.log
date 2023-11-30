@@ -1,0 +1,143 @@
+2022-12-16 16:11:10,587 P17710 INFO Params: {
+    "batch_size": "4096",
+    "data_format": "csv",
+    "data_root": "../data/Frappe/",
+    "dataset_id": "frappe_x1_47e6e0df",
+    "debug_mode": "False",
+    "early_stop_patience": "2",
+    "embedding_dim": "10",
+    "embedding_regularizer": "0.05",
+    "epochs": "100",
+    "eval_interval": "1",
+    "feature_cols": "[{'active': True, 'dtype': 'float', 'name': ['user', 'item', 'daytime', 'weekday', 'isweekend', 'homework', 'cost', 'weather', 'country', 'city'], 'type': 'categorical'}]",
+    "feature_specs": "None",
+    "gpu": "1",
+    "group_id": "None",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "binary_crossentropy",
+    "metrics": "['AUC', 'logloss']",
+    "min_categr_count": "1",
+    "mlp1_batch_norm": "True",
+    "mlp1_dropout": "0.2",
+    "mlp1_hidden_activations": "relu",
+    "mlp1_hidden_units": "[400, 400, 400]",
+    "mlp2_batch_norm": "True",
+    "mlp2_dropout": "0.3",
+    "mlp2_hidden_activations": "relu",
+    "mlp2_hidden_units": "[500, 500, 500]",
+    "model": "DualMLP",
+    "model_id": "DualMLP_frappe_x1_008_27a1726a",
+    "model_root": "./checkpoints/DualMLP_frappe_x1/",
+    "monitor": "{'AUC': 1, 'logloss': -1}",
+    "monitor_mode": "max",
+    "net_regularizer": "0",
+    "num_workers": "3",
+    "optimizer": "adam",
+    "ordered_features": "None",
+    "pickle_feature_encoder": "True",
+    "save_best_only": "True",
+    "seed": "2021",
+    "shuffle": "True",
+    "task": "binary_classification",
+    "test_data": "../data/Frappe/Frappe_x1/test.csv",
+    "train_data": "../data/Frappe/Frappe_x1/train.csv",
+    "valid_data": "../data/Frappe/Frappe_x1/valid.csv",
+    "verbose": "1"
+}
+2022-12-16 16:11:10,587 P17710 INFO Load feature_map from json: ../data/Frappe/frappe_x1_47e6e0df/feature_map.json
+2022-12-16 16:11:10,588 P17710 INFO Set column index...
+2022-12-16 16:11:10,588 P17710 INFO Feature specs: {
+    "city": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 234, 'vocab_size': 235}",
+    "cost": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "country": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 81, 'vocab_size': 82}",
+    "daytime": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}",
+    "homework": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4, 'vocab_size': 5}",
+    "isweekend": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 3, 'vocab_size': 4}",
+    "item": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 4083, 'vocab_size': 4084}",
+    "user": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 955, 'vocab_size': 956}",
+    "weather": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 10, 'vocab_size': 11}",
+    "weekday": "{'source': '', 'type': 'categorical', 'padding_idx': 0, 'oov_idx': 8, 'vocab_size': 9}"
+}
+2022-12-16 16:11:14,287 P17710 INFO Total number of parameters: 972992.
+2022-12-16 16:11:14,287 P17710 INFO Loading data...
+2022-12-16 16:11:14,287 P17710 INFO Loading data from h5: ../data/Frappe/frappe_x1_47e6e0df/train.h5
+2022-12-16 16:11:14,321 P17710 INFO Train samples: total/202027, blocks/1
+2022-12-16 16:11:14,321 P17710 INFO Loading data from h5: ../data/Frappe/frappe_x1_47e6e0df/valid.h5
+2022-12-16 16:11:14,331 P17710 INFO Validation samples: total/57722, blocks/1
+2022-12-16 16:11:14,331 P17710 INFO Loading train and validation data done.
+2022-12-16 16:11:14,332 P17710 INFO Start training: 50 batches/epoch
+2022-12-16 16:11:14,332 P17710 INFO ************ Epoch=1 start ************
+2022-12-16 16:11:21,325 P17710 INFO [Metrics] AUC: 0.933270 - logloss: 0.584338
+2022-12-16 16:11:21,326 P17710 INFO Save best model: monitor(max): 0.348932
+2022-12-16 16:11:21,379 P17710 INFO --- 50/50 batches finished ---
+2022-12-16 16:11:21,414 P17710 INFO Train loss @epoch 1: 0.390752
+2022-12-16 16:11:21,414 P17710 INFO ************ Epoch=1 end ************
+2022-12-16 16:11:28,249 P17710 INFO [Metrics] AUC: 0.961401 - logloss: 0.241205
+2022-12-16 16:11:28,250 P17710 INFO Save best model: monitor(max): 0.720196
+2022-12-16 16:11:28,258 P17710 INFO --- 50/50 batches finished ---
+2022-12-16 16:11:28,292 P17710 INFO Train loss @epoch 2: 0.286313
+2022-12-16 16:11:28,292 P17710 INFO ************ Epoch=2 end ************
+2022-12-16 16:11:34,992 P17710 INFO [Metrics] AUC: 0.973644 - logloss: 0.187512
+2022-12-16 16:11:34,992 P17710 INFO Save best model: monitor(max): 0.786131
+2022-12-16 16:11:35,000 P17710 INFO --- 50/50 batches finished ---
+2022-12-16 16:11:35,037 P17710 INFO Train loss @epoch 3: 0.232117
+2022-12-16 16:11:35,037 P17710 INFO ************ Epoch=3 end ************
+2022-12-16 16:11:41,830 P17710 INFO [Metrics] AUC: 0.977548 - logloss: 0.172591
+2022-12-16 16:11:41,830 P17710 INFO Save best model: monitor(max): 0.804958
+2022-12-16 16:11:41,838 P17710 INFO --- 50/50 batches finished ---
+2022-12-16 16:11:41,872 P17710 INFO Train loss @epoch 4: 0.203961
+2022-12-16 16:11:41,872 P17710 INFO ************ Epoch=4 end ************
+2022-12-16 16:11:48,589 P17710 INFO [Metrics] AUC: 0.979912 - logloss: 0.163834
+2022-12-16 16:11:48,589 P17710 INFO Save best model: monitor(max): 0.816078
+2022-12-16 16:11:48,598 P17710 INFO --- 50/50 batches finished ---
+2022-12-16 16:11:48,632 P17710 INFO Train loss @epoch 5: 0.189011
+2022-12-16 16:11:48,632 P17710 INFO ************ Epoch=5 end ************
+2022-12-16 16:11:55,461 P17710 INFO [Metrics] AUC: 0.980918 - logloss: 0.161805
+2022-12-16 16:11:55,461 P17710 INFO Save best model: monitor(max): 0.819112
+2022-12-16 16:11:55,470 P17710 INFO --- 50/50 batches finished ---
+2022-12-16 16:11:55,508 P17710 INFO Train loss @epoch 6: 0.180425
+2022-12-16 16:11:55,508 P17710 INFO ************ Epoch=6 end ************
+2022-12-16 16:12:02,310 P17710 INFO [Metrics] AUC: 0.981318 - logloss: 0.158942
+2022-12-16 16:12:02,310 P17710 INFO Save best model: monitor(max): 0.822376
+2022-12-16 16:12:02,319 P17710 INFO --- 50/50 batches finished ---
+2022-12-16 16:12:02,356 P17710 INFO Train loss @epoch 7: 0.172428
+2022-12-16 16:12:02,356 P17710 INFO ************ Epoch=7 end ************
+2022-12-16 16:12:09,094 P17710 INFO [Metrics] AUC: 0.981468 - logloss: 0.175364
+2022-12-16 16:12:09,095 P17710 INFO Monitor(max) STOP: 0.806103 !
+2022-12-16 16:12:09,095 P17710 INFO Reduce learning rate on plateau: 0.000100
+2022-12-16 16:12:09,095 P17710 INFO --- 50/50 batches finished ---
+2022-12-16 16:12:09,130 P17710 INFO Train loss @epoch 8: 0.168094
+2022-12-16 16:12:09,130 P17710 INFO ************ Epoch=8 end ************
+2022-12-16 16:12:14,272 P17710 INFO [Metrics] AUC: 0.984021 - logloss: 0.146393
+2022-12-16 16:12:14,273 P17710 INFO Save best model: monitor(max): 0.837628
+2022-12-16 16:12:14,281 P17710 INFO --- 50/50 batches finished ---
+2022-12-16 16:12:14,323 P17710 INFO Train loss @epoch 9: 0.137943
+2022-12-16 16:12:14,323 P17710 INFO ************ Epoch=9 end ************
+2022-12-16 16:12:20,042 P17710 INFO [Metrics] AUC: 0.984765 - logloss: 0.145974
+2022-12-16 16:12:20,043 P17710 INFO Save best model: monitor(max): 0.838791
+2022-12-16 16:12:20,051 P17710 INFO --- 50/50 batches finished ---
+2022-12-16 16:12:20,090 P17710 INFO Train loss @epoch 10: 0.116061
+2022-12-16 16:12:20,090 P17710 INFO ************ Epoch=10 end ************
+2022-12-16 16:12:26,489 P17710 INFO [Metrics] AUC: 0.985002 - logloss: 0.147781
+2022-12-16 16:12:26,490 P17710 INFO Monitor(max) STOP: 0.837221 !
+2022-12-16 16:12:26,490 P17710 INFO Reduce learning rate on plateau: 0.000010
+2022-12-16 16:12:26,490 P17710 INFO --- 50/50 batches finished ---
+2022-12-16 16:12:26,524 P17710 INFO Train loss @epoch 11: 0.102907
+2022-12-16 16:12:26,524 P17710 INFO ************ Epoch=11 end ************
+2022-12-16 16:12:33,120 P17710 INFO [Metrics] AUC: 0.984985 - logloss: 0.150508
+2022-12-16 16:12:33,121 P17710 INFO Monitor(max) STOP: 0.834478 !
+2022-12-16 16:12:33,121 P17710 INFO Reduce learning rate on plateau: 0.000001
+2022-12-16 16:12:33,121 P17710 INFO ********* Epoch==12 early stop *********
+2022-12-16 16:12:33,121 P17710 INFO --- 50/50 batches finished ---
+2022-12-16 16:12:33,161 P17710 INFO Train loss @epoch 12: 0.093950
+2022-12-16 16:12:33,161 P17710 INFO Training finished.
+2022-12-16 16:12:33,161 P17710 INFO Load best model: /home/XXX/FuxiCTRv2/benchmark/checkpoints/DualMLP_frappe_x1/frappe_x1_47e6e0df/DualMLP_frappe_x1_008_27a1726a.model
+2022-12-16 16:12:33,229 P17710 INFO ****** Validation evaluation ******
+2022-12-16 16:12:33,731 P17710 INFO [Metrics] AUC: 0.984765 - logloss: 0.145974
+2022-12-16 16:12:33,803 P17710 INFO ******** Test evaluation ********
+2022-12-16 16:12:33,803 P17710 INFO Loading data...
+2022-12-16 16:12:33,803 P17710 INFO Loading data from h5: ../data/Frappe/frappe_x1_47e6e0df/test.h5
+2022-12-16 16:12:33,810 P17710 INFO Test samples: total/28860, blocks/1
+2022-12-16 16:12:33,810 P17710 INFO Loading test data done.
+2022-12-16 16:12:34,127 P17710 INFO [Metrics] AUC: 0.984650 - logloss: 0.147083

@@ -1,0 +1,17 @@
+amazonbooks_m1_fea71f7d:
+    data_root: ./data/Amazon/
+    data_format: csv
+    train_data: ./data/Amazon/AmazonBooks_m1/train.csv
+    valid_data: ./data/Amazon/AmazonBooks_m1/test.csv
+    item_corpus: ./data/Amazon/AmazonBooks_m1/item_corpus.csv
+    min_categr_count: 1
+    query_index: query_index
+    corpus_index: corpus_index
+    feature_cols:
+        - {'name': 'query_index', 'active': True, 'dtype': int, 'type': 'index'}
+        - {'name': 'corpus_index', 'active': True, 'dtype': int, 'type': 'index'}
+        - {'name': 'user_id', 'active': True, 'dtype': str, 'type': 'categorical', 'source': 'user'}
+        - {'name': 'user_history', 'active': True, 'dtype': str, 'type': 'sequence', 'source': 'user', 'splitter': '^',
+            'max_len': 500, 'padding': 'pre', 'embedding_callback': null}
+        - {'name': 'item_id', 'active': True, 'dtype': str, 'type': 'categorical', 'source': 'item', 'share_embedding': 'user_history'}
+    label_col: {name: label, dtype: float}

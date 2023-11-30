@@ -1,0 +1,888 @@
+DualMLP_avazu_x1_001_2e046612:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_002_1c2c1f09:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_003_0a0bf2de:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_004_719bb9c6:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_005_4818fa19:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_006_04c70bfa:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_007_1c2c1f09:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_008_1abef4fe:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_009_719bb9c6:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_010_1864e8b3:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_011_04c70bfa:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_012_1ce71703:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_013_21e49c1d:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_014_ccce7cc3:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_015_3f9d1d9c:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_016_0b2de833:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_017_ee44a5fd:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_018_7ce16f2f:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_019_ccce7cc3:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_020_762e099b:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_021_0b2de833:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_022_c137aab2:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_023_7ce16f2f:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_avazu_x1_024_8d9ea1a6:
+    batch_size: 4096
+    dataset_id: avazu_x1_0bbde04e
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_avazu_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0

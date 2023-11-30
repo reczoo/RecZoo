@@ -1,0 +1,392 @@
+2021-01-25 07:31:23,300 P8266 INFO {
+    "aggregator": "mean",
+    "attention_dropout": "0",
+    "batch_size": "1024",
+    "corpus_index": "corpus_index",
+    "data_format": "csv",
+    "data_root": "../data/Movielens1M/",
+    "dataset_id": "movielens1m_m1_8de87281",
+    "debug_mode": "False",
+    "embedding_dim": "128",
+    "embedding_regularizer": "1e-05",
+    "enable_bias": "True",
+    "epochs": "100",
+    "eval_interval_epochs": "1",
+    "feature_cols": "[{'active': True, 'dtype': 'int', 'name': 'query_index', 'type': 'index'}, {'active': True, 'dtype': 'int', 'name': 'corpus_index', 'type': 'index'}, {'active': True, 'dtype': 'str', 'name': 'user_id', 'source': 'user', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'embedding_callback': None, 'max_len': 500, 'name': 'user_history', 'padding': 'pre', 'source': 'user', 'splitter': '^', 'type': 'sequence'}, {'active': True, 'dtype': 'str', 'name': 'item_id', 'share_embedding': 'user_history', 'source': 'item', 'type': 'categorical'}]",
+    "fix_sampling_seeds": "True",
+    "gamma": "0.8",
+    "gpu": "1",
+    "ignore_pos_items": "True",
+    "item_corpus": "../data/Movielens1M/movielens1m_m1/item_corpus.csv",
+    "item_id_field": "item_id",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "CosineContrastiveLoss",
+    "margin": "0.9",
+    "metrics": "['F1(k=20)', 'NDCG(k=20)', 'Recall(k=20)', 'NDCG(k=50)', 'Recall(k=50)', 'HitRate(k=20)', 'HitRate(k=50)']",
+    "min_categr_count": "1",
+    "model": "SimpleX",
+    "model_id": "SimpleX_movielens1m_m1_021_6b1eda86",
+    "model_root": "./Movielens1M/SimpleX_movielens1m_m1/",
+    "monitor": "NDCG(k=20)",
+    "monitor_mode": "max",
+    "negative_weight": "10",
+    "net_dropout": "0.4",
+    "net_regularizer": "0",
+    "num_negs": "1500",
+    "num_workers": "3",
+    "optimizer": "adam",
+    "patience": "3",
+    "query_index": "query_index",
+    "sampling_num_process": "4",
+    "save_best_only": "True",
+    "seed": "2019",
+    "shuffle": "True",
+    "similarity_score": "cosine",
+    "train_data": "../data/Movielens1M/movielens1m_m1/train.csv",
+    "user_history_field": "user_history",
+    "user_id_field": "user_id",
+    "valid_data": "../data/Movielens1M/movielens1m_m1/test.csv",
+    "verbose": "1",
+    "version": "pytorch"
+}
+2021-01-25 07:31:23,301 P8266 INFO Set up feature encoder...
+2021-01-25 07:31:23,301 P8266 INFO Load feature_map from json: ../data/Movielens1M/movielens1m_m1_8de87281/feature_map.json
+2021-01-25 07:31:28,298 P8266 INFO Total number of parameters: 1186157.
+2021-01-25 07:31:28,299 P8266 INFO Loading data...
+2021-01-25 07:31:28,305 P8266 INFO Loading data from h5: ../data/Movielens1M/movielens1m_m1_8de87281/train.h5
+2021-01-25 07:31:29,057 P8266 INFO Loading data from h5: ../data/Movielens1M/movielens1m_m1_8de87281/item_corpus.h5
+2021-01-25 07:31:29,299 P8266 INFO Loading data from h5: ../data/Movielens1M/movielens1m_m1_8de87281/valid.h5
+2021-01-25 07:31:29,445 P8266 INFO Loading data from h5: ../data/Movielens1M/movielens1m_m1_8de87281/item_corpus.h5
+2021-01-25 07:31:29,446 P8266 INFO Train samples: total/796244, blocks/1
+2021-01-25 07:31:29,446 P8266 INFO Validation samples: total/6022, blocks/1
+2021-01-25 07:31:29,446 P8266 INFO Loading train data done.
+2021-01-25 07:31:29,446 P8266 INFO **** Start training: 778 batches/epoch ****
+2021-01-25 07:31:29,450 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 07:33:01,385 P8266 INFO Negative sampling done
+2021-01-25 07:36:03,490 P8266 INFO --- Start evaluation ---
+2021-01-25 07:36:04,069 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 07:36:10,769 P8266 INFO [Metrics] F1(k=20): 0.099315 - NDCG(k=20): 0.162179 - Recall(k=20): 0.156053 - NDCG(k=50): 0.195615 - Recall(k=50): 0.272761 - HitRate(k=20): 0.740286 - HitRate(k=50): 0.864995
+2021-01-25 07:36:10,773 P8266 INFO Save best model: monitor(max): 0.162179
+2021-01-25 07:36:11,000 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 07:36:11,055 P8266 INFO Train loss: 0.210238
+2021-01-25 07:36:11,055 P8266 INFO ************ Epoch=1 end ************
+2021-01-25 07:36:11,055 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 07:37:47,648 P8266 INFO Negative sampling done
+2021-01-25 07:40:27,055 P8266 INFO --- Start evaluation ---
+2021-01-25 07:40:27,587 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 07:40:34,248 P8266 INFO [Metrics] F1(k=20): 0.121836 - NDCG(k=20): 0.195497 - Recall(k=20): 0.193734 - NDCG(k=50): 0.235992 - Recall(k=50): 0.330572 - HitRate(k=20): 0.802557 - HitRate(k=50): 0.905181
+2021-01-25 07:40:34,251 P8266 INFO Save best model: monitor(max): 0.195497
+2021-01-25 07:40:34,259 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 07:40:34,353 P8266 INFO Train loss: 0.148608
+2021-01-25 07:40:34,353 P8266 INFO ************ Epoch=2 end ************
+2021-01-25 07:40:34,354 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 07:42:10,188 P8266 INFO Negative sampling done
+2021-01-25 07:45:15,380 P8266 INFO --- Start evaluation ---
+2021-01-25 07:45:16,249 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 07:45:22,949 P8266 INFO [Metrics] F1(k=20): 0.132399 - NDCG(k=20): 0.212633 - Recall(k=20): 0.215543 - NDCG(k=50): 0.256236 - Recall(k=50): 0.360719 - HitRate(k=20): 0.827300 - HitRate(k=50): 0.923281
+2021-01-25 07:45:22,952 P8266 INFO Save best model: monitor(max): 0.212633
+2021-01-25 07:45:22,959 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 07:45:23,053 P8266 INFO Train loss: 0.115009
+2021-01-25 07:45:23,053 P8266 INFO ************ Epoch=3 end ************
+2021-01-25 07:45:23,054 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 07:46:56,137 P8266 INFO Negative sampling done
+2021-01-25 07:49:37,101 P8266 INFO --- Start evaluation ---
+2021-01-25 07:49:37,629 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 07:49:46,177 P8266 INFO [Metrics] F1(k=20): 0.141451 - NDCG(k=20): 0.228186 - Recall(k=20): 0.234052 - NDCG(k=50): 0.272747 - Recall(k=50): 0.382371 - HitRate(k=20): 0.854533 - HitRate(k=50): 0.936234
+2021-01-25 07:49:46,180 P8266 INFO Save best model: monitor(max): 0.228186
+2021-01-25 07:49:46,187 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 07:49:46,239 P8266 INFO Train loss: 0.105449
+2021-01-25 07:49:46,239 P8266 INFO ************ Epoch=4 end ************
+2021-01-25 07:49:46,240 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 07:51:19,423 P8266 INFO Negative sampling done
+2021-01-25 07:54:23,376 P8266 INFO --- Start evaluation ---
+2021-01-25 07:54:23,883 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 07:54:30,803 P8266 INFO [Metrics] F1(k=20): 0.146853 - NDCG(k=20): 0.236688 - Recall(k=20): 0.245117 - NDCG(k=50): 0.284731 - Recall(k=50): 0.402139 - HitRate(k=20): 0.870309 - HitRate(k=50): 0.947360
+2021-01-25 07:54:30,806 P8266 INFO Save best model: monitor(max): 0.236688
+2021-01-25 07:54:30,813 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 07:54:30,868 P8266 INFO Train loss: 0.103409
+2021-01-25 07:54:30,868 P8266 INFO ************ Epoch=5 end ************
+2021-01-25 07:54:30,869 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 07:56:05,599 P8266 INFO Negative sampling done
+2021-01-25 07:58:52,582 P8266 INFO --- Start evaluation ---
+2021-01-25 07:58:53,157 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 07:59:00,564 P8266 INFO [Metrics] F1(k=20): 0.151442 - NDCG(k=20): 0.243731 - Recall(k=20): 0.253247 - NDCG(k=50): 0.291297 - Recall(k=50): 0.410999 - HitRate(k=20): 0.875457 - HitRate(k=50): 0.949352
+2021-01-25 07:59:00,567 P8266 INFO Save best model: monitor(max): 0.243731
+2021-01-25 07:59:00,574 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 07:59:00,631 P8266 INFO Train loss: 0.102448
+2021-01-25 07:59:00,631 P8266 INFO ************ Epoch=6 end ************
+2021-01-25 07:59:00,632 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 08:00:34,905 P8266 INFO Negative sampling done
+2021-01-25 08:03:34,995 P8266 INFO --- Start evaluation ---
+2021-01-25 08:03:35,526 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 08:03:42,731 P8266 INFO [Metrics] F1(k=20): 0.155605 - NDCG(k=20): 0.249898 - Recall(k=20): 0.262350 - NDCG(k=50): 0.295807 - Recall(k=50): 0.415250 - HitRate(k=20): 0.885918 - HitRate(k=50): 0.951013
+2021-01-25 08:03:42,735 P8266 INFO Save best model: monitor(max): 0.249898
+2021-01-25 08:03:42,742 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 08:03:42,802 P8266 INFO Train loss: 0.101907
+2021-01-25 08:03:42,802 P8266 INFO ************ Epoch=7 end ************
+2021-01-25 08:03:42,803 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 08:05:15,474 P8266 INFO Negative sampling done
+2021-01-25 08:08:11,162 P8266 INFO --- Start evaluation ---
+2021-01-25 08:08:11,721 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 08:08:18,508 P8266 INFO [Metrics] F1(k=20): 0.156853 - NDCG(k=20): 0.253505 - Recall(k=20): 0.263074 - NDCG(k=50): 0.301094 - Recall(k=50): 0.420478 - HitRate(k=20): 0.887081 - HitRate(k=50): 0.953172
+2021-01-25 08:08:18,510 P8266 INFO Save best model: monitor(max): 0.253505
+2021-01-25 08:08:18,517 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 08:08:18,571 P8266 INFO Train loss: 0.101690
+2021-01-25 08:08:18,571 P8266 INFO ************ Epoch=8 end ************
+2021-01-25 08:08:18,572 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 08:09:50,679 P8266 INFO Negative sampling done
+2021-01-25 08:12:45,897 P8266 INFO --- Start evaluation ---
+2021-01-25 08:12:46,406 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 08:12:52,756 P8266 INFO [Metrics] F1(k=20): 0.156631 - NDCG(k=20): 0.253801 - Recall(k=20): 0.263852 - NDCG(k=50): 0.302035 - Recall(k=50): 0.422223 - HitRate(k=20): 0.883593 - HitRate(k=50): 0.952341
+2021-01-25 08:12:52,758 P8266 INFO Save best model: monitor(max): 0.253801
+2021-01-25 08:12:52,765 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 08:12:52,822 P8266 INFO Train loss: 0.101771
+2021-01-25 08:12:52,822 P8266 INFO ************ Epoch=9 end ************
+2021-01-25 08:12:52,823 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 08:14:27,755 P8266 INFO Negative sampling done
+2021-01-25 08:17:35,242 P8266 INFO --- Start evaluation ---
+2021-01-25 08:17:35,812 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 08:17:42,402 P8266 INFO [Metrics] F1(k=20): 0.157353 - NDCG(k=20): 0.254028 - Recall(k=20): 0.264105 - NDCG(k=50): 0.303392 - Recall(k=50): 0.425664 - HitRate(k=20): 0.886749 - HitRate(k=50): 0.956161
+2021-01-25 08:17:42,404 P8266 INFO Save best model: monitor(max): 0.254028
+2021-01-25 08:17:42,411 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 08:17:42,471 P8266 INFO Train loss: 0.101857
+2021-01-25 08:17:42,472 P8266 INFO ************ Epoch=10 end ************
+2021-01-25 08:17:42,472 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 08:19:14,199 P8266 INFO Negative sampling done
+2021-01-25 08:21:58,309 P8266 INFO --- Start evaluation ---
+2021-01-25 08:21:58,822 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 08:22:05,259 P8266 INFO [Metrics] F1(k=20): 0.157766 - NDCG(k=20): 0.254069 - Recall(k=20): 0.265411 - NDCG(k=50): 0.302766 - Recall(k=50): 0.425356 - HitRate(k=20): 0.887579 - HitRate(k=50): 0.954334
+2021-01-25 08:22:05,263 P8266 INFO Save best model: monitor(max): 0.254069
+2021-01-25 08:22:05,269 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 08:22:05,322 P8266 INFO Train loss: 0.101991
+2021-01-25 08:22:05,322 P8266 INFO ************ Epoch=11 end ************
+2021-01-25 08:22:05,322 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 08:23:40,735 P8266 INFO Negative sampling done
+2021-01-25 08:26:51,006 P8266 INFO --- Start evaluation ---
+2021-01-25 08:26:51,573 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 08:26:58,270 P8266 INFO [Metrics] F1(k=20): 0.158303 - NDCG(k=20): 0.255503 - Recall(k=20): 0.266482 - NDCG(k=50): 0.303164 - Recall(k=50): 0.424413 - HitRate(k=20): 0.888741 - HitRate(k=50): 0.955164
+2021-01-25 08:26:58,275 P8266 INFO Save best model: monitor(max): 0.255503
+2021-01-25 08:26:58,284 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 08:26:58,341 P8266 INFO Train loss: 0.102140
+2021-01-25 08:26:58,341 P8266 INFO ************ Epoch=12 end ************
+2021-01-25 08:26:58,342 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 08:28:34,084 P8266 INFO Negative sampling done
+2021-01-25 08:31:25,706 P8266 INFO --- Start evaluation ---
+2021-01-25 08:31:26,325 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 08:31:33,292 P8266 INFO [Metrics] F1(k=20): 0.157885 - NDCG(k=20): 0.254815 - Recall(k=20): 0.265650 - NDCG(k=50): 0.303995 - Recall(k=50): 0.427374 - HitRate(k=20): 0.887081 - HitRate(k=50): 0.956493
+2021-01-25 08:31:33,295 P8266 INFO Monitor(max) STOP: 0.254815 !
+2021-01-25 08:31:33,296 P8266 INFO Reduce learning rate on plateau: 0.000100
+2021-01-25 08:31:33,296 P8266 INFO Load best model: /home/XXX/benchmarks/Movielens1M/SimpleX_movielens1m_m1/movielens1m_m1_8de87281/SimpleX_movielens1m_m1_021_6b1eda86.model
+2021-01-25 08:31:33,325 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 08:31:33,384 P8266 INFO Train loss: 0.102225
+2021-01-25 08:31:33,384 P8266 INFO ************ Epoch=13 end ************
+2021-01-25 08:31:33,385 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 08:33:07,629 P8266 INFO Negative sampling done
+2021-01-25 08:36:11,639 P8266 INFO --- Start evaluation ---
+2021-01-25 08:36:12,164 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 08:36:19,496 P8266 INFO [Metrics] F1(k=20): 0.163166 - NDCG(k=20): 0.263613 - Recall(k=20): 0.274984 - NDCG(k=50): 0.312571 - Recall(k=50): 0.436605 - HitRate(k=20): 0.896214 - HitRate(k=50): 0.958486
+2021-01-25 08:36:19,499 P8266 INFO Save best model: monitor(max): 0.263613
+2021-01-25 08:36:19,507 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 08:36:19,561 P8266 INFO Train loss: 0.096154
+2021-01-25 08:36:19,561 P8266 INFO ************ Epoch=14 end ************
+2021-01-25 08:36:19,561 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 08:37:53,266 P8266 INFO Negative sampling done
+2021-01-25 08:40:49,500 P8266 INFO --- Start evaluation ---
+2021-01-25 08:40:50,067 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 08:40:57,025 P8266 INFO [Metrics] F1(k=20): 0.164482 - NDCG(k=20): 0.265378 - Recall(k=20): 0.277928 - NDCG(k=50): 0.315405 - Recall(k=50): 0.442068 - HitRate(k=20): 0.899203 - HitRate(k=50): 0.962803
+2021-01-25 08:40:57,028 P8266 INFO Save best model: monitor(max): 0.265378
+2021-01-25 08:40:57,035 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 08:40:57,091 P8266 INFO Train loss: 0.094367
+2021-01-25 08:40:57,091 P8266 INFO ************ Epoch=15 end ************
+2021-01-25 08:40:57,092 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 08:42:30,236 P8266 INFO Negative sampling done
+2021-01-25 08:45:33,059 P8266 INFO --- Start evaluation ---
+2021-01-25 08:45:33,616 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 08:45:40,360 P8266 INFO [Metrics] F1(k=20): 0.165080 - NDCG(k=20): 0.266311 - Recall(k=20): 0.279098 - NDCG(k=50): 0.316404 - Recall(k=50): 0.443411 - HitRate(k=20): 0.899037 - HitRate(k=50): 0.962305
+2021-01-25 08:45:40,363 P8266 INFO Save best model: monitor(max): 0.266311
+2021-01-25 08:45:40,370 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 08:45:40,429 P8266 INFO Train loss: 0.093213
+2021-01-25 08:45:40,429 P8266 INFO ************ Epoch=16 end ************
+2021-01-25 08:45:40,430 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 08:47:13,667 P8266 INFO Negative sampling done
+2021-01-25 08:49:58,248 P8266 INFO --- Start evaluation ---
+2021-01-25 08:49:58,762 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 08:50:05,761 P8266 INFO [Metrics] F1(k=20): 0.165375 - NDCG(k=20): 0.266565 - Recall(k=20): 0.279262 - NDCG(k=50): 0.317041 - Recall(k=50): 0.445002 - HitRate(k=20): 0.900033 - HitRate(k=50): 0.962139
+2021-01-25 08:50:05,766 P8266 INFO Save best model: monitor(max): 0.266565
+2021-01-25 08:50:05,777 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 08:50:05,836 P8266 INFO Train loss: 0.092242
+2021-01-25 08:50:05,836 P8266 INFO ************ Epoch=17 end ************
+2021-01-25 08:50:05,837 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 08:51:41,243 P8266 INFO Negative sampling done
+2021-01-25 08:54:45,308 P8266 INFO --- Start evaluation ---
+2021-01-25 08:54:45,873 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 08:54:52,271 P8266 INFO [Metrics] F1(k=20): 0.165354 - NDCG(k=20): 0.266420 - Recall(k=20): 0.279486 - NDCG(k=50): 0.316763 - Recall(k=50): 0.444390 - HitRate(k=20): 0.900365 - HitRate(k=50): 0.961309
+2021-01-25 08:54:52,273 P8266 INFO Monitor(max) STOP: 0.266420 !
+2021-01-25 08:54:52,274 P8266 INFO Reduce learning rate on plateau: 0.000010
+2021-01-25 08:54:52,274 P8266 INFO Load best model: /home/XXX/benchmarks/Movielens1M/SimpleX_movielens1m_m1/movielens1m_m1_8de87281/SimpleX_movielens1m_m1_021_6b1eda86.model
+2021-01-25 08:54:52,286 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 08:54:52,340 P8266 INFO Train loss: 0.091510
+2021-01-25 08:54:52,340 P8266 INFO ************ Epoch=18 end ************
+2021-01-25 08:54:52,341 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 08:56:27,163 P8266 INFO Negative sampling done
+2021-01-25 08:59:12,321 P8266 INFO --- Start evaluation ---
+2021-01-25 08:59:12,815 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 08:59:20,441 P8266 INFO [Metrics] F1(k=20): 0.165409 - NDCG(k=20): 0.266594 - Recall(k=20): 0.279470 - NDCG(k=50): 0.316999 - Recall(k=50): 0.444747 - HitRate(k=20): 0.899701 - HitRate(k=50): 0.961807
+2021-01-25 08:59:20,444 P8266 INFO Save best model: monitor(max): 0.266594
+2021-01-25 08:59:20,451 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 08:59:20,508 P8266 INFO Train loss: 0.090858
+2021-01-25 08:59:20,508 P8266 INFO ************ Epoch=19 end ************
+2021-01-25 08:59:20,509 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 09:00:55,493 P8266 INFO Negative sampling done
+2021-01-25 09:04:01,108 P8266 INFO --- Start evaluation ---
+2021-01-25 09:04:01,644 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 09:04:09,474 P8266 INFO [Metrics] F1(k=20): 0.165505 - NDCG(k=20): 0.266643 - Recall(k=20): 0.279594 - NDCG(k=50): 0.317075 - Recall(k=50): 0.444818 - HitRate(k=20): 0.899867 - HitRate(k=50): 0.961142
+2021-01-25 09:04:09,478 P8266 INFO Save best model: monitor(max): 0.266643
+2021-01-25 09:04:09,485 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 09:04:09,554 P8266 INFO Train loss: 0.090675
+2021-01-25 09:04:09,554 P8266 INFO ************ Epoch=20 end ************
+2021-01-25 09:04:09,555 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 09:05:43,043 P8266 INFO Negative sampling done
+2021-01-25 09:08:39,409 P8266 INFO --- Start evaluation ---
+2021-01-25 09:08:39,945 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 09:08:46,621 P8266 INFO [Metrics] F1(k=20): 0.165512 - NDCG(k=20): 0.266661 - Recall(k=20): 0.279286 - NDCG(k=50): 0.317183 - Recall(k=50): 0.444852 - HitRate(k=20): 0.899867 - HitRate(k=50): 0.961807
+2021-01-25 09:08:46,625 P8266 INFO Save best model: monitor(max): 0.266661
+2021-01-25 09:08:46,631 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 09:08:46,685 P8266 INFO Train loss: 0.090602
+2021-01-25 09:08:46,685 P8266 INFO ************ Epoch=21 end ************
+2021-01-25 09:08:46,686 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 09:10:20,589 P8266 INFO Negative sampling done
+2021-01-25 09:13:02,982 P8266 INFO --- Start evaluation ---
+2021-01-25 09:13:03,507 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 09:13:10,376 P8266 INFO [Metrics] F1(k=20): 0.165626 - NDCG(k=20): 0.266782 - Recall(k=20): 0.279797 - NDCG(k=50): 0.317258 - Recall(k=50): 0.445101 - HitRate(k=20): 0.900199 - HitRate(k=50): 0.961973
+2021-01-25 09:13:10,379 P8266 INFO Save best model: monitor(max): 0.266782
+2021-01-25 09:13:10,386 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 09:13:10,472 P8266 INFO Train loss: 0.090454
+2021-01-25 09:13:10,472 P8266 INFO ************ Epoch=22 end ************
+2021-01-25 09:13:10,473 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 09:14:41,366 P8266 INFO Negative sampling done
+2021-01-25 09:17:28,599 P8266 INFO --- Start evaluation ---
+2021-01-25 09:17:29,167 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 09:17:35,717 P8266 INFO [Metrics] F1(k=20): 0.165685 - NDCG(k=20): 0.266810 - Recall(k=20): 0.279847 - NDCG(k=50): 0.317410 - Recall(k=50): 0.445442 - HitRate(k=20): 0.899701 - HitRate(k=50): 0.961807
+2021-01-25 09:17:35,720 P8266 INFO Save best model: monitor(max): 0.266810
+2021-01-25 09:17:35,727 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 09:17:35,787 P8266 INFO Train loss: 0.090356
+2021-01-25 09:17:35,787 P8266 INFO ************ Epoch=23 end ************
+2021-01-25 09:17:35,788 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 09:19:11,348 P8266 INFO Negative sampling done
+2021-01-25 09:22:00,172 P8266 INFO --- Start evaluation ---
+2021-01-25 09:22:00,710 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 09:22:07,846 P8266 INFO [Metrics] F1(k=20): 0.165562 - NDCG(k=20): 0.266797 - Recall(k=20): 0.279596 - NDCG(k=50): 0.317454 - Recall(k=50): 0.445486 - HitRate(k=20): 0.900199 - HitRate(k=50): 0.961641
+2021-01-25 09:22:07,850 P8266 INFO Monitor(max) STOP: 0.266797 !
+2021-01-25 09:22:07,850 P8266 INFO Reduce learning rate on plateau: 0.000001
+2021-01-25 09:22:07,850 P8266 INFO Load best model: /home/XXX/benchmarks/Movielens1M/SimpleX_movielens1m_m1/movielens1m_m1_8de87281/SimpleX_movielens1m_m1_021_6b1eda86.model
+2021-01-25 09:22:07,855 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 09:22:07,915 P8266 INFO Train loss: 0.090323
+2021-01-25 09:22:07,915 P8266 INFO ************ Epoch=24 end ************
+2021-01-25 09:22:07,916 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 09:23:40,980 P8266 INFO Negative sampling done
+2021-01-25 09:26:26,565 P8266 INFO --- Start evaluation ---
+2021-01-25 09:26:27,143 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 09:26:33,564 P8266 INFO [Metrics] F1(k=20): 0.165677 - NDCG(k=20): 0.266825 - Recall(k=20): 0.279844 - NDCG(k=50): 0.317380 - Recall(k=50): 0.445301 - HitRate(k=20): 0.899701 - HitRate(k=50): 0.961475
+2021-01-25 09:26:33,567 P8266 INFO Save best model: monitor(max): 0.266825
+2021-01-25 09:26:33,573 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 09:26:33,625 P8266 INFO Train loss: 0.090171
+2021-01-25 09:26:33,625 P8266 INFO ************ Epoch=25 end ************
+2021-01-25 09:26:33,626 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 09:28:07,389 P8266 INFO Negative sampling done
+2021-01-25 09:31:01,034 P8266 INFO --- Start evaluation ---
+2021-01-25 09:31:01,636 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 09:31:08,642 P8266 INFO [Metrics] F1(k=20): 0.165722 - NDCG(k=20): 0.266837 - Recall(k=20): 0.280007 - NDCG(k=50): 0.317343 - Recall(k=50): 0.445363 - HitRate(k=20): 0.900033 - HitRate(k=50): 0.961641
+2021-01-25 09:31:08,645 P8266 INFO Save best model: monitor(max): 0.266837
+2021-01-25 09:31:08,652 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 09:31:08,711 P8266 INFO Train loss: 0.090188
+2021-01-25 09:31:08,711 P8266 INFO ************ Epoch=26 end ************
+2021-01-25 09:31:08,712 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 09:32:42,695 P8266 INFO Negative sampling done
+2021-01-25 09:35:22,046 P8266 INFO --- Start evaluation ---
+2021-01-25 09:35:22,621 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 09:35:29,681 P8266 INFO [Metrics] F1(k=20): 0.165752 - NDCG(k=20): 0.266935 - Recall(k=20): 0.280055 - NDCG(k=50): 0.317396 - Recall(k=50): 0.445256 - HitRate(k=20): 0.899701 - HitRate(k=50): 0.961475
+2021-01-25 09:35:29,684 P8266 INFO Save best model: monitor(max): 0.266935
+2021-01-25 09:35:29,691 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 09:35:29,760 P8266 INFO Train loss: 0.090202
+2021-01-25 09:35:29,760 P8266 INFO ************ Epoch=27 end ************
+2021-01-25 09:35:29,760 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 09:37:01,458 P8266 INFO Negative sampling done
+2021-01-25 09:40:00,527 P8266 INFO --- Start evaluation ---
+2021-01-25 09:40:01,075 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 09:40:07,827 P8266 INFO [Metrics] F1(k=20): 0.165724 - NDCG(k=20): 0.266895 - Recall(k=20): 0.280021 - NDCG(k=50): 0.317410 - Recall(k=50): 0.445267 - HitRate(k=20): 0.899867 - HitRate(k=50): 0.961475
+2021-01-25 09:40:07,830 P8266 INFO Monitor(max) STOP: 0.266895 !
+2021-01-25 09:40:07,830 P8266 INFO Reduce learning rate on plateau: 0.000001
+2021-01-25 09:40:07,830 P8266 INFO Load best model: /home/XXX/benchmarks/Movielens1M/SimpleX_movielens1m_m1/movielens1m_m1_8de87281/SimpleX_movielens1m_m1_021_6b1eda86.model
+2021-01-25 09:40:07,846 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 09:40:07,913 P8266 INFO Train loss: 0.090183
+2021-01-25 09:40:07,914 P8266 INFO ************ Epoch=28 end ************
+2021-01-25 09:40:07,914 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 09:41:40,352 P8266 INFO Negative sampling done
+2021-01-25 09:44:16,657 P8266 INFO --- Start evaluation ---
+2021-01-25 09:44:17,172 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 09:44:23,356 P8266 INFO [Metrics] F1(k=20): 0.165747 - NDCG(k=20): 0.266954 - Recall(k=20): 0.280099 - NDCG(k=50): 0.317451 - Recall(k=50): 0.445362 - HitRate(k=20): 0.900199 - HitRate(k=50): 0.961641
+2021-01-25 09:44:23,359 P8266 INFO Save best model: monitor(max): 0.266954
+2021-01-25 09:44:23,365 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 09:44:23,424 P8266 INFO Train loss: 0.090190
+2021-01-25 09:44:23,424 P8266 INFO ************ Epoch=29 end ************
+2021-01-25 09:44:23,425 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 09:45:56,127 P8266 INFO Negative sampling done
+2021-01-25 09:48:55,310 P8266 INFO --- Start evaluation ---
+2021-01-25 09:48:55,904 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 09:49:02,261 P8266 INFO [Metrics] F1(k=20): 0.165804 - NDCG(k=20): 0.266938 - Recall(k=20): 0.280168 - NDCG(k=50): 0.317364 - Recall(k=50): 0.445271 - HitRate(k=20): 0.900199 - HitRate(k=50): 0.961475
+2021-01-25 09:49:02,263 P8266 INFO Monitor(max) STOP: 0.266938 !
+2021-01-25 09:49:02,264 P8266 INFO Reduce learning rate on plateau: 0.000001
+2021-01-25 09:49:02,264 P8266 INFO Load best model: /home/XXX/benchmarks/Movielens1M/SimpleX_movielens1m_m1/movielens1m_m1_8de87281/SimpleX_movielens1m_m1_021_6b1eda86.model
+2021-01-25 09:49:02,280 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 09:49:02,353 P8266 INFO Train loss: 0.090192
+2021-01-25 09:49:02,353 P8266 INFO ************ Epoch=30 end ************
+2021-01-25 09:49:02,353 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 09:50:38,513 P8266 INFO Negative sampling done
+2021-01-25 09:53:15,793 P8266 INFO --- Start evaluation ---
+2021-01-25 09:53:16,310 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 09:53:23,265 P8266 INFO [Metrics] F1(k=20): 0.165809 - NDCG(k=20): 0.266971 - Recall(k=20): 0.280191 - NDCG(k=50): 0.317417 - Recall(k=50): 0.445358 - HitRate(k=20): 0.900199 - HitRate(k=50): 0.961475
+2021-01-25 09:53:23,268 P8266 INFO Save best model: monitor(max): 0.266971
+2021-01-25 09:53:23,275 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 09:53:23,333 P8266 INFO Train loss: 0.090163
+2021-01-25 09:53:23,333 P8266 INFO ************ Epoch=31 end ************
+2021-01-25 09:53:23,334 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 09:54:55,356 P8266 INFO Negative sampling done
+2021-01-25 09:57:51,376 P8266 INFO --- Start evaluation ---
+2021-01-25 09:57:51,945 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 09:57:58,750 P8266 INFO [Metrics] F1(k=20): 0.165859 - NDCG(k=20): 0.266965 - Recall(k=20): 0.280281 - NDCG(k=50): 0.317346 - Recall(k=50): 0.445229 - HitRate(k=20): 0.900199 - HitRate(k=50): 0.961475
+2021-01-25 09:57:58,754 P8266 INFO Monitor(max) STOP: 0.266965 !
+2021-01-25 09:57:58,754 P8266 INFO Reduce learning rate on plateau: 0.000001
+2021-01-25 09:57:58,754 P8266 INFO Load best model: /home/XXX/benchmarks/Movielens1M/SimpleX_movielens1m_m1/movielens1m_m1_8de87281/SimpleX_movielens1m_m1_021_6b1eda86.model
+2021-01-25 09:57:58,783 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 09:57:58,842 P8266 INFO Train loss: 0.090175
+2021-01-25 09:57:58,842 P8266 INFO ************ Epoch=32 end ************
+2021-01-25 09:57:58,843 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 09:59:31,849 P8266 INFO Negative sampling done
+2021-01-25 10:02:02,035 P8266 INFO --- Start evaluation ---
+2021-01-25 10:02:02,579 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 10:02:09,123 P8266 INFO [Metrics] F1(k=20): 0.165776 - NDCG(k=20): 0.266946 - Recall(k=20): 0.280085 - NDCG(k=50): 0.317385 - Recall(k=50): 0.445274 - HitRate(k=20): 0.900365 - HitRate(k=50): 0.961309
+2021-01-25 10:02:09,126 P8266 INFO Monitor(max) STOP: 0.266946 !
+2021-01-25 10:02:09,126 P8266 INFO Reduce learning rate on plateau: 0.000001
+2021-01-25 10:02:09,126 P8266 INFO Load best model: /home/XXX/benchmarks/Movielens1M/SimpleX_movielens1m_m1/movielens1m_m1_8de87281/SimpleX_movielens1m_m1_021_6b1eda86.model
+2021-01-25 10:02:09,145 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 10:02:09,202 P8266 INFO Train loss: 0.090133
+2021-01-25 10:02:09,202 P8266 INFO ************ Epoch=33 end ************
+2021-01-25 10:02:09,203 P8266 INFO Negative sampling num_negs=1500
+2021-01-25 10:03:40,897 P8266 INFO Negative sampling done
+2021-01-25 10:06:37,808 P8266 INFO --- Start evaluation ---
+2021-01-25 10:06:38,329 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 10:06:45,089 P8266 INFO [Metrics] F1(k=20): 0.165826 - NDCG(k=20): 0.266921 - Recall(k=20): 0.280162 - NDCG(k=50): 0.317373 - Recall(k=50): 0.445334 - HitRate(k=20): 0.900199 - HitRate(k=50): 0.961475
+2021-01-25 10:06:45,093 P8266 INFO Monitor(max) STOP: 0.266921 !
+2021-01-25 10:06:45,093 P8266 INFO Reduce learning rate on plateau: 0.000001
+2021-01-25 10:06:45,093 P8266 INFO Load best model: /home/XXX/benchmarks/Movielens1M/SimpleX_movielens1m_m1/movielens1m_m1_8de87281/SimpleX_movielens1m_m1_021_6b1eda86.model
+2021-01-25 10:06:45,121 P8266 INFO Early stopping at epoch=34
+2021-01-25 10:06:45,121 P8266 INFO --- 778/778 batches finished ---
+2021-01-25 10:06:45,180 P8266 INFO Train loss: 0.090137
+2021-01-25 10:06:45,180 P8266 INFO Training finished.
+2021-01-25 10:06:45,180 P8266 INFO Load best model: /home/XXX/benchmarks/Movielens1M/SimpleX_movielens1m_m1/movielens1m_m1_8de87281/SimpleX_movielens1m_m1_021_6b1eda86.model
+2021-01-25 10:06:45,236 P8266 INFO ****** Train/validation evaluation ******
+2021-01-25 10:06:45,236 P8266 INFO --- Start evaluation ---
+2021-01-25 10:06:45,785 P8266 INFO Evaluating metrics for 6022 users...
+2021-01-25 10:06:52,202 P8266 INFO [Metrics] F1(k=20): 0.165809 - NDCG(k=20): 0.266971 - Recall(k=20): 0.280191 - NDCG(k=50): 0.317417 - Recall(k=50): 0.445358 - HitRate(k=20): 0.900199 - HitRate(k=50): 0.961475

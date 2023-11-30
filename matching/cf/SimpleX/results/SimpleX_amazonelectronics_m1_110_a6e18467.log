@@ -1,0 +1,264 @@
+2021-01-16 01:52:32,480 P47451 INFO {
+    "aggregator": "mean",
+    "attention_dropout": "0",
+    "batch_size": "256",
+    "corpus_index": "corpus_index",
+    "data_format": "csv",
+    "data_root": "../data/AmazonElectronics/",
+    "dataset_id": "amazonelectronics_m1_56de5fec",
+    "debug_mode": "False",
+    "embedding_dim": "50",
+    "embedding_regularizer": "0.05",
+    "enable_bias": "False",
+    "epochs": "100",
+    "eval_interval_epochs": "1",
+    "feature_cols": "[{'active': True, 'dtype': 'int', 'name': 'query_index', 'type': 'index'}, {'active': True, 'dtype': 'int', 'name': 'corpus_index', 'type': 'index'}, {'active': True, 'dtype': 'str', 'name': 'user_id', 'source': 'user', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'embedding_callback': None, 'max_len': 500, 'name': 'user_history', 'padding': 'pre', 'source': 'user', 'splitter': '^', 'type': 'sequence'}, {'active': True, 'dtype': 'str', 'name': 'item_id', 'share_embedding': 'user_history', 'source': 'item', 'type': 'categorical'}]",
+    "fix_sampling_seeds": "True",
+    "gamma": "0.3",
+    "gpu": "1",
+    "ignore_pos_items": "True",
+    "item_corpus": "../data/AmazonElectronics/amazonelectronics_m1/item_corpus.csv",
+    "item_id_field": "item_id",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.0005",
+    "loss": "CosineContrastiveLoss",
+    "margin": "0.8",
+    "metrics": "['F1(k=20)', 'NDCG(k=20)', 'Recall(k=20)', 'NDCG(k=50)', 'Recall(k=50)', 'HitRate(k=20)', 'HitRate(k=50)']",
+    "min_categr_count": "1",
+    "model": "SimpleX",
+    "model_id": "SimpleX_amazonelectronics_m1_110_a6e18467",
+    "model_root": "./AmazonElectronics/SimpleX_amazonelectronics_m1/",
+    "monitor": "NDCG(k=20)",
+    "monitor_mode": "max",
+    "negative_weight": "4",
+    "net_dropout": "0",
+    "net_regularizer": "0",
+    "num_negs": "1000",
+    "num_workers": "3",
+    "optimizer": "adam",
+    "patience": "3",
+    "query_index": "query_index",
+    "sampling_num_process": "1",
+    "save_best_only": "True",
+    "seed": "2019",
+    "shuffle": "True",
+    "similarity_score": "cosine",
+    "train_data": "../data/AmazonElectronics/amazonelectronics_m1/train.csv",
+    "user_history_field": "user_history",
+    "user_id_field": "user_id",
+    "valid_data": "../data/AmazonElectronics/amazonelectronics_m1/test.csv",
+    "verbose": "1",
+    "version": "pytorch"
+}
+2021-01-16 01:52:32,481 P47451 INFO Set up feature encoder...
+2021-01-16 01:52:32,481 P47451 INFO Load feature_map from json: ../data/AmazonElectronics/amazonelectronics_m1_56de5fec/feature_map.json
+2021-01-16 01:52:37,103 P47451 INFO Total number of parameters: 150500.
+2021-01-16 01:52:37,103 P47451 INFO Loading data...
+2021-01-16 01:52:37,183 P47451 INFO Loading data from h5: ../data/AmazonElectronics/amazonelectronics_m1_56de5fec/train.h5
+2021-01-16 01:52:37,223 P47451 INFO Loading data from h5: ../data/AmazonElectronics/amazonelectronics_m1_56de5fec/item_corpus.h5
+2021-01-16 01:52:37,245 P47451 INFO Loading data from h5: ../data/AmazonElectronics/amazonelectronics_m1_56de5fec/valid.h5
+2021-01-16 01:52:37,259 P47451 INFO Loading data from h5: ../data/AmazonElectronics/amazonelectronics_m1_56de5fec/item_corpus.h5
+2021-01-16 01:52:37,260 P47451 INFO Train samples: total/31887, blocks/1
+2021-01-16 01:52:37,261 P47451 INFO Validation samples: total/1435, blocks/1
+2021-01-16 01:52:37,261 P47451 INFO Loading train data done.
+2021-01-16 01:52:37,261 P47451 INFO **** Start training: 125 batches/epoch ****
+2021-01-16 01:52:37,264 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:52:44,147 P47451 INFO Negative sampling done
+2021-01-16 01:52:46,713 P47451 INFO --- Start evaluation ---
+2021-01-16 01:52:47,200 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:52:47,999 P47451 INFO [Metrics] F1(k=20): 0.023542 - NDCG(k=20): 0.058556 - Recall(k=20): 0.102551 - NDCG(k=50): 0.076256 - Recall(k=50): 0.169674 - HitRate(k=20): 0.245296 - HitRate(k=50): 0.377003
+2021-01-16 01:52:48,000 P47451 INFO Save best model: monitor(max): 0.058556
+2021-01-16 01:52:48,238 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:52:48,295 P47451 INFO Train loss: 0.357503
+2021-01-16 01:52:48,295 P47451 INFO ************ Epoch=1 end ************
+2021-01-16 01:52:48,296 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:52:55,122 P47451 INFO Negative sampling done
+2021-01-16 01:53:00,729 P47451 INFO --- Start evaluation ---
+2021-01-16 01:53:01,351 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:53:02,307 P47451 INFO [Metrics] F1(k=20): 0.026643 - NDCG(k=20): 0.063376 - Recall(k=20): 0.115308 - NDCG(k=50): 0.080293 - Recall(k=50): 0.180683 - HitRate(k=20): 0.267596 - HitRate(k=50): 0.382578
+2021-01-16 01:53:02,308 P47451 INFO Save best model: monitor(max): 0.063376
+2021-01-16 01:53:02,310 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:53:02,386 P47451 INFO Train loss: 0.255148
+2021-01-16 01:53:02,386 P47451 INFO ************ Epoch=2 end ************
+2021-01-16 01:53:02,387 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:53:09,377 P47451 INFO Negative sampling done
+2021-01-16 01:53:14,733 P47451 INFO --- Start evaluation ---
+2021-01-16 01:53:15,233 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:53:16,331 P47451 INFO [Metrics] F1(k=20): 0.026635 - NDCG(k=20): 0.063098 - Recall(k=20): 0.113553 - NDCG(k=50): 0.082214 - Recall(k=50): 0.185816 - HitRate(k=20): 0.266899 - HitRate(k=50): 0.394425
+2021-01-16 01:53:16,332 P47451 INFO Monitor(max) STOP: 0.063098 !
+2021-01-16 01:53:16,332 P47451 INFO Reduce learning rate on plateau: 0.000050
+2021-01-16 01:53:16,332 P47451 INFO Load best model: /home/XXX/benchmarks/AmazonElectronics/SimpleX_amazonelectronics_m1/amazonelectronics_m1_56de5fec/SimpleX_amazonelectronics_m1_110_a6e18467.model
+2021-01-16 01:53:16,337 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:53:16,430 P47451 INFO Train loss: 0.255182
+2021-01-16 01:53:16,430 P47451 INFO ************ Epoch=3 end ************
+2021-01-16 01:53:16,431 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:53:23,758 P47451 INFO Negative sampling done
+2021-01-16 01:53:28,017 P47451 INFO --- Start evaluation ---
+2021-01-16 01:53:28,574 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:53:29,524 P47451 INFO [Metrics] F1(k=20): 0.028474 - NDCG(k=20): 0.071069 - Recall(k=20): 0.121521 - NDCG(k=50): 0.093524 - Recall(k=50): 0.205902 - HitRate(k=20): 0.279443 - HitRate(k=50): 0.432056
+2021-01-16 01:53:29,525 P47451 INFO Save best model: monitor(max): 0.071069
+2021-01-16 01:53:29,527 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:53:29,575 P47451 INFO Train loss: 0.220729
+2021-01-16 01:53:29,575 P47451 INFO ************ Epoch=4 end ************
+2021-01-16 01:53:29,576 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:53:36,847 P47451 INFO Negative sampling done
+2021-01-16 01:53:39,731 P47451 INFO --- Start evaluation ---
+2021-01-16 01:53:40,204 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:53:41,145 P47451 INFO [Metrics] F1(k=20): 0.029361 - NDCG(k=20): 0.072879 - Recall(k=20): 0.126759 - NDCG(k=50): 0.093867 - Recall(k=50): 0.206772 - HitRate(k=20): 0.285714 - HitRate(k=50): 0.425784
+2021-01-16 01:53:41,145 P47451 INFO Save best model: monitor(max): 0.072879
+2021-01-16 01:53:41,147 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:53:41,279 P47451 INFO Train loss: 0.208537
+2021-01-16 01:53:41,279 P47451 INFO ************ Epoch=5 end ************
+2021-01-16 01:53:41,279 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:53:47,804 P47451 INFO Negative sampling done
+2021-01-16 01:53:50,932 P47451 INFO --- Start evaluation ---
+2021-01-16 01:53:51,431 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:53:52,468 P47451 INFO [Metrics] F1(k=20): 0.030314 - NDCG(k=20): 0.076130 - Recall(k=20): 0.130955 - NDCG(k=50): 0.097800 - Recall(k=50): 0.213705 - HitRate(k=20): 0.291986 - HitRate(k=50): 0.439024
+2021-01-16 01:53:52,468 P47451 INFO Save best model: monitor(max): 0.076130
+2021-01-16 01:53:52,470 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:53:52,517 P47451 INFO Train loss: 0.202279
+2021-01-16 01:53:52,517 P47451 INFO ************ Epoch=6 end ************
+2021-01-16 01:53:52,517 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:53:59,143 P47451 INFO Negative sampling done
+2021-01-16 01:54:05,125 P47451 INFO --- Start evaluation ---
+2021-01-16 01:54:05,631 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:54:06,713 P47451 INFO [Metrics] F1(k=20): 0.031090 - NDCG(k=20): 0.077099 - Recall(k=20): 0.133970 - NDCG(k=50): 0.098905 - Recall(k=50): 0.218235 - HitRate(k=20): 0.297561 - HitRate(k=50): 0.447387
+2021-01-16 01:54:06,714 P47451 INFO Save best model: monitor(max): 0.077099
+2021-01-16 01:54:06,716 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:54:06,820 P47451 INFO Train loss: 0.197279
+2021-01-16 01:54:06,820 P47451 INFO ************ Epoch=7 end ************
+2021-01-16 01:54:06,834 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:54:13,846 P47451 INFO Negative sampling done
+2021-01-16 01:54:20,449 P47451 INFO --- Start evaluation ---
+2021-01-16 01:54:20,937 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:54:21,797 P47451 INFO [Metrics] F1(k=20): 0.030951 - NDCG(k=20): 0.078050 - Recall(k=20): 0.132853 - NDCG(k=50): 0.099871 - Recall(k=50): 0.215752 - HitRate(k=20): 0.298258 - HitRate(k=50): 0.445296
+2021-01-16 01:54:21,797 P47451 INFO Save best model: monitor(max): 0.078050
+2021-01-16 01:54:21,799 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:54:21,861 P47451 INFO Train loss: 0.193271
+2021-01-16 01:54:21,861 P47451 INFO ************ Epoch=8 end ************
+2021-01-16 01:54:21,861 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:54:28,786 P47451 INFO Negative sampling done
+2021-01-16 01:54:31,852 P47451 INFO --- Start evaluation ---
+2021-01-16 01:54:32,346 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:54:33,194 P47451 INFO [Metrics] F1(k=20): 0.031630 - NDCG(k=20): 0.078177 - Recall(k=20): 0.137353 - NDCG(k=50): 0.099417 - Recall(k=50): 0.219123 - HitRate(k=20): 0.303833 - HitRate(k=50): 0.450174
+2021-01-16 01:54:33,195 P47451 INFO Save best model: monitor(max): 0.078177
+2021-01-16 01:54:33,196 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:54:33,272 P47451 INFO Train loss: 0.190093
+2021-01-16 01:54:33,272 P47451 INFO ************ Epoch=9 end ************
+2021-01-16 01:54:33,273 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:54:40,252 P47451 INFO Negative sampling done
+2021-01-16 01:54:42,289 P47451 INFO --- Start evaluation ---
+2021-01-16 01:54:42,790 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:54:43,451 P47451 INFO [Metrics] F1(k=20): 0.033076 - NDCG(k=20): 0.082065 - Recall(k=20): 0.143339 - NDCG(k=50): 0.102252 - Recall(k=50): 0.220844 - HitRate(k=20): 0.319861 - HitRate(k=50): 0.451568
+2021-01-16 01:54:43,452 P47451 INFO Save best model: monitor(max): 0.082065
+2021-01-16 01:54:43,455 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:54:43,504 P47451 INFO Train loss: 0.187518
+2021-01-16 01:54:43,505 P47451 INFO ************ Epoch=10 end ************
+2021-01-16 01:54:43,505 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:54:50,426 P47451 INFO Negative sampling done
+2021-01-16 01:54:54,883 P47451 INFO --- Start evaluation ---
+2021-01-16 01:54:55,355 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:54:56,290 P47451 INFO [Metrics] F1(k=20): 0.032534 - NDCG(k=20): 0.080091 - Recall(k=20): 0.141215 - NDCG(k=50): 0.101723 - Recall(k=50): 0.224275 - HitRate(k=20): 0.316376 - HitRate(k=50): 0.457840
+2021-01-16 01:54:56,290 P47451 INFO Monitor(max) STOP: 0.080091 !
+2021-01-16 01:54:56,290 P47451 INFO Reduce learning rate on plateau: 0.000005
+2021-01-16 01:54:56,291 P47451 INFO Load best model: /home/XXX/benchmarks/AmazonElectronics/SimpleX_amazonelectronics_m1/amazonelectronics_m1_56de5fec/SimpleX_amazonelectronics_m1_110_a6e18467.model
+2021-01-16 01:54:56,295 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:54:56,372 P47451 INFO Train loss: 0.185437
+2021-01-16 01:54:56,372 P47451 INFO ************ Epoch=11 end ************
+2021-01-16 01:54:56,373 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:55:03,166 P47451 INFO Negative sampling done
+2021-01-16 01:55:06,797 P47451 INFO --- Start evaluation ---
+2021-01-16 01:55:07,373 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:55:08,429 P47451 INFO [Metrics] F1(k=20): 0.033343 - NDCG(k=20): 0.083547 - Recall(k=20): 0.143976 - NDCG(k=50): 0.105005 - Recall(k=50): 0.227662 - HitRate(k=20): 0.319861 - HitRate(k=50): 0.461324
+2021-01-16 01:55:08,430 P47451 INFO Save best model: monitor(max): 0.083547
+2021-01-16 01:55:08,432 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:55:08,539 P47451 INFO Train loss: 0.175219
+2021-01-16 01:55:08,540 P47451 INFO ************ Epoch=12 end ************
+2021-01-16 01:55:08,540 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:55:15,319 P47451 INFO Negative sampling done
+2021-01-16 01:55:18,816 P47451 INFO --- Start evaluation ---
+2021-01-16 01:55:19,296 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:55:19,997 P47451 INFO [Metrics] F1(k=20): 0.033085 - NDCG(k=20): 0.083019 - Recall(k=20): 0.142575 - NDCG(k=50): 0.105040 - Recall(k=50): 0.228316 - HitRate(k=20): 0.317073 - HitRate(k=50): 0.462021
+2021-01-16 01:55:19,997 P47451 INFO Monitor(max) STOP: 0.083019 !
+2021-01-16 01:55:19,998 P47451 INFO Reduce learning rate on plateau: 0.000001
+2021-01-16 01:55:19,998 P47451 INFO Load best model: /home/XXX/benchmarks/AmazonElectronics/SimpleX_amazonelectronics_m1/amazonelectronics_m1_56de5fec/SimpleX_amazonelectronics_m1_110_a6e18467.model
+2021-01-16 01:55:20,007 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:55:20,057 P47451 INFO Train loss: 0.173856
+2021-01-16 01:55:20,057 P47451 INFO ************ Epoch=13 end ************
+2021-01-16 01:55:20,058 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:55:27,401 P47451 INFO Negative sampling done
+2021-01-16 01:55:29,525 P47451 INFO --- Start evaluation ---
+2021-01-16 01:55:29,969 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:55:30,745 P47451 INFO [Metrics] F1(k=20): 0.033401 - NDCG(k=20): 0.083592 - Recall(k=20): 0.144150 - NDCG(k=50): 0.104966 - Recall(k=50): 0.227547 - HitRate(k=20): 0.319861 - HitRate(k=50): 0.460627
+2021-01-16 01:55:30,746 P47451 INFO Save best model: monitor(max): 0.083592
+2021-01-16 01:55:30,748 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:55:30,801 P47451 INFO Train loss: 0.173024
+2021-01-16 01:55:30,801 P47451 INFO ************ Epoch=14 end ************
+2021-01-16 01:55:30,801 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:55:37,547 P47451 INFO Negative sampling done
+2021-01-16 01:55:41,167 P47451 INFO --- Start evaluation ---
+2021-01-16 01:55:41,654 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:55:42,502 P47451 INFO [Metrics] F1(k=20): 0.033217 - NDCG(k=20): 0.083496 - Recall(k=20): 0.143337 - NDCG(k=50): 0.105311 - Recall(k=50): 0.228587 - HitRate(k=20): 0.317770 - HitRate(k=50): 0.462021
+2021-01-16 01:55:42,503 P47451 INFO Monitor(max) STOP: 0.083496 !
+2021-01-16 01:55:42,503 P47451 INFO Reduce learning rate on plateau: 0.000001
+2021-01-16 01:55:42,503 P47451 INFO Load best model: /home/XXX/benchmarks/AmazonElectronics/SimpleX_amazonelectronics_m1/amazonelectronics_m1_56de5fec/SimpleX_amazonelectronics_m1_110_a6e18467.model
+2021-01-16 01:55:42,505 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:55:42,575 P47451 INFO Train loss: 0.172886
+2021-01-16 01:55:42,575 P47451 INFO ************ Epoch=15 end ************
+2021-01-16 01:55:42,575 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:55:48,953 P47451 INFO Negative sampling done
+2021-01-16 01:55:53,770 P47451 INFO --- Start evaluation ---
+2021-01-16 01:55:54,481 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:55:55,421 P47451 INFO [Metrics] F1(k=20): 0.033520 - NDCG(k=20): 0.083932 - Recall(k=20): 0.144557 - NDCG(k=50): 0.105353 - Recall(k=50): 0.228367 - HitRate(k=20): 0.320557 - HitRate(k=50): 0.462021
+2021-01-16 01:55:55,421 P47451 INFO Save best model: monitor(max): 0.083932
+2021-01-16 01:55:55,423 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:55:55,468 P47451 INFO Train loss: 0.172885
+2021-01-16 01:55:55,468 P47451 INFO ************ Epoch=16 end ************
+2021-01-16 01:55:55,469 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:56:02,233 P47451 INFO Negative sampling done
+2021-01-16 01:56:08,345 P47451 INFO --- Start evaluation ---
+2021-01-16 01:56:09,043 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:56:10,023 P47451 INFO [Metrics] F1(k=20): 0.033808 - NDCG(k=20): 0.084236 - Recall(k=20): 0.145708 - NDCG(k=50): 0.105092 - Recall(k=50): 0.227560 - HitRate(k=20): 0.322648 - HitRate(k=50): 0.460627
+2021-01-16 01:56:10,024 P47451 INFO Save best model: monitor(max): 0.084236
+2021-01-16 01:56:10,026 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:56:10,096 P47451 INFO Train loss: 0.172693
+2021-01-16 01:56:10,096 P47451 INFO ************ Epoch=17 end ************
+2021-01-16 01:56:10,097 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:56:16,847 P47451 INFO Negative sampling done
+2021-01-16 01:56:22,445 P47451 INFO --- Start evaluation ---
+2021-01-16 01:56:23,051 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:56:23,963 P47451 INFO [Metrics] F1(k=20): 0.033638 - NDCG(k=20): 0.083932 - Recall(k=20): 0.145244 - NDCG(k=50): 0.105149 - Recall(k=50): 0.228373 - HitRate(k=20): 0.321254 - HitRate(k=50): 0.461324
+2021-01-16 01:56:23,964 P47451 INFO Monitor(max) STOP: 0.083932 !
+2021-01-16 01:56:23,964 P47451 INFO Reduce learning rate on plateau: 0.000001
+2021-01-16 01:56:23,964 P47451 INFO Load best model: /home/XXX/benchmarks/AmazonElectronics/SimpleX_amazonelectronics_m1/amazonelectronics_m1_56de5fec/SimpleX_amazonelectronics_m1_110_a6e18467.model
+2021-01-16 01:56:23,969 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:56:24,016 P47451 INFO Train loss: 0.172566
+2021-01-16 01:56:24,016 P47451 INFO ************ Epoch=18 end ************
+2021-01-16 01:56:24,017 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:56:30,630 P47451 INFO Negative sampling done
+2021-01-16 01:56:34,895 P47451 INFO --- Start evaluation ---
+2021-01-16 01:56:35,320 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:56:36,251 P47451 INFO [Metrics] F1(k=20): 0.033513 - NDCG(k=20): 0.083464 - Recall(k=20): 0.144447 - NDCG(k=50): 0.104925 - Recall(k=50): 0.228472 - HitRate(k=20): 0.319164 - HitRate(k=50): 0.462021
+2021-01-16 01:56:36,252 P47451 INFO Monitor(max) STOP: 0.083464 !
+2021-01-16 01:56:36,252 P47451 INFO Reduce learning rate on plateau: 0.000001
+2021-01-16 01:56:36,252 P47451 INFO Load best model: /home/XXX/benchmarks/AmazonElectronics/SimpleX_amazonelectronics_m1/amazonelectronics_m1_56de5fec/SimpleX_amazonelectronics_m1_110_a6e18467.model
+2021-01-16 01:56:36,256 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:56:36,309 P47451 INFO Train loss: 0.172579
+2021-01-16 01:56:36,309 P47451 INFO ************ Epoch=19 end ************
+2021-01-16 01:56:36,310 P47451 INFO Negative sampling num_negs=1000
+2021-01-16 01:56:43,074 P47451 INFO Negative sampling done
+2021-01-16 01:56:45,997 P47451 INFO --- Start evaluation ---
+2021-01-16 01:56:46,710 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:56:47,739 P47451 INFO [Metrics] F1(k=20): 0.033448 - NDCG(k=20): 0.083469 - Recall(k=20): 0.144198 - NDCG(k=50): 0.104972 - Recall(k=50): 0.228356 - HitRate(k=20): 0.319164 - HitRate(k=50): 0.462718
+2021-01-16 01:56:47,739 P47451 INFO Monitor(max) STOP: 0.083469 !
+2021-01-16 01:56:47,739 P47451 INFO Reduce learning rate on plateau: 0.000001
+2021-01-16 01:56:47,739 P47451 INFO Load best model: /home/XXX/benchmarks/AmazonElectronics/SimpleX_amazonelectronics_m1/amazonelectronics_m1_56de5fec/SimpleX_amazonelectronics_m1_110_a6e18467.model
+2021-01-16 01:56:47,743 P47451 INFO Early stopping at epoch=20
+2021-01-16 01:56:47,744 P47451 INFO --- 125/125 batches finished ---
+2021-01-16 01:56:47,794 P47451 INFO Train loss: 0.172581
+2021-01-16 01:56:47,795 P47451 INFO Training finished.
+2021-01-16 01:56:47,795 P47451 INFO Load best model: /home/XXX/benchmarks/AmazonElectronics/SimpleX_amazonelectronics_m1/amazonelectronics_m1_56de5fec/SimpleX_amazonelectronics_m1_110_a6e18467.model
+2021-01-16 01:56:47,834 P47451 INFO ****** Train/validation evaluation ******
+2021-01-16 01:56:47,834 P47451 INFO --- Start evaluation ---
+2021-01-16 01:56:48,493 P47451 INFO Evaluating metrics for 1435 users...
+2021-01-16 01:56:49,368 P47451 INFO [Metrics] F1(k=20): 0.033808 - NDCG(k=20): 0.084236 - Recall(k=20): 0.145708 - NDCG(k=50): 0.105092 - Recall(k=50): 0.227560 - HitRate(k=20): 0.322648 - HitRate(k=50): 0.460627

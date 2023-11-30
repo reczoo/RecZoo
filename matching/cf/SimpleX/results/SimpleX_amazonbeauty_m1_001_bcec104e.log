@@ -1,0 +1,233 @@
+2021-01-20 20:37:00,798 P48687 INFO {
+    "aggregator": "mean",
+    "attention_dropout": "0",
+    "batch_size": "256",
+    "corpus_index": "corpus_index",
+    "data_format": "csv",
+    "data_root": "../data/AmazonBeauty/",
+    "dataset_id": "amazonbeauty_m1_04d53001",
+    "debug_mode": "False",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.001",
+    "enable_bias": "True",
+    "epochs": "100",
+    "eval_interval_epochs": "1",
+    "feature_cols": "[{'active': True, 'dtype': 'int', 'name': 'query_index', 'type': 'index'}, {'active': True, 'dtype': 'int', 'name': 'corpus_index', 'type': 'index'}, {'active': True, 'dtype': 'str', 'name': 'user_id', 'source': 'user', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'embedding_callback': None, 'max_len': 500, 'name': 'user_history', 'padding': 'pre', 'source': 'user', 'splitter': '^', 'type': 'sequence'}, {'active': True, 'dtype': 'str', 'name': 'item_id', 'share_embedding': 'user_history', 'source': 'item', 'type': 'categorical'}]",
+    "fix_sampling_seeds": "True",
+    "gamma": "1",
+    "gpu": "1",
+    "ignore_pos_items": "True",
+    "item_corpus": "../data/AmazonBeauty/amazonbeauty_m1/item_corpus.csv",
+    "item_id_field": "item_id",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "CosineContrastiveLoss",
+    "margin": "0.3",
+    "metrics": "['Recall(k=20)', 'Recall(k=50)', 'NDCG(k=20)', 'NDCG(k=50)', 'HitRate(k=20)', 'HitRate(k=50)']",
+    "min_categr_count": "1",
+    "model": "SimpleX",
+    "model_id": "SimpleX_amazonbeauty_m1_001_bcec104e",
+    "model_root": "./AmazonBeauty/SimpleX_amazonbeauty_m1/",
+    "monitor": "Recall(k=20)",
+    "monitor_mode": "max",
+    "negative_weight": "10",
+    "net_dropout": "0.1",
+    "net_regularizer": "0",
+    "num_negs": "800",
+    "num_workers": "3",
+    "optimizer": "adam",
+    "patience": "3",
+    "query_index": "query_index",
+    "sampling_num_process": "1",
+    "save_best_only": "True",
+    "seed": "2019",
+    "shuffle": "True",
+    "similarity_score": "cosine",
+    "train_data": "../data/AmazonBeauty/amazonbeauty_m1/train.csv",
+    "user_history_field": "user_history",
+    "user_id_field": "user_id",
+    "valid_data": "../data/AmazonBeauty/amazonbeauty_m1/test.csv",
+    "verbose": "1",
+    "version": "pytorch"
+}
+2021-01-20 20:37:00,799 P48687 INFO Set up feature encoder...
+2021-01-20 20:37:00,799 P48687 INFO Load feature_map from json: ../data/AmazonBeauty/amazonbeauty_m1_04d53001/feature_map.json
+2021-01-20 20:37:03,561 P48687 INFO Total number of parameters: 695697.
+2021-01-20 20:37:03,561 P48687 INFO Loading data...
+2021-01-20 20:37:03,566 P48687 INFO Loading data from h5: ../data/AmazonBeauty/amazonbeauty_m1_04d53001/train.h5
+2021-01-20 20:37:03,636 P48687 INFO Loading data from h5: ../data/AmazonBeauty/amazonbeauty_m1_04d53001/item_corpus.h5
+2021-01-20 20:37:03,663 P48687 INFO Loading data from h5: ../data/AmazonBeauty/amazonbeauty_m1_04d53001/valid.h5
+2021-01-20 20:37:03,806 P48687 INFO Loading data from h5: ../data/AmazonBeauty/amazonbeauty_m1_04d53001/item_corpus.h5
+2021-01-20 20:37:03,808 P48687 INFO Train samples: total/60818, blocks/1
+2021-01-20 20:37:03,808 P48687 INFO Validation samples: total/7068, blocks/1
+2021-01-20 20:37:03,808 P48687 INFO Loading train data done.
+2021-01-20 20:37:03,808 P48687 INFO **** Start training: 238 batches/epoch ****
+2021-01-20 20:37:03,810 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:37:16,697 P48687 INFO Negative sampling done
+2021-01-20 20:37:20,169 P48687 INFO --- Start evaluation ---
+2021-01-20 20:37:20,650 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:37:22,130 P48687 INFO [Metrics] Recall(k=20): 0.028941 - Recall(k=50): 0.051007 - NDCG(k=20): 0.017957 - NDCG(k=50): 0.024407 - HitRate(k=20): 0.078806 - HitRate(k=50): 0.123656
+2021-01-20 20:37:22,132 P48687 INFO Save best model: monitor(max): 0.028941
+2021-01-20 20:37:22,136 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:37:22,188 P48687 INFO Train loss: 0.957887
+2021-01-20 20:37:22,189 P48687 INFO ************ Epoch=1 end ************
+2021-01-20 20:37:22,189 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:37:34,938 P48687 INFO Negative sampling done
+2021-01-20 20:37:38,358 P48687 INFO --- Start evaluation ---
+2021-01-20 20:37:38,837 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:37:40,331 P48687 INFO [Metrics] Recall(k=20): 0.094434 - Recall(k=50): 0.148131 - NDCG(k=20): 0.058511 - NDCG(k=50): 0.074151 - HitRate(k=20): 0.199349 - HitRate(k=50): 0.273911
+2021-01-20 20:37:40,333 P48687 INFO Save best model: monitor(max): 0.094434
+2021-01-20 20:37:40,338 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:37:40,387 P48687 INFO Train loss: 0.750699
+2021-01-20 20:37:40,387 P48687 INFO ************ Epoch=2 end ************
+2021-01-20 20:37:40,387 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:37:53,140 P48687 INFO Negative sampling done
+2021-01-20 20:37:56,587 P48687 INFO --- Start evaluation ---
+2021-01-20 20:37:57,067 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:37:58,557 P48687 INFO [Metrics] Recall(k=20): 0.125443 - Recall(k=50): 0.194533 - NDCG(k=20): 0.076010 - NDCG(k=50): 0.095457 - HitRate(k=20): 0.254810 - HitRate(k=50): 0.344228
+2021-01-20 20:37:58,559 P48687 INFO Save best model: monitor(max): 0.125443
+2021-01-20 20:37:58,565 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:37:58,634 P48687 INFO Train loss: 0.611323
+2021-01-20 20:37:58,635 P48687 INFO ************ Epoch=3 end ************
+2021-01-20 20:37:58,635 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:38:11,637 P48687 INFO Negative sampling done
+2021-01-20 20:38:15,104 P48687 INFO --- Start evaluation ---
+2021-01-20 20:38:15,572 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:38:17,062 P48687 INFO [Metrics] Recall(k=20): 0.142901 - Recall(k=50): 0.217703 - NDCG(k=20): 0.085973 - NDCG(k=50): 0.106938 - HitRate(k=20): 0.284663 - HitRate(k=50): 0.378042
+2021-01-20 20:38:17,065 P48687 INFO Save best model: monitor(max): 0.142901
+2021-01-20 20:38:17,070 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:38:17,124 P48687 INFO Train loss: 0.567353
+2021-01-20 20:38:17,125 P48687 INFO ************ Epoch=4 end ************
+2021-01-20 20:38:17,125 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:38:34,165 P48687 INFO Negative sampling done
+2021-01-20 20:38:37,596 P48687 INFO --- Start evaluation ---
+2021-01-20 20:38:38,066 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:38:43,108 P48687 INFO [Metrics] Recall(k=20): 0.150213 - Recall(k=50): 0.233092 - NDCG(k=20): 0.089572 - NDCG(k=50): 0.112657 - HitRate(k=20): 0.295416 - HitRate(k=50): 0.402660
+2021-01-20 20:38:43,115 P48687 INFO Save best model: monitor(max): 0.150213
+2021-01-20 20:38:43,154 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:38:43,339 P48687 INFO Train loss: 0.547188
+2021-01-20 20:38:43,339 P48687 INFO ************ Epoch=5 end ************
+2021-01-20 20:38:43,340 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:38:57,917 P48687 INFO Negative sampling done
+2021-01-20 20:39:01,356 P48687 INFO --- Start evaluation ---
+2021-01-20 20:39:01,819 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:39:03,400 P48687 INFO [Metrics] Recall(k=20): 0.157168 - Recall(k=50): 0.242277 - NDCG(k=20): 0.094260 - NDCG(k=50): 0.117931 - HitRate(k=20): 0.308149 - HitRate(k=50): 0.413837
+2021-01-20 20:39:03,402 P48687 INFO Save best model: monitor(max): 0.157168
+2021-01-20 20:39:03,407 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:39:03,486 P48687 INFO Train loss: 0.536337
+2021-01-20 20:39:03,486 P48687 INFO ************ Epoch=6 end ************
+2021-01-20 20:39:03,487 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:39:16,059 P48687 INFO Negative sampling done
+2021-01-20 20:39:19,578 P48687 INFO --- Start evaluation ---
+2021-01-20 20:39:20,416 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:39:22,004 P48687 INFO [Metrics] Recall(k=20): 0.161563 - Recall(k=50): 0.249275 - NDCG(k=20): 0.095885 - NDCG(k=50): 0.120101 - HitRate(k=20): 0.314941 - HitRate(k=50): 0.424165
+2021-01-20 20:39:22,006 P48687 INFO Save best model: monitor(max): 0.161563
+2021-01-20 20:39:22,011 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:39:22,065 P48687 INFO Train loss: 0.530258
+2021-01-20 20:39:22,065 P48687 INFO ************ Epoch=7 end ************
+2021-01-20 20:39:22,066 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:39:34,947 P48687 INFO Negative sampling done
+2021-01-20 20:39:38,422 P48687 INFO --- Start evaluation ---
+2021-01-20 20:39:38,910 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:39:40,400 P48687 INFO [Metrics] Recall(k=20): 0.165863 - Recall(k=50): 0.251444 - NDCG(k=20): 0.098619 - NDCG(k=50): 0.122300 - HitRate(k=20): 0.320458 - HitRate(k=50): 0.426995
+2021-01-20 20:39:40,403 P48687 INFO Save best model: monitor(max): 0.165863
+2021-01-20 20:39:40,407 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:39:40,462 P48687 INFO Train loss: 0.527436
+2021-01-20 20:39:40,462 P48687 INFO ************ Epoch=8 end ************
+2021-01-20 20:39:40,463 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:39:53,287 P48687 INFO Negative sampling done
+2021-01-20 20:39:56,736 P48687 INFO --- Start evaluation ---
+2021-01-20 20:39:57,216 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:39:58,674 P48687 INFO [Metrics] Recall(k=20): 0.168977 - Recall(k=50): 0.256431 - NDCG(k=20): 0.101588 - NDCG(k=50): 0.125602 - HitRate(k=20): 0.326259 - HitRate(k=50): 0.435059
+2021-01-20 20:39:58,676 P48687 INFO Save best model: monitor(max): 0.168977
+2021-01-20 20:39:58,681 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:39:58,765 P48687 INFO Train loss: 0.526746
+2021-01-20 20:39:58,765 P48687 INFO ************ Epoch=9 end ************
+2021-01-20 20:39:58,766 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:40:11,365 P48687 INFO Negative sampling done
+2021-01-20 20:40:14,798 P48687 INFO --- Start evaluation ---
+2021-01-20 20:40:15,274 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:40:16,684 P48687 INFO [Metrics] Recall(k=20): 0.167378 - Recall(k=50): 0.258399 - NDCG(k=20): 0.100605 - NDCG(k=50): 0.125596 - HitRate(k=20): 0.324986 - HitRate(k=50): 0.436474
+2021-01-20 20:40:16,687 P48687 INFO Monitor(max) STOP: 0.167378 !
+2021-01-20 20:40:16,687 P48687 INFO Reduce learning rate on plateau: 0.000100
+2021-01-20 20:40:16,687 P48687 INFO Load best model: /home/XXX/benchmarks/AmazonBeauty/SimpleX_amazonbeauty_m1/amazonbeauty_m1_04d53001/SimpleX_amazonbeauty_m1_001_bcec104e.model
+2021-01-20 20:40:16,692 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:40:16,743 P48687 INFO Train loss: 0.526787
+2021-01-20 20:40:16,743 P48687 INFO ************ Epoch=10 end ************
+2021-01-20 20:40:16,743 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:40:29,356 P48687 INFO Negative sampling done
+2021-01-20 20:40:32,800 P48687 INFO --- Start evaluation ---
+2021-01-20 20:40:33,279 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:40:34,752 P48687 INFO [Metrics] Recall(k=20): 0.172068 - Recall(k=50): 0.259412 - NDCG(k=20): 0.102933 - NDCG(k=50): 0.126893 - HitRate(k=20): 0.328806 - HitRate(k=50): 0.439728
+2021-01-20 20:40:34,755 P48687 INFO Save best model: monitor(max): 0.172068
+2021-01-20 20:40:34,759 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:40:34,809 P48687 INFO Train loss: 0.446443
+2021-01-20 20:40:34,810 P48687 INFO ************ Epoch=11 end ************
+2021-01-20 20:40:34,810 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:40:47,465 P48687 INFO Negative sampling done
+2021-01-20 20:40:50,888 P48687 INFO --- Start evaluation ---
+2021-01-20 20:40:51,378 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:40:53,006 P48687 INFO [Metrics] Recall(k=20): 0.171717 - Recall(k=50): 0.261094 - NDCG(k=20): 0.103254 - NDCG(k=50): 0.127791 - HitRate(k=20): 0.327674 - HitRate(k=50): 0.440011
+2021-01-20 20:40:53,008 P48687 INFO Monitor(max) STOP: 0.171717 !
+2021-01-20 20:40:53,009 P48687 INFO Reduce learning rate on plateau: 0.000010
+2021-01-20 20:40:53,009 P48687 INFO Load best model: /home/XXX/benchmarks/AmazonBeauty/SimpleX_amazonbeauty_m1/amazonbeauty_m1_04d53001/SimpleX_amazonbeauty_m1_001_bcec104e.model
+2021-01-20 20:40:53,013 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:40:53,085 P48687 INFO Train loss: 0.433934
+2021-01-20 20:40:53,085 P48687 INFO ************ Epoch=12 end ************
+2021-01-20 20:40:53,086 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:41:05,974 P48687 INFO Negative sampling done
+2021-01-20 20:41:09,417 P48687 INFO --- Start evaluation ---
+2021-01-20 20:41:09,907 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:41:11,596 P48687 INFO [Metrics] Recall(k=20): 0.172128 - Recall(k=50): 0.259675 - NDCG(k=20): 0.103006 - NDCG(k=50): 0.127023 - HitRate(k=20): 0.329372 - HitRate(k=50): 0.440011
+2021-01-20 20:41:11,599 P48687 INFO Save best model: monitor(max): 0.172128
+2021-01-20 20:41:11,603 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:41:11,682 P48687 INFO Train loss: 0.428118
+2021-01-20 20:41:11,682 P48687 INFO ************ Epoch=13 end ************
+2021-01-20 20:41:11,682 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:41:24,546 P48687 INFO Negative sampling done
+2021-01-20 20:41:27,980 P48687 INFO --- Start evaluation ---
+2021-01-20 20:41:28,487 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:41:29,947 P48687 INFO [Metrics] Recall(k=20): 0.172148 - Recall(k=50): 0.259483 - NDCG(k=20): 0.102848 - NDCG(k=50): 0.126830 - HitRate(k=20): 0.328806 - HitRate(k=50): 0.439304
+2021-01-20 20:41:29,949 P48687 INFO Save best model: monitor(max): 0.172148
+2021-01-20 20:41:29,954 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:41:30,035 P48687 INFO Train loss: 0.426600
+2021-01-20 20:41:30,035 P48687 INFO ************ Epoch=14 end ************
+2021-01-20 20:41:30,035 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:41:42,937 P48687 INFO Negative sampling done
+2021-01-20 20:41:46,381 P48687 INFO --- Start evaluation ---
+2021-01-20 20:41:46,861 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:41:48,318 P48687 INFO [Metrics] Recall(k=20): 0.171990 - Recall(k=50): 0.260353 - NDCG(k=20): 0.102848 - NDCG(k=50): 0.127094 - HitRate(k=20): 0.327957 - HitRate(k=50): 0.440294
+2021-01-20 20:41:48,320 P48687 INFO Monitor(max) STOP: 0.171990 !
+2021-01-20 20:41:48,321 P48687 INFO Reduce learning rate on plateau: 0.000001
+2021-01-20 20:41:48,321 P48687 INFO Load best model: /home/XXX/benchmarks/AmazonBeauty/SimpleX_amazonbeauty_m1/amazonbeauty_m1_04d53001/SimpleX_amazonbeauty_m1_001_bcec104e.model
+2021-01-20 20:41:48,326 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:41:48,375 P48687 INFO Train loss: 0.425320
+2021-01-20 20:41:48,375 P48687 INFO ************ Epoch=15 end ************
+2021-01-20 20:41:48,376 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:42:01,146 P48687 INFO Negative sampling done
+2021-01-20 20:42:04,606 P48687 INFO --- Start evaluation ---
+2021-01-20 20:42:05,089 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:42:06,610 P48687 INFO [Metrics] Recall(k=20): 0.172123 - Recall(k=50): 0.259459 - NDCG(k=20): 0.102875 - NDCG(k=50): 0.126851 - HitRate(k=20): 0.328664 - HitRate(k=50): 0.439304
+2021-01-20 20:42:06,612 P48687 INFO Monitor(max) STOP: 0.172123 !
+2021-01-20 20:42:06,612 P48687 INFO Reduce learning rate on plateau: 0.000001
+2021-01-20 20:42:06,612 P48687 INFO Load best model: /home/XXX/benchmarks/AmazonBeauty/SimpleX_amazonbeauty_m1/amazonbeauty_m1_04d53001/SimpleX_amazonbeauty_m1_001_bcec104e.model
+2021-01-20 20:42:06,617 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:42:06,671 P48687 INFO Train loss: 0.424892
+2021-01-20 20:42:06,671 P48687 INFO ************ Epoch=16 end ************
+2021-01-20 20:42:06,672 P48687 INFO Negative sampling num_negs=800
+2021-01-20 20:42:19,368 P48687 INFO Negative sampling done
+2021-01-20 20:42:22,808 P48687 INFO --- Start evaluation ---
+2021-01-20 20:42:23,292 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:42:24,778 P48687 INFO [Metrics] Recall(k=20): 0.172111 - Recall(k=50): 0.259431 - NDCG(k=20): 0.102862 - NDCG(k=50): 0.126835 - HitRate(k=20): 0.328664 - HitRate(k=50): 0.439304
+2021-01-20 20:42:24,781 P48687 INFO Monitor(max) STOP: 0.172111 !
+2021-01-20 20:42:24,781 P48687 INFO Reduce learning rate on plateau: 0.000001
+2021-01-20 20:42:24,781 P48687 INFO Load best model: /home/XXX/benchmarks/AmazonBeauty/SimpleX_amazonbeauty_m1/amazonbeauty_m1_04d53001/SimpleX_amazonbeauty_m1_001_bcec104e.model
+2021-01-20 20:42:24,785 P48687 INFO Early stopping at epoch=17
+2021-01-20 20:42:24,785 P48687 INFO --- 238/238 batches finished ---
+2021-01-20 20:42:24,838 P48687 INFO Train loss: 0.424520
+2021-01-20 20:42:24,838 P48687 INFO Training finished.
+2021-01-20 20:42:24,838 P48687 INFO Load best model: /home/XXX/benchmarks/AmazonBeauty/SimpleX_amazonbeauty_m1/amazonbeauty_m1_04d53001/SimpleX_amazonbeauty_m1_001_bcec104e.model
+2021-01-20 20:42:24,844 P48687 INFO ****** Train/validation evaluation ******
+2021-01-20 20:42:24,844 P48687 INFO --- Start evaluation ---
+2021-01-20 20:42:25,319 P48687 INFO Evaluating metrics for 7068 users...
+2021-01-20 20:42:26,793 P48687 INFO [Metrics] Recall(k=20): 0.172148 - Recall(k=50): 0.259483 - NDCG(k=20): 0.102848 - NDCG(k=50): 0.126830 - HitRate(k=20): 0.328806 - HitRate(k=50): 0.439304

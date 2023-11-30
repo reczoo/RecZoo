@@ -1,0 +1,556 @@
+2021-01-25 08:42:07,539 P24677 INFO {
+    "aggregator": "mean",
+    "attention_dropout": "0",
+    "batch_size": "1024",
+    "corpus_index": "corpus_index",
+    "data_format": "csv",
+    "data_root": "../data/AmazonCDs/",
+    "dataset_id": "amazoncds_m1_3215e010",
+    "debug_mode": "False",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.0005",
+    "enable_bias": "False",
+    "epochs": "100",
+    "eval_interval_epochs": "1",
+    "feature_cols": "[{'active': True, 'dtype': 'int', 'name': 'query_index', 'type': 'index'}, {'active': True, 'dtype': 'int', 'name': 'corpus_index', 'type': 'index'}, {'active': True, 'dtype': 'str', 'name': 'user_id', 'source': 'user', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'embedding_callback': None, 'max_len': 500, 'name': 'user_history', 'padding': 'pre', 'source': 'user', 'splitter': '^', 'type': 'sequence'}, {'active': True, 'dtype': 'str', 'name': 'item_id', 'share_embedding': 'user_history', 'source': 'item', 'type': 'categorical'}]",
+    "fix_sampling_seeds": "True",
+    "gamma": "1",
+    "gpu": "1",
+    "ignore_pos_items": "False",
+    "item_corpus": "../data/AmazonCDs/amazoncds_m1/item_corpus.csv",
+    "item_id_field": "item_id",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "CosineContrastiveLoss",
+    "margin": "0.7",
+    "metrics": "['Recall(k=20)', 'Recall(k=50)', 'NDCG(k=20)', 'NDCG(k=50)', 'HitRate(k=20)', 'HitRate(k=50)']",
+    "min_categr_count": "1",
+    "model": "SimpleX",
+    "model_id": "SimpleX_amazoncds_m1_014_c5143710",
+    "model_root": "./AmazonCDs/SimpleX_amazoncds_m1/",
+    "monitor": "Recall(k=20)",
+    "monitor_mode": "max",
+    "negative_weight": "50",
+    "net_dropout": "0.2",
+    "net_regularizer": "0",
+    "num_negs": "1500",
+    "num_workers": "3",
+    "optimizer": "adam",
+    "patience": "3",
+    "query_index": "query_index",
+    "sampling_num_process": "1",
+    "save_best_only": "True",
+    "seed": "2019",
+    "shuffle": "True",
+    "similarity_score": "cosine",
+    "train_data": "../data/AmazonCDs/amazoncds_m1/train.csv",
+    "user_history_field": "user_history",
+    "user_id_field": "user_id",
+    "valid_data": "../data/AmazonCDs/amazoncds_m1/test.csv",
+    "verbose": "1",
+    "version": "pytorch"
+}
+2021-01-25 08:42:07,540 P24677 INFO Set up feature encoder...
+2021-01-25 08:42:07,540 P24677 INFO Load feature_map from json: ../data/AmazonCDs/amazoncds_m1_3215e010/feature_map.json
+2021-01-25 08:42:10,710 P24677 INFO Total number of parameters: 5048576.
+2021-01-25 08:42:10,710 P24677 INFO Loading data...
+2021-01-25 08:42:10,715 P24677 INFO Loading data from h5: ../data/AmazonCDs/amazoncds_m1_3215e010/train.h5
+2021-01-25 08:42:11,305 P24677 INFO Loading data from h5: ../data/AmazonCDs/amazoncds_m1_3215e010/item_corpus.h5
+2021-01-25 08:42:11,509 P24677 INFO Loading data from h5: ../data/AmazonCDs/amazoncds_m1_3215e010/valid.h5
+2021-01-25 08:42:11,863 P24677 INFO Loading data from h5: ../data/AmazonCDs/amazoncds_m1_3215e010/item_corpus.h5
+2021-01-25 08:42:11,865 P24677 INFO Train samples: total/604475, blocks/1
+2021-01-25 08:42:11,865 P24677 INFO Validation samples: total/43169, blocks/1
+2021-01-25 08:42:11,865 P24677 INFO Loading train data done.
+2021-01-25 08:42:11,865 P24677 INFO **** Start training: 591 batches/epoch ****
+2021-01-25 08:42:11,867 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 08:42:35,081 P24677 INFO Negative sampling done
+2021-01-25 08:43:56,426 P24677 INFO --- Start evaluation ---
+2021-01-25 08:43:57,602 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 08:44:22,870 P24677 INFO [Metrics] Recall(k=20): 0.000951 - Recall(k=50): 0.001926 - NDCG(k=20): 0.000570 - NDCG(k=50): 0.000836 - HitRate(k=20): 0.004123 - HitRate(k=50): 0.008640
+2021-01-25 08:44:22,879 P24677 INFO Save best model: monitor(max): 0.000951
+2021-01-25 08:44:23,146 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 08:44:23,196 P24677 INFO Train loss: 1.076865
+2021-01-25 08:44:23,196 P24677 INFO ************ Epoch=1 end ************
+2021-01-25 08:44:23,197 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 08:44:46,052 P24677 INFO Negative sampling done
+2021-01-25 08:45:52,246 P24677 INFO --- Start evaluation ---
+2021-01-25 08:45:53,020 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 08:46:16,615 P24677 INFO [Metrics] Recall(k=20): 0.025032 - Recall(k=50): 0.044335 - NDCG(k=20): 0.017433 - NDCG(k=50): 0.023049 - HitRate(k=20): 0.092798 - HitRate(k=50): 0.141629
+2021-01-25 08:46:16,626 P24677 INFO Save best model: monitor(max): 0.025032
+2021-01-25 08:46:16,651 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 08:46:16,739 P24677 INFO Train loss: 0.901331
+2021-01-25 08:46:16,739 P24677 INFO ************ Epoch=2 end ************
+2021-01-25 08:46:16,740 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 08:46:39,207 P24677 INFO Negative sampling done
+2021-01-25 08:47:12,849 P24677 INFO --- Start evaluation ---
+2021-01-25 08:47:13,717 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 08:47:38,832 P24677 INFO [Metrics] Recall(k=20): 0.050010 - Recall(k=50): 0.085317 - NDCG(k=20): 0.033052 - NDCG(k=50): 0.043041 - HitRate(k=20): 0.153837 - HitRate(k=50): 0.228845
+2021-01-25 08:47:38,846 P24677 INFO Save best model: monitor(max): 0.050010
+2021-01-25 08:47:38,870 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 08:47:38,927 P24677 INFO Train loss: 0.618492
+2021-01-25 08:47:38,927 P24677 INFO ************ Epoch=3 end ************
+2021-01-25 08:47:38,928 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 08:48:02,313 P24677 INFO Negative sampling done
+2021-01-25 08:49:24,315 P24677 INFO --- Start evaluation ---
+2021-01-25 08:49:25,568 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 08:49:51,044 P24677 INFO [Metrics] Recall(k=20): 0.064853 - Recall(k=50): 0.110549 - NDCG(k=20): 0.041015 - NDCG(k=50): 0.053787 - HitRate(k=20): 0.185550 - HitRate(k=50): 0.276495
+2021-01-25 08:49:51,054 P24677 INFO Save best model: monitor(max): 0.064853
+2021-01-25 08:49:51,076 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 08:49:51,129 P24677 INFO Train loss: 0.561784
+2021-01-25 08:49:51,129 P24677 INFO ************ Epoch=4 end ************
+2021-01-25 08:49:51,130 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 08:50:14,552 P24677 INFO Negative sampling done
+2021-01-25 08:50:46,885 P24677 INFO --- Start evaluation ---
+2021-01-25 08:50:47,630 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 08:51:11,502 P24677 INFO [Metrics] Recall(k=20): 0.071717 - Recall(k=50): 0.121737 - NDCG(k=20): 0.044621 - NDCG(k=50): 0.058431 - HitRate(k=20): 0.199773 - HitRate(k=50): 0.299405
+2021-01-25 08:51:11,514 P24677 INFO Save best model: monitor(max): 0.071717
+2021-01-25 08:51:11,538 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 08:51:11,618 P24677 INFO Train loss: 0.548303
+2021-01-25 08:51:11,618 P24677 INFO ************ Epoch=5 end ************
+2021-01-25 08:51:11,619 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 08:51:37,180 P24677 INFO Negative sampling done
+2021-01-25 08:52:48,735 P24677 INFO --- Start evaluation ---
+2021-01-25 08:52:49,955 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 08:53:14,905 P24677 INFO [Metrics] Recall(k=20): 0.073973 - Recall(k=50): 0.126857 - NDCG(k=20): 0.045476 - NDCG(k=50): 0.060045 - HitRate(k=20): 0.205124 - HitRate(k=50): 0.307674
+2021-01-25 08:53:14,913 P24677 INFO Save best model: monitor(max): 0.073973
+2021-01-25 08:53:14,938 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 08:53:14,995 P24677 INFO Train loss: 0.550249
+2021-01-25 08:53:14,995 P24677 INFO ************ Epoch=6 end ************
+2021-01-25 08:53:14,995 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 08:53:39,170 P24677 INFO Negative sampling done
+2021-01-25 08:54:56,063 P24677 INFO --- Start evaluation ---
+2021-01-25 08:54:57,061 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 08:55:21,215 P24677 INFO [Metrics] Recall(k=20): 0.070980 - Recall(k=50): 0.122107 - NDCG(k=20): 0.044237 - NDCG(k=50): 0.058224 - HitRate(k=20): 0.198244 - HitRate(k=50): 0.299636
+2021-01-25 08:55:21,226 P24677 INFO Monitor(max) STOP: 0.070980 !
+2021-01-25 08:55:21,226 P24677 INFO Reduce learning rate on plateau: 0.000100
+2021-01-25 08:55:21,227 P24677 INFO Load best model: /home/XXX/benchmarks/AmazonCDs/SimpleX_amazoncds_m1/amazoncds_m1_3215e010/SimpleX_amazoncds_m1_014_c5143710.model
+2021-01-25 08:55:21,239 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 08:55:21,298 P24677 INFO Train loss: 0.559719
+2021-01-25 08:55:21,298 P24677 INFO ************ Epoch=7 end ************
+2021-01-25 08:55:21,299 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 08:55:44,566 P24677 INFO Negative sampling done
+2021-01-25 08:56:17,507 P24677 INFO --- Start evaluation ---
+2021-01-25 08:56:18,279 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 08:56:43,889 P24677 INFO [Metrics] Recall(k=20): 0.110879 - Recall(k=50): 0.178222 - NDCG(k=20): 0.071001 - NDCG(k=50): 0.089376 - HitRate(k=20): 0.279112 - HitRate(k=50): 0.393593
+2021-01-25 08:56:43,899 P24677 INFO Save best model: monitor(max): 0.110879
+2021-01-25 08:56:43,922 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 08:56:43,977 P24677 INFO Train loss: 0.478548
+2021-01-25 08:56:43,978 P24677 INFO ************ Epoch=8 end ************
+2021-01-25 08:56:43,978 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 08:57:06,609 P24677 INFO Negative sampling done
+2021-01-25 08:58:28,555 P24677 INFO --- Start evaluation ---
+2021-01-25 08:58:29,779 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 08:58:54,466 P24677 INFO [Metrics] Recall(k=20): 0.130280 - Recall(k=50): 0.203815 - NDCG(k=20): 0.084193 - NDCG(k=50): 0.104281 - HitRate(k=20): 0.313466 - HitRate(k=50): 0.431560
+2021-01-25 08:58:54,477 P24677 INFO Save best model: monitor(max): 0.130280
+2021-01-25 08:58:54,501 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 08:58:54,558 P24677 INFO Train loss: 0.420498
+2021-01-25 08:58:54,558 P24677 INFO ************ Epoch=9 end ************
+2021-01-25 08:58:54,558 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 08:59:19,130 P24677 INFO Negative sampling done
+2021-01-25 08:59:55,145 P24677 INFO --- Start evaluation ---
+2021-01-25 08:59:55,900 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:00:21,209 P24677 INFO [Metrics] Recall(k=20): 0.140366 - Recall(k=50): 0.217794 - NDCG(k=20): 0.090948 - NDCG(k=50): 0.112018 - HitRate(k=20): 0.332275 - HitRate(k=50): 0.451968
+2021-01-25 09:00:21,220 P24677 INFO Save best model: monitor(max): 0.140366
+2021-01-25 09:00:21,248 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:00:21,305 P24677 INFO Train loss: 0.388924
+2021-01-25 09:00:21,305 P24677 INFO ************ Epoch=10 end ************
+2021-01-25 09:00:21,305 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:00:43,798 P24677 INFO Negative sampling done
+2021-01-25 09:01:46,147 P24677 INFO --- Start evaluation ---
+2021-01-25 09:01:47,334 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:02:11,552 P24677 INFO [Metrics] Recall(k=20): 0.146551 - Recall(k=50): 0.226400 - NDCG(k=20): 0.094408 - NDCG(k=50): 0.116117 - HitRate(k=20): 0.342723 - HitRate(k=50): 0.465473
+2021-01-25 09:02:11,562 P24677 INFO Save best model: monitor(max): 0.146551
+2021-01-25 09:02:11,585 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:02:11,640 P24677 INFO Train loss: 0.370863
+2021-01-25 09:02:11,640 P24677 INFO ************ Epoch=11 end ************
+2021-01-25 09:02:11,641 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:02:34,220 P24677 INFO Negative sampling done
+2021-01-25 09:03:56,920 P24677 INFO --- Start evaluation ---
+2021-01-25 09:03:58,174 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:04:23,126 P24677 INFO [Metrics] Recall(k=20): 0.149503 - Recall(k=50): 0.230105 - NDCG(k=20): 0.096457 - NDCG(k=50): 0.118443 - HitRate(k=20): 0.347448 - HitRate(k=50): 0.469133
+2021-01-25 09:04:23,136 P24677 INFO Save best model: monitor(max): 0.149503
+2021-01-25 09:04:23,158 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:04:23,207 P24677 INFO Train loss: 0.359898
+2021-01-25 09:04:23,208 P24677 INFO ************ Epoch=12 end ************
+2021-01-25 09:04:23,208 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:04:45,684 P24677 INFO Negative sampling done
+2021-01-25 09:05:18,144 P24677 INFO --- Start evaluation ---
+2021-01-25 09:05:18,867 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:05:43,685 P24677 INFO [Metrics] Recall(k=20): 0.153189 - Recall(k=50): 0.235061 - NDCG(k=20): 0.098981 - NDCG(k=50): 0.121110 - HitRate(k=20): 0.353518 - HitRate(k=50): 0.476824
+2021-01-25 09:05:43,695 P24677 INFO Save best model: monitor(max): 0.153189
+2021-01-25 09:05:43,719 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:05:43,777 P24677 INFO Train loss: 0.352365
+2021-01-25 09:05:43,777 P24677 INFO ************ Epoch=13 end ************
+2021-01-25 09:05:43,778 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:06:06,457 P24677 INFO Negative sampling done
+2021-01-25 09:07:28,762 P24677 INFO --- Start evaluation ---
+2021-01-25 09:07:29,977 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:07:54,507 P24677 INFO [Metrics] Recall(k=20): 0.156589 - Recall(k=50): 0.238115 - NDCG(k=20): 0.100314 - NDCG(k=50): 0.122443 - HitRate(k=20): 0.357525 - HitRate(k=50): 0.481688
+2021-01-25 09:07:54,520 P24677 INFO Save best model: monitor(max): 0.156589
+2021-01-25 09:07:54,543 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:07:54,618 P24677 INFO Train loss: 0.347290
+2021-01-25 09:07:54,618 P24677 INFO ************ Epoch=14 end ************
+2021-01-25 09:07:54,619 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:08:18,376 P24677 INFO Negative sampling done
+2021-01-25 09:09:08,681 P24677 INFO --- Start evaluation ---
+2021-01-25 09:09:09,401 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:09:33,239 P24677 INFO [Metrics] Recall(k=20): 0.156795 - Recall(k=50): 0.238506 - NDCG(k=20): 0.101279 - NDCG(k=50): 0.123546 - HitRate(k=20): 0.360027 - HitRate(k=50): 0.482707
+2021-01-25 09:09:33,247 P24677 INFO Save best model: monitor(max): 0.156795
+2021-01-25 09:09:33,269 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:09:33,321 P24677 INFO Train loss: 0.343160
+2021-01-25 09:09:33,321 P24677 INFO ************ Epoch=15 end ************
+2021-01-25 09:09:33,322 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:09:55,776 P24677 INFO Negative sampling done
+2021-01-25 09:10:36,901 P24677 INFO --- Start evaluation ---
+2021-01-25 09:10:37,860 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:11:03,103 P24677 INFO [Metrics] Recall(k=20): 0.157840 - Recall(k=50): 0.241030 - NDCG(k=20): 0.101461 - NDCG(k=50): 0.124064 - HitRate(k=20): 0.361069 - HitRate(k=50): 0.485927
+2021-01-25 09:11:03,113 P24677 INFO Save best model: monitor(max): 0.157840
+2021-01-25 09:11:03,137 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:11:03,188 P24677 INFO Train loss: 0.340005
+2021-01-25 09:11:03,188 P24677 INFO ************ Epoch=16 end ************
+2021-01-25 09:11:03,189 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:11:25,794 P24677 INFO Negative sampling done
+2021-01-25 09:12:47,197 P24677 INFO --- Start evaluation ---
+2021-01-25 09:12:48,413 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:13:11,945 P24677 INFO [Metrics] Recall(k=20): 0.158996 - Recall(k=50): 0.242086 - NDCG(k=20): 0.102789 - NDCG(k=50): 0.125331 - HitRate(k=20): 0.363409 - HitRate(k=50): 0.487665
+2021-01-25 09:13:11,954 P24677 INFO Save best model: monitor(max): 0.158996
+2021-01-25 09:13:11,977 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:13:12,027 P24677 INFO Train loss: 0.337585
+2021-01-25 09:13:12,027 P24677 INFO ************ Epoch=17 end ************
+2021-01-25 09:13:12,028 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:13:34,919 P24677 INFO Negative sampling done
+2021-01-25 09:14:07,741 P24677 INFO --- Start evaluation ---
+2021-01-25 09:14:08,446 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:14:31,810 P24677 INFO [Metrics] Recall(k=20): 0.159459 - Recall(k=50): 0.243186 - NDCG(k=20): 0.103170 - NDCG(k=50): 0.125869 - HitRate(k=20): 0.363200 - HitRate(k=50): 0.488267
+2021-01-25 09:14:31,819 P24677 INFO Save best model: monitor(max): 0.159459
+2021-01-25 09:14:31,840 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:14:31,890 P24677 INFO Train loss: 0.335775
+2021-01-25 09:14:31,890 P24677 INFO ************ Epoch=18 end ************
+2021-01-25 09:14:31,890 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:14:54,270 P24677 INFO Negative sampling done
+2021-01-25 09:16:13,016 P24677 INFO --- Start evaluation ---
+2021-01-25 09:16:14,208 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:16:37,846 P24677 INFO [Metrics] Recall(k=20): 0.160040 - Recall(k=50): 0.243964 - NDCG(k=20): 0.102932 - NDCG(k=50): 0.125749 - HitRate(k=20): 0.363895 - HitRate(k=50): 0.488337
+2021-01-25 09:16:37,856 P24677 INFO Save best model: monitor(max): 0.160040
+2021-01-25 09:16:37,879 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:16:37,929 P24677 INFO Train loss: 0.334273
+2021-01-25 09:16:37,930 P24677 INFO ************ Epoch=19 end ************
+2021-01-25 09:16:37,930 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:17:00,455 P24677 INFO Negative sampling done
+2021-01-25 09:18:03,796 P24677 INFO --- Start evaluation ---
+2021-01-25 09:18:04,582 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:18:28,216 P24677 INFO [Metrics] Recall(k=20): 0.160197 - Recall(k=50): 0.243713 - NDCG(k=20): 0.103170 - NDCG(k=50): 0.125860 - HitRate(k=20): 0.364660 - HitRate(k=50): 0.489495
+2021-01-25 09:18:28,226 P24677 INFO Save best model: monitor(max): 0.160197
+2021-01-25 09:18:28,249 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:18:28,301 P24677 INFO Train loss: 0.332900
+2021-01-25 09:18:28,301 P24677 INFO ************ Epoch=20 end ************
+2021-01-25 09:18:28,302 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:18:51,473 P24677 INFO Negative sampling done
+2021-01-25 09:19:35,599 P24677 INFO --- Start evaluation ---
+2021-01-25 09:19:37,037 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:20:00,454 P24677 INFO [Metrics] Recall(k=20): 0.161696 - Recall(k=50): 0.245017 - NDCG(k=20): 0.103958 - NDCG(k=50): 0.126542 - HitRate(k=20): 0.367347 - HitRate(k=50): 0.490375
+2021-01-25 09:20:00,463 P24677 INFO Save best model: monitor(max): 0.161696
+2021-01-25 09:20:00,487 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:20:00,539 P24677 INFO Train loss: 0.332195
+2021-01-25 09:20:00,539 P24677 INFO ************ Epoch=21 end ************
+2021-01-25 09:20:00,539 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:20:23,127 P24677 INFO Negative sampling done
+2021-01-25 09:21:45,227 P24677 INFO --- Start evaluation ---
+2021-01-25 09:21:46,482 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:22:11,306 P24677 INFO [Metrics] Recall(k=20): 0.161354 - Recall(k=50): 0.246080 - NDCG(k=20): 0.103746 - NDCG(k=50): 0.126752 - HitRate(k=20): 0.367393 - HitRate(k=50): 0.493966
+2021-01-25 09:22:11,317 P24677 INFO Monitor(max) STOP: 0.161354 !
+2021-01-25 09:22:11,317 P24677 INFO Reduce learning rate on plateau: 0.000010
+2021-01-25 09:22:11,317 P24677 INFO Load best model: /home/XXX/benchmarks/AmazonCDs/SimpleX_amazoncds_m1/amazoncds_m1_3215e010/SimpleX_amazoncds_m1_014_c5143710.model
+2021-01-25 09:22:11,333 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:22:11,387 P24677 INFO Train loss: 0.331371
+2021-01-25 09:22:11,387 P24677 INFO ************ Epoch=22 end ************
+2021-01-25 09:22:11,388 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:22:34,285 P24677 INFO Negative sampling done
+2021-01-25 09:23:07,268 P24677 INFO --- Start evaluation ---
+2021-01-25 09:23:07,984 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:23:32,042 P24677 INFO [Metrics] Recall(k=20): 0.165512 - Recall(k=50): 0.249660 - NDCG(k=20): 0.106587 - NDCG(k=50): 0.129418 - HitRate(k=20): 0.374227 - HitRate(k=50): 0.497394
+2021-01-25 09:23:32,056 P24677 INFO Save best model: monitor(max): 0.165512
+2021-01-25 09:23:32,085 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:23:32,136 P24677 INFO Train loss: 0.303210
+2021-01-25 09:23:32,136 P24677 INFO ************ Epoch=23 end ************
+2021-01-25 09:23:32,137 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:23:55,368 P24677 INFO Negative sampling done
+2021-01-25 09:25:15,706 P24677 INFO --- Start evaluation ---
+2021-01-25 09:25:16,941 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:25:41,318 P24677 INFO [Metrics] Recall(k=20): 0.168074 - Recall(k=50): 0.253506 - NDCG(k=20): 0.108489 - NDCG(k=50): 0.131658 - HitRate(k=20): 0.378582 - HitRate(k=50): 0.502606
+2021-01-25 09:25:41,328 P24677 INFO Save best model: monitor(max): 0.168074
+2021-01-25 09:25:41,350 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:25:41,401 P24677 INFO Train loss: 0.298702
+2021-01-25 09:25:41,401 P24677 INFO ************ Epoch=24 end ************
+2021-01-25 09:25:41,401 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:26:03,725 P24677 INFO Negative sampling done
+2021-01-25 09:27:03,252 P24677 INFO --- Start evaluation ---
+2021-01-25 09:27:03,960 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:27:29,486 P24677 INFO [Metrics] Recall(k=20): 0.169655 - Recall(k=50): 0.255896 - NDCG(k=20): 0.109577 - NDCG(k=50): 0.132921 - HitRate(k=20): 0.380574 - HitRate(k=50): 0.506150
+2021-01-25 09:27:29,495 P24677 INFO Save best model: monitor(max): 0.169655
+2021-01-25 09:27:29,518 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:27:29,572 P24677 INFO Train loss: 0.295649
+2021-01-25 09:27:29,572 P24677 INFO ************ Epoch=25 end ************
+2021-01-25 09:27:29,572 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:27:53,401 P24677 INFO Negative sampling done
+2021-01-25 09:28:44,289 P24677 INFO --- Start evaluation ---
+2021-01-25 09:28:45,503 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:29:08,513 P24677 INFO [Metrics] Recall(k=20): 0.170833 - Recall(k=50): 0.257500 - NDCG(k=20): 0.110559 - NDCG(k=50): 0.134034 - HitRate(k=20): 0.382474 - HitRate(k=50): 0.508189
+2021-01-25 09:29:08,522 P24677 INFO Save best model: monitor(max): 0.170833
+2021-01-25 09:29:08,544 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:29:08,603 P24677 INFO Train loss: 0.293263
+2021-01-25 09:29:08,604 P24677 INFO ************ Epoch=26 end ************
+2021-01-25 09:29:08,604 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:29:30,911 P24677 INFO Negative sampling done
+2021-01-25 09:30:53,201 P24677 INFO --- Start evaluation ---
+2021-01-25 09:30:54,379 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:31:18,857 P24677 INFO [Metrics] Recall(k=20): 0.171805 - Recall(k=50): 0.258812 - NDCG(k=20): 0.111294 - NDCG(k=50): 0.134853 - HitRate(k=20): 0.384628 - HitRate(k=50): 0.510366
+2021-01-25 09:31:18,865 P24677 INFO Save best model: monitor(max): 0.171805
+2021-01-25 09:31:18,889 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:31:18,940 P24677 INFO Train loss: 0.291262
+2021-01-25 09:31:18,940 P24677 INFO ************ Epoch=27 end ************
+2021-01-25 09:31:18,941 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:31:41,549 P24677 INFO Negative sampling done
+2021-01-25 09:32:15,264 P24677 INFO --- Start evaluation ---
+2021-01-25 09:32:15,968 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:32:40,428 P24677 INFO [Metrics] Recall(k=20): 0.172458 - Recall(k=50): 0.259970 - NDCG(k=20): 0.111930 - NDCG(k=50): 0.135615 - HitRate(k=20): 0.385323 - HitRate(k=50): 0.511409
+2021-01-25 09:32:40,436 P24677 INFO Save best model: monitor(max): 0.172458
+2021-01-25 09:32:40,460 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:32:40,513 P24677 INFO Train loss: 0.289622
+2021-01-25 09:32:40,513 P24677 INFO ************ Epoch=28 end ************
+2021-01-25 09:32:40,513 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:33:03,763 P24677 INFO Negative sampling done
+2021-01-25 09:34:25,840 P24677 INFO --- Start evaluation ---
+2021-01-25 09:34:27,436 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:34:51,832 P24677 INFO [Metrics] Recall(k=20): 0.173056 - Recall(k=50): 0.260349 - NDCG(k=20): 0.112369 - NDCG(k=50): 0.136006 - HitRate(k=20): 0.386527 - HitRate(k=50): 0.512104
+2021-01-25 09:34:51,843 P24677 INFO Save best model: monitor(max): 0.173056
+2021-01-25 09:34:51,867 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:34:51,925 P24677 INFO Train loss: 0.288353
+2021-01-25 09:34:51,925 P24677 INFO ************ Epoch=29 end ************
+2021-01-25 09:34:51,926 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:35:15,210 P24677 INFO Negative sampling done
+2021-01-25 09:36:07,298 P24677 INFO --- Start evaluation ---
+2021-01-25 09:36:08,012 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:36:31,909 P24677 INFO [Metrics] Recall(k=20): 0.173818 - Recall(k=50): 0.260957 - NDCG(k=20): 0.112770 - NDCG(k=50): 0.136382 - HitRate(k=20): 0.387662 - HitRate(k=50): 0.512683
+2021-01-25 09:36:31,917 P24677 INFO Save best model: monitor(max): 0.173818
+2021-01-25 09:36:31,939 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:36:31,992 P24677 INFO Train loss: 0.287094
+2021-01-25 09:36:31,992 P24677 INFO ************ Epoch=30 end ************
+2021-01-25 09:36:31,992 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:36:54,183 P24677 INFO Negative sampling done
+2021-01-25 09:37:51,615 P24677 INFO --- Start evaluation ---
+2021-01-25 09:37:52,801 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:38:16,955 P24677 INFO [Metrics] Recall(k=20): 0.174286 - Recall(k=50): 0.261581 - NDCG(k=20): 0.113077 - NDCG(k=50): 0.136744 - HitRate(k=20): 0.387801 - HitRate(k=50): 0.514281
+2021-01-25 09:38:16,965 P24677 INFO Save best model: monitor(max): 0.174286
+2021-01-25 09:38:16,988 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:38:17,039 P24677 INFO Train loss: 0.286163
+2021-01-25 09:38:17,039 P24677 INFO ************ Epoch=31 end ************
+2021-01-25 09:38:17,040 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:38:39,328 P24677 INFO Negative sampling done
+2021-01-25 09:40:01,378 P24677 INFO --- Start evaluation ---
+2021-01-25 09:40:02,365 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:40:26,081 P24677 INFO [Metrics] Recall(k=20): 0.174403 - Recall(k=50): 0.262032 - NDCG(k=20): 0.113269 - NDCG(k=50): 0.137034 - HitRate(k=20): 0.388381 - HitRate(k=50): 0.514791
+2021-01-25 09:40:26,092 P24677 INFO Save best model: monitor(max): 0.174403
+2021-01-25 09:40:26,116 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:40:26,171 P24677 INFO Train loss: 0.284997
+2021-01-25 09:40:26,171 P24677 INFO ************ Epoch=32 end ************
+2021-01-25 09:40:26,172 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:40:48,366 P24677 INFO Negative sampling done
+2021-01-25 09:41:21,429 P24677 INFO --- Start evaluation ---
+2021-01-25 09:41:22,138 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:41:45,498 P24677 INFO [Metrics] Recall(k=20): 0.174754 - Recall(k=50): 0.262402 - NDCG(k=20): 0.113603 - NDCG(k=50): 0.137378 - HitRate(k=20): 0.388496 - HitRate(k=50): 0.515370
+2021-01-25 09:41:45,507 P24677 INFO Save best model: monitor(max): 0.174754
+2021-01-25 09:41:45,531 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:41:45,582 P24677 INFO Train loss: 0.284109
+2021-01-25 09:41:45,582 P24677 INFO ************ Epoch=33 end ************
+2021-01-25 09:41:45,582 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:42:08,238 P24677 INFO Negative sampling done
+2021-01-25 09:43:30,581 P24677 INFO --- Start evaluation ---
+2021-01-25 09:43:31,733 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:43:56,375 P24677 INFO [Metrics] Recall(k=20): 0.175323 - Recall(k=50): 0.262393 - NDCG(k=20): 0.113853 - NDCG(k=50): 0.137510 - HitRate(k=20): 0.389817 - HitRate(k=50): 0.515092
+2021-01-25 09:43:56,386 P24677 INFO Save best model: monitor(max): 0.175323
+2021-01-25 09:43:56,409 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:43:56,459 P24677 INFO Train loss: 0.283490
+2021-01-25 09:43:56,459 P24677 INFO ************ Epoch=34 end ************
+2021-01-25 09:43:56,460 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:44:18,580 P24677 INFO Negative sampling done
+2021-01-25 09:45:05,267 P24677 INFO --- Start evaluation ---
+2021-01-25 09:45:06,041 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:45:29,083 P24677 INFO [Metrics] Recall(k=20): 0.175577 - Recall(k=50): 0.263139 - NDCG(k=20): 0.114013 - NDCG(k=50): 0.137787 - HitRate(k=20): 0.390072 - HitRate(k=50): 0.516366
+2021-01-25 09:45:29,091 P24677 INFO Save best model: monitor(max): 0.175577
+2021-01-25 09:45:29,115 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:45:29,167 P24677 INFO Train loss: 0.282508
+2021-01-25 09:45:29,167 P24677 INFO ************ Epoch=35 end ************
+2021-01-25 09:45:29,167 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:45:51,791 P24677 INFO Negative sampling done
+2021-01-25 09:46:52,406 P24677 INFO --- Start evaluation ---
+2021-01-25 09:46:53,601 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:47:16,501 P24677 INFO [Metrics] Recall(k=20): 0.175509 - Recall(k=50): 0.263313 - NDCG(k=20): 0.114154 - NDCG(k=50): 0.138008 - HitRate(k=20): 0.390072 - HitRate(k=50): 0.516667
+2021-01-25 09:47:16,510 P24677 INFO Monitor(max) STOP: 0.175509 !
+2021-01-25 09:47:16,511 P24677 INFO Reduce learning rate on plateau: 0.000001
+2021-01-25 09:47:16,511 P24677 INFO Load best model: /home/XXX/benchmarks/AmazonCDs/SimpleX_amazoncds_m1/amazoncds_m1_3215e010/SimpleX_amazoncds_m1_014_c5143710.model
+2021-01-25 09:47:16,528 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:47:16,584 P24677 INFO Train loss: 0.281923
+2021-01-25 09:47:16,584 P24677 INFO ************ Epoch=36 end ************
+2021-01-25 09:47:16,584 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:47:39,062 P24677 INFO Negative sampling done
+2021-01-25 09:48:59,944 P24677 INFO --- Start evaluation ---
+2021-01-25 09:49:00,920 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:49:26,273 P24677 INFO [Metrics] Recall(k=20): 0.175649 - Recall(k=50): 0.263071 - NDCG(k=20): 0.114133 - NDCG(k=50): 0.137871 - HitRate(k=20): 0.390350 - HitRate(k=50): 0.516227
+2021-01-25 09:49:26,281 P24677 INFO Save best model: monitor(max): 0.175649
+2021-01-25 09:49:26,303 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:49:26,353 P24677 INFO Train loss: 0.278575
+2021-01-25 09:49:26,354 P24677 INFO ************ Epoch=37 end ************
+2021-01-25 09:49:26,354 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:49:48,689 P24677 INFO Negative sampling done
+2021-01-25 09:50:21,728 P24677 INFO --- Start evaluation ---
+2021-01-25 09:50:22,442 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:50:49,063 P24677 INFO [Metrics] Recall(k=20): 0.175537 - Recall(k=50): 0.263251 - NDCG(k=20): 0.114090 - NDCG(k=50): 0.137902 - HitRate(k=20): 0.390118 - HitRate(k=50): 0.516482
+2021-01-25 09:50:49,072 P24677 INFO Monitor(max) STOP: 0.175537 !
+2021-01-25 09:50:49,072 P24677 INFO Reduce learning rate on plateau: 0.000001
+2021-01-25 09:50:49,072 P24677 INFO Load best model: /home/XXX/benchmarks/AmazonCDs/SimpleX_amazoncds_m1/amazoncds_m1_3215e010/SimpleX_amazoncds_m1_014_c5143710.model
+2021-01-25 09:50:49,085 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:50:49,138 P24677 INFO Train loss: 0.278506
+2021-01-25 09:50:49,138 P24677 INFO ************ Epoch=38 end ************
+2021-01-25 09:50:49,139 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:51:11,573 P24677 INFO Negative sampling done
+2021-01-25 09:52:34,065 P24677 INFO --- Start evaluation ---
+2021-01-25 09:52:35,283 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:52:59,617 P24677 INFO [Metrics] Recall(k=20): 0.175689 - Recall(k=50): 0.263030 - NDCG(k=20): 0.114139 - NDCG(k=50): 0.137858 - HitRate(k=20): 0.390373 - HitRate(k=50): 0.515949
+2021-01-25 09:52:59,624 P24677 INFO Save best model: monitor(max): 0.175689
+2021-01-25 09:52:59,647 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:52:59,701 P24677 INFO Train loss: 0.278514
+2021-01-25 09:52:59,701 P24677 INFO ************ Epoch=39 end ************
+2021-01-25 09:52:59,702 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:53:22,027 P24677 INFO Negative sampling done
+2021-01-25 09:54:05,618 P24677 INFO --- Start evaluation ---
+2021-01-25 09:54:06,339 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:54:30,142 P24677 INFO [Metrics] Recall(k=20): 0.175837 - Recall(k=50): 0.263337 - NDCG(k=20): 0.114204 - NDCG(k=50): 0.137956 - HitRate(k=20): 0.390651 - HitRate(k=50): 0.516482
+2021-01-25 09:54:30,150 P24677 INFO Save best model: monitor(max): 0.175837
+2021-01-25 09:54:30,173 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:54:30,226 P24677 INFO Train loss: 0.278487
+2021-01-25 09:54:30,226 P24677 INFO ************ Epoch=40 end ************
+2021-01-25 09:54:30,227 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:54:52,623 P24677 INFO Negative sampling done
+2021-01-25 09:55:58,008 P24677 INFO --- Start evaluation ---
+2021-01-25 09:55:59,244 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:56:22,892 P24677 INFO [Metrics] Recall(k=20): 0.175852 - Recall(k=50): 0.263290 - NDCG(k=20): 0.114276 - NDCG(k=50): 0.138011 - HitRate(k=20): 0.390836 - HitRate(k=50): 0.516250
+2021-01-25 09:56:22,901 P24677 INFO Save best model: monitor(max): 0.175852
+2021-01-25 09:56:22,923 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:56:22,979 P24677 INFO Train loss: 0.278212
+2021-01-25 09:56:22,980 P24677 INFO ************ Epoch=41 end ************
+2021-01-25 09:56:22,980 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:56:45,193 P24677 INFO Negative sampling done
+2021-01-25 09:58:03,122 P24677 INFO --- Start evaluation ---
+2021-01-25 09:58:04,062 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:58:27,881 P24677 INFO [Metrics] Recall(k=20): 0.175921 - Recall(k=50): 0.263375 - NDCG(k=20): 0.114334 - NDCG(k=50): 0.138068 - HitRate(k=20): 0.390743 - HitRate(k=50): 0.516320
+2021-01-25 09:58:27,889 P24677 INFO Save best model: monitor(max): 0.175921
+2021-01-25 09:58:27,911 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:58:27,962 P24677 INFO Train loss: 0.278399
+2021-01-25 09:58:27,962 P24677 INFO ************ Epoch=42 end ************
+2021-01-25 09:58:27,962 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 09:58:50,137 P24677 INFO Negative sampling done
+2021-01-25 09:59:23,001 P24677 INFO --- Start evaluation ---
+2021-01-25 09:59:23,748 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 09:59:50,415 P24677 INFO [Metrics] Recall(k=20): 0.175986 - Recall(k=50): 0.263522 - NDCG(k=20): 0.114436 - NDCG(k=50): 0.138181 - HitRate(k=20): 0.390836 - HitRate(k=50): 0.516366
+2021-01-25 09:59:50,430 P24677 INFO Save best model: monitor(max): 0.175986
+2021-01-25 09:59:50,461 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 09:59:50,532 P24677 INFO Train loss: 0.278053
+2021-01-25 09:59:50,532 P24677 INFO ************ Epoch=43 end ************
+2021-01-25 09:59:50,533 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 10:00:12,757 P24677 INFO Negative sampling done
+2021-01-25 10:01:35,899 P24677 INFO --- Start evaluation ---
+2021-01-25 10:01:37,151 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 10:02:01,179 P24677 INFO [Metrics] Recall(k=20): 0.175828 - Recall(k=50): 0.263659 - NDCG(k=20): 0.114368 - NDCG(k=50): 0.138193 - HitRate(k=20): 0.390535 - HitRate(k=50): 0.516459
+2021-01-25 10:02:01,188 P24677 INFO Monitor(max) STOP: 0.175828 !
+2021-01-25 10:02:01,188 P24677 INFO Reduce learning rate on plateau: 0.000001
+2021-01-25 10:02:01,188 P24677 INFO Load best model: /home/XXX/benchmarks/AmazonCDs/SimpleX_amazoncds_m1/amazoncds_m1_3215e010/SimpleX_amazoncds_m1_014_c5143710.model
+2021-01-25 10:02:01,203 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 10:02:01,258 P24677 INFO Train loss: 0.277970
+2021-01-25 10:02:01,258 P24677 INFO ************ Epoch=44 end ************
+2021-01-25 10:02:01,259 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 10:02:23,917 P24677 INFO Negative sampling done
+2021-01-25 10:02:57,783 P24677 INFO --- Start evaluation ---
+2021-01-25 10:02:58,500 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 10:03:22,844 P24677 INFO [Metrics] Recall(k=20): 0.175903 - Recall(k=50): 0.263753 - NDCG(k=20): 0.114357 - NDCG(k=50): 0.138187 - HitRate(k=20): 0.390743 - HitRate(k=50): 0.516713
+2021-01-25 10:03:22,853 P24677 INFO Monitor(max) STOP: 0.175903 !
+2021-01-25 10:03:22,854 P24677 INFO Reduce learning rate on plateau: 0.000001
+2021-01-25 10:03:22,854 P24677 INFO Load best model: /home/XXX/benchmarks/AmazonCDs/SimpleX_amazoncds_m1/amazoncds_m1_3215e010/SimpleX_amazoncds_m1_014_c5143710.model
+2021-01-25 10:03:22,865 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 10:03:22,919 P24677 INFO Train loss: 0.278018
+2021-01-25 10:03:22,919 P24677 INFO ************ Epoch=45 end ************
+2021-01-25 10:03:22,920 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 10:03:45,619 P24677 INFO Negative sampling done
+2021-01-25 10:04:59,895 P24677 INFO --- Start evaluation ---
+2021-01-25 10:05:01,085 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 10:05:25,365 P24677 INFO [Metrics] Recall(k=20): 0.176117 - Recall(k=50): 0.263466 - NDCG(k=20): 0.114475 - NDCG(k=50): 0.138182 - HitRate(k=20): 0.391091 - HitRate(k=50): 0.516459
+2021-01-25 10:05:25,375 P24677 INFO Save best model: monitor(max): 0.176117
+2021-01-25 10:05:25,399 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 10:05:25,450 P24677 INFO Train loss: 0.278007
+2021-01-25 10:05:25,451 P24677 INFO ************ Epoch=46 end ************
+2021-01-25 10:05:25,451 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 10:05:47,566 P24677 INFO Negative sampling done
+2021-01-25 10:07:00,182 P24677 INFO --- Start evaluation ---
+2021-01-25 10:07:01,125 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 10:07:24,478 P24677 INFO [Metrics] Recall(k=20): 0.176170 - Recall(k=50): 0.263522 - NDCG(k=20): 0.114491 - NDCG(k=50): 0.138202 - HitRate(k=20): 0.391322 - HitRate(k=50): 0.516644
+2021-01-25 10:07:24,487 P24677 INFO Save best model: monitor(max): 0.176170
+2021-01-25 10:07:24,510 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 10:07:24,561 P24677 INFO Train loss: 0.277848
+2021-01-25 10:07:24,561 P24677 INFO ************ Epoch=47 end ************
+2021-01-25 10:07:24,562 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 10:07:46,656 P24677 INFO Negative sampling done
+2021-01-25 10:08:20,484 P24677 INFO --- Start evaluation ---
+2021-01-25 10:08:21,198 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 10:08:45,211 P24677 INFO [Metrics] Recall(k=20): 0.176255 - Recall(k=50): 0.263761 - NDCG(k=20): 0.114555 - NDCG(k=50): 0.138303 - HitRate(k=20): 0.391392 - HitRate(k=50): 0.516945
+2021-01-25 10:08:45,219 P24677 INFO Save best model: monitor(max): 0.176255
+2021-01-25 10:08:45,243 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 10:08:45,303 P24677 INFO Train loss: 0.277671
+2021-01-25 10:08:45,303 P24677 INFO ************ Epoch=48 end ************
+2021-01-25 10:08:45,304 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 10:09:07,500 P24677 INFO Negative sampling done
+2021-01-25 10:10:05,216 P24677 INFO --- Start evaluation ---
+2021-01-25 10:10:06,164 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 10:10:29,332 P24677 INFO [Metrics] Recall(k=20): 0.176296 - Recall(k=50): 0.263846 - NDCG(k=20): 0.114532 - NDCG(k=50): 0.138281 - HitRate(k=20): 0.391554 - HitRate(k=50): 0.516968
+2021-01-25 10:10:29,339 P24677 INFO Save best model: monitor(max): 0.176296
+2021-01-25 10:10:29,363 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 10:10:29,414 P24677 INFO Train loss: 0.277496
+2021-01-25 10:10:29,415 P24677 INFO ************ Epoch=49 end ************
+2021-01-25 10:10:29,415 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 10:10:51,606 P24677 INFO Negative sampling done
+2021-01-25 10:11:24,639 P24677 INFO --- Start evaluation ---
+2021-01-25 10:11:25,340 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 10:11:48,919 P24677 INFO [Metrics] Recall(k=20): 0.176292 - Recall(k=50): 0.263568 - NDCG(k=20): 0.114559 - NDCG(k=50): 0.138254 - HitRate(k=20): 0.391600 - HitRate(k=50): 0.516829
+2021-01-25 10:11:48,927 P24677 INFO Monitor(max) STOP: 0.176292 !
+2021-01-25 10:11:48,927 P24677 INFO Reduce learning rate on plateau: 0.000001
+2021-01-25 10:11:48,927 P24677 INFO Load best model: /home/XXX/benchmarks/AmazonCDs/SimpleX_amazoncds_m1/amazoncds_m1_3215e010/SimpleX_amazoncds_m1_014_c5143710.model
+2021-01-25 10:11:48,940 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 10:11:48,995 P24677 INFO Train loss: 0.277521
+2021-01-25 10:11:48,995 P24677 INFO ************ Epoch=50 end ************
+2021-01-25 10:11:48,996 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 10:12:11,356 P24677 INFO Negative sampling done
+2021-01-25 10:13:10,515 P24677 INFO --- Start evaluation ---
+2021-01-25 10:13:11,481 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 10:13:35,536 P24677 INFO [Metrics] Recall(k=20): 0.176078 - Recall(k=50): 0.263839 - NDCG(k=20): 0.114533 - NDCG(k=50): 0.138348 - HitRate(k=20): 0.391137 - HitRate(k=50): 0.516991
+2021-01-25 10:13:35,545 P24677 INFO Monitor(max) STOP: 0.176078 !
+2021-01-25 10:13:35,545 P24677 INFO Reduce learning rate on plateau: 0.000001
+2021-01-25 10:13:35,545 P24677 INFO Load best model: /home/XXX/benchmarks/AmazonCDs/SimpleX_amazoncds_m1/amazoncds_m1_3215e010/SimpleX_amazoncds_m1_014_c5143710.model
+2021-01-25 10:13:35,558 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 10:13:35,613 P24677 INFO Train loss: 0.277554
+2021-01-25 10:13:35,614 P24677 INFO ************ Epoch=51 end ************
+2021-01-25 10:13:35,614 P24677 INFO Negative sampling num_negs=1500
+2021-01-25 10:13:57,746 P24677 INFO Negative sampling done
+2021-01-25 10:14:31,120 P24677 INFO --- Start evaluation ---
+2021-01-25 10:14:31,838 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 10:14:54,784 P24677 INFO [Metrics] Recall(k=20): 0.176293 - Recall(k=50): 0.263784 - NDCG(k=20): 0.114551 - NDCG(k=50): 0.138296 - HitRate(k=20): 0.391647 - HitRate(k=50): 0.516876
+2021-01-25 10:14:54,791 P24677 INFO Monitor(max) STOP: 0.176293 !
+2021-01-25 10:14:54,791 P24677 INFO Reduce learning rate on plateau: 0.000001
+2021-01-25 10:14:54,791 P24677 INFO Load best model: /home/XXX/benchmarks/AmazonCDs/SimpleX_amazoncds_m1/amazoncds_m1_3215e010/SimpleX_amazoncds_m1_014_c5143710.model
+2021-01-25 10:14:54,802 P24677 INFO Early stopping at epoch=52
+2021-01-25 10:14:54,802 P24677 INFO --- 591/591 batches finished ---
+2021-01-25 10:14:54,853 P24677 INFO Train loss: 0.277553
+2021-01-25 10:14:54,853 P24677 INFO Training finished.
+2021-01-25 10:14:54,853 P24677 INFO Load best model: /home/XXX/benchmarks/AmazonCDs/SimpleX_amazoncds_m1/amazoncds_m1_3215e010/SimpleX_amazoncds_m1_014_c5143710.model
+2021-01-25 10:14:54,872 P24677 INFO ****** Train/validation evaluation ******
+2021-01-25 10:14:54,872 P24677 INFO --- Start evaluation ---
+2021-01-25 10:14:55,573 P24677 INFO Evaluating metrics for 43169 users...
+2021-01-25 10:15:18,263 P24677 INFO [Metrics] Recall(k=20): 0.176296 - Recall(k=50): 0.263846 - NDCG(k=20): 0.114532 - NDCG(k=50): 0.138281 - HitRate(k=20): 0.391554 - HitRate(k=50): 0.516968

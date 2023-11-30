@@ -1,0 +1,999 @@
+DualMLP_movielenslatest_x1_001_5f5f7452:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.4
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.4
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_002_ff36ac60:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.4
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_003_0735fc0e:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.4
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_004_afbf3dfa:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.4
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.4
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_005_66b8145d:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.4
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_006_85f2f4ab:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.4
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_007_99b25ea7:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.4
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.4
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_008_8beb770f:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.4
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_009_218e7595:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.4
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_010_ff36ac60:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.4
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_011_f4f00a4e:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_012_ff513941:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_013_66b8145d:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.4
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_014_f3592cc3:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_015_6f3c4528:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_016_8beb770f:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.4
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_017_6634e116:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_018_040ac688:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_019_0735fc0e:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.4
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_020_ff513941:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_021_3c0d2b75:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_022_85f2f4ab:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.4
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_023_6f3c4528:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_024_0e003a79:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_025_218e7595:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.4
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_026_040ac688:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_movielenslatest_x1_027_198bb0ee:
+    batch_size: 4096
+    dataset_id: movielenslatest_x1_233328b6
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.01
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_movielenslatest_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1

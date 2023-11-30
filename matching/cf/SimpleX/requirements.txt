@@ -1,0 +1,8 @@
+recbox==0.0.4
+faiss-cpu
+PyYAML
+pandas
+scikit-learn
+numpy
+h5py
+tqdm

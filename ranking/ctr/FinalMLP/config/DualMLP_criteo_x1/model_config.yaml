@@ -1,0 +1,888 @@
+DualMLP_criteo_x1_001_0aa31de8:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 1.0e-05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_002_53a11d2c:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 1.0e-05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.1
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_003_a7463c1d:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 1.0e-05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_004_5cdf5c6d:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 1.0e-05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.1
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_005_e81c4ef5:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 1.0e-05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_006_cb0adef6:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 1.0e-05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.1
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_007_53a11d2c:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 1.0e-05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.1
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_008_d42a19a2:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 1.0e-05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.1
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.1
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_009_5cdf5c6d:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 1.0e-05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.1
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_010_c6000df2:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 1.0e-05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.1
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.1
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_011_cb0adef6:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 1.0e-05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.1
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_012_6bdf19e7:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 1.0e-05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.1
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.1
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_013_8e52dc11:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.0001
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_014_5a7f557c:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.0001
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.1
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_015_5cfda2c1:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.0001
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_016_c24fafb0:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.0001
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.1
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_017_c654e562:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.0001
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_018_3243a24b:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.0001
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.1
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_019_5a7f557c:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.0001
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.1
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_020_cbad5559:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.0001
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.1
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.1
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_021_c24fafb0:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.0001
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.1
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_022_c4522beb:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.0001
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.1
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.1
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_023_3243a24b:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.0001
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.1
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0
+DualMLP_criteo_x1_024_d723dda9:
+    batch_size: 4096
+    dataset_id: criteo_x1_49102577
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.0001
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.1
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.1
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_criteo_x1/
+    monitor: AUC
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 0

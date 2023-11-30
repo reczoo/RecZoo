@@ -1,0 +1,41 @@
+Base:
+    model_root: './checkpoints/'
+    num_workers: 3
+    verbose: 1
+    patience: 3
+    save_best_only: True
+    eval_interval_epochs: 1
+    debug_mode: False
+
+SimpleX_citeulikea_m1:
+    model: SimpleX
+    dataset_id: citeulikea_m1_4040b2bc
+    metrics: ['Precision(k=20)', 'Recall(k=20)', 'Recall(k=50)', 'NDCG(k=20)', 'NDCG(k=50)', 'HitRate(k=20)', 'HitRate(k=50)']
+    optimizer: adam
+    learning_rate: 5.e-4
+    batch_size: 128
+    num_negs: 5000
+    embedding_dim: 64
+    aggregator: mean
+    gamma: 0.6
+    user_id_field: user_id
+    item_id_field: item_id
+    user_history_field: user_history
+    embedding_regularizer: 1.e-3
+    net_regularizer: 0
+    net_dropout: 0.2
+    attention_dropout: 0
+    enable_bias: True
+    similarity_score: cosine
+    loss: CosineContrastiveLoss
+    margin: 0.1
+    negative_weight: 2
+    sampling_num_process: 1
+    fix_sampling_seeds: True
+    ignore_pos_items: True
+    epochs: 100
+    shuffle: True
+    seed: 2019
+    monitor: 'Recall(k=20)'
+    monitor_mode: 'max'
+    

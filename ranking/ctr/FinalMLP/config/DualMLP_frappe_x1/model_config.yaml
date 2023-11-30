@@ -1,0 +1,1776 @@
+DualMLP_frappe_x1_001_c060a39e:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_002_e0baa784:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_003_35b21bc1:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_004_45ba8541:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_005_2171ffd4:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_006_1dee027f:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_007_2bde7e4c:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_008_27a1726a:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_009_e0baa784:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_010_f86e69cd:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_011_45ba8541:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_012_7ac1c476:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_013_1dee027f:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_014_e635cb22:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_015_27a1726a:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_016_68553519:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400, 400, 400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_017_7339f95b:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_018_81184fa4:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_019_d673edea:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_020_302e50f8:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_021_0ddf1828:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_022_6b195697:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_023_16004eff:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_024_823be9e8:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_025_81184fa4:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_026_0564d5aa:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_027_302e50f8:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_028_66b43c20:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_029_6b195697:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_030_d5b843ae:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_031_823be9e8:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_032_21479450:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [400]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_033_42ac91a1:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_034_239ee66d:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_035_96c9bad2:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_036_c9d9fe84:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_037_87854be2:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_038_119d2237:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_039_434921d2:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_040_4a340b29:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.2
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_041_239ee66d:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_042_0e281de7:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_043_c9d9fe84:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_044_9c5bfef9:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [400, 400, 400]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_045_119d2237:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_046_7b470adc:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_047_4a340b29:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.2
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1
+DualMLP_frappe_x1_048_ff0e6dd9:
+    batch_size: 4096
+    dataset_id: frappe_x1_47e6e0df
+    debug_mode: false
+    early_stop_patience: 2
+    embedding_dim: 10
+    embedding_regularizer: 0.05
+    epochs: 100
+    eval_steps: null
+    feature_specs: null
+    group_id: null
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [AUC, logloss]
+    mlp1_batch_norm: true
+    mlp1_dropout: 0.3
+    mlp1_hidden_activations: relu
+    mlp1_hidden_units: [800]
+    mlp2_batch_norm: true
+    mlp2_dropout: 0.3
+    mlp2_hidden_activations: relu
+    mlp2_hidden_units: [500, 500, 500]
+    model: DualMLP
+    model_id: DualMLP_default
+    model_root: ./checkpoints/DualMLP_frappe_x1/
+    monitor: {AUC: 1, logloss: -1}
+    monitor_mode: max
+    net_regularizer: 0
+    num_workers: 3
+    optimizer: adam
+    ordered_features: null
+    pickle_feature_encoder: true
+    save_best_only: true
+    seed: 2021
+    shuffle: true
+    task: binary_classification
+    verbose: 1

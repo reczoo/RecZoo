@@ -1,0 +1,426 @@
+2021-01-26 22:48:34,424 P48836 INFO {
+    "aggregator": "mean",
+    "attention_dropout": "0",
+    "batch_size": "1024",
+    "corpus_index": "corpus_index",
+    "data_format": "csv",
+    "data_root": "../data/AmazonMovies/",
+    "dataset_id": "amazonmovies_m1_88b8a00d",
+    "debug_mode": "False",
+    "embedding_dim": "64",
+    "embedding_regularizer": "1e-06",
+    "enable_bias": "False",
+    "epochs": "100",
+    "eval_interval_epochs": "1",
+    "feature_cols": "[{'active': True, 'dtype': 'int', 'name': 'query_index', 'type': 'index'}, {'active': True, 'dtype': 'int', 'name': 'corpus_index', 'type': 'index'}, {'active': True, 'dtype': 'str', 'name': 'user_id', 'source': 'user', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'embedding_callback': None, 'max_len': 500, 'name': 'user_history', 'padding': 'pre', 'source': 'user', 'splitter': '^', 'type': 'sequence'}, {'active': True, 'dtype': 'str', 'name': 'item_id', 'share_embedding': 'user_history', 'source': 'item', 'type': 'categorical'}]",
+    "fix_sampling_seeds": "True",
+    "gamma": "1",
+    "gpu": "0",
+    "ignore_pos_items": "False",
+    "item_corpus": "../data/AmazonMovies/amazonmovies_m1/item_corpus.csv",
+    "item_id_field": "item_id",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.001",
+    "loss": "CosineContrastiveLoss",
+    "margin": "0.9",
+    "metrics": "['Recall(k=20)', 'Recall(k=50)', 'NDCG(k=20)', 'NDCG(k=50)', 'HitRate(k=20)', 'HitRate(k=50)']",
+    "min_categr_count": "1",
+    "model": "SimpleX",
+    "model_id": "SimpleX_amazonmovies_m1_009_88b07f96",
+    "model_root": "./AmazonMovies/SimpleX_amazonmovies_m1/",
+    "monitor": "Recall(k=20)",
+    "monitor_mode": "max",
+    "negative_weight": "30",
+    "net_dropout": "0",
+    "net_regularizer": "0",
+    "num_negs": "800",
+    "num_workers": "3",
+    "optimizer": "adam",
+    "patience": "3",
+    "query_index": "query_index",
+    "sampling_num_process": "1",
+    "save_best_only": "True",
+    "seed": "2019",
+    "shuffle": "True",
+    "similarity_score": "cosine",
+    "train_data": "../data/AmazonMovies/amazonmovies_m1/train.csv",
+    "user_history_field": "user_history",
+    "user_id_field": "user_id",
+    "valid_data": "../data/AmazonMovies/amazonmovies_m1/test.csv",
+    "verbose": "1",
+    "version": "pytorch"
+}
+2021-01-26 22:48:34,424 P48836 INFO Set up feature encoder...
+2021-01-26 22:48:34,425 P48836 INFO Load feature_map from json: ../data/AmazonMovies/amazonmovies_m1_88b8a00d/feature_map.json
+2021-01-26 22:48:39,166 P48836 INFO Total number of parameters: 4451392.
+2021-01-26 22:48:39,167 P48836 INFO Loading data...
+2021-01-26 22:48:39,172 P48836 INFO Loading data from h5: ../data/AmazonMovies/amazonmovies_m1_88b8a00d/train.h5
+2021-01-26 22:48:40,466 P48836 INFO Loading data from h5: ../data/AmazonMovies/amazonmovies_m1_88b8a00d/item_corpus.h5
+2021-01-26 22:48:40,834 P48836 INFO Loading data from h5: ../data/AmazonMovies/amazonmovies_m1_88b8a00d/valid.h5
+2021-01-26 22:48:41,325 P48836 INFO Loading data from h5: ../data/AmazonMovies/amazonmovies_m1_88b8a00d/item_corpus.h5
+2021-01-26 22:48:41,327 P48836 INFO Train samples: total/839444, blocks/1
+2021-01-26 22:48:41,327 P48836 INFO Validation samples: total/44439, blocks/1
+2021-01-26 22:48:41,327 P48836 INFO Loading train data done.
+2021-01-26 22:48:41,327 P48836 INFO **** Start training: 820 batches/epoch ****
+2021-01-26 22:48:41,330 P48836 INFO Negative sampling num_negs=800
+2021-01-26 22:48:52,761 P48836 INFO Negative sampling done
+2021-01-26 22:49:55,480 P48836 INFO --- Start evaluation ---
+2021-01-26 22:49:56,521 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 22:50:18,602 P48836 INFO [Metrics] Recall(k=20): 0.004105 - Recall(k=50): 0.009027 - NDCG(k=20): 0.003329 - NDCG(k=50): 0.004923 - HitRate(k=20): 0.030131 - HitRate(k=50): 0.057630
+2021-01-26 22:50:18,610 P48836 INFO Save best model: monitor(max): 0.004105
+2021-01-26 22:50:18,628 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 22:50:18,687 P48836 INFO Train loss: 0.913611
+2021-01-26 22:50:18,688 P48836 INFO ************ Epoch=1 end ************
+2021-01-26 22:50:18,688 P48836 INFO Negative sampling num_negs=800
+2021-01-26 22:50:30,569 P48836 INFO Negative sampling done
+2021-01-26 22:51:16,448 P48836 INFO --- Start evaluation ---
+2021-01-26 22:51:17,592 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 22:51:38,224 P48836 INFO [Metrics] Recall(k=20): 0.021594 - Recall(k=50): 0.041695 - NDCG(k=20): 0.015329 - NDCG(k=50): 0.021499 - HitRate(k=20): 0.097504 - HitRate(k=50): 0.159365
+2021-01-26 22:51:38,232 P48836 INFO Save best model: monitor(max): 0.021594
+2021-01-26 22:51:38,254 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 22:51:38,302 P48836 INFO Train loss: 0.342487
+2021-01-26 22:51:38,302 P48836 INFO ************ Epoch=2 end ************
+2021-01-26 22:51:38,303 P48836 INFO Negative sampling num_negs=800
+2021-01-26 22:51:50,215 P48836 INFO Negative sampling done
+2021-01-26 22:52:59,819 P48836 INFO --- Start evaluation ---
+2021-01-26 22:53:01,178 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 22:53:23,567 P48836 INFO [Metrics] Recall(k=20): 0.044354 - Recall(k=50): 0.078200 - NDCG(k=20): 0.030050 - NDCG(k=50): 0.040155 - HitRate(k=20): 0.163640 - HitRate(k=50): 0.249151
+2021-01-26 22:53:23,584 P48836 INFO Save best model: monitor(max): 0.044354
+2021-01-26 22:53:23,608 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 22:53:23,680 P48836 INFO Train loss: 0.183408
+2021-01-26 22:53:23,680 P48836 INFO ************ Epoch=3 end ************
+2021-01-26 22:53:23,681 P48836 INFO Negative sampling num_negs=800
+2021-01-26 22:53:34,749 P48836 INFO Negative sampling done
+2021-01-26 22:54:51,402 P48836 INFO --- Start evaluation ---
+2021-01-26 22:54:52,676 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 22:55:13,745 P48836 INFO [Metrics] Recall(k=20): 0.061230 - Recall(k=50): 0.105349 - NDCG(k=20): 0.041318 - NDCG(k=50): 0.054326 - HitRate(k=20): 0.207048 - HitRate(k=50): 0.309053
+2021-01-26 22:55:13,754 P48836 INFO Save best model: monitor(max): 0.061230
+2021-01-26 22:55:13,776 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 22:55:13,833 P48836 INFO Train loss: 0.141774
+2021-01-26 22:55:13,833 P48836 INFO ************ Epoch=4 end ************
+2021-01-26 22:55:13,834 P48836 INFO Negative sampling num_negs=800
+2021-01-26 22:55:24,822 P48836 INFO Negative sampling done
+2021-01-26 22:56:05,499 P48836 INFO --- Start evaluation ---
+2021-01-26 22:56:06,548 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 22:56:29,076 P48836 INFO [Metrics] Recall(k=20): 0.073406 - Recall(k=50): 0.124932 - NDCG(k=20): 0.049084 - NDCG(k=50): 0.064150 - HitRate(k=20): 0.236099 - HitRate(k=50): 0.350390
+2021-01-26 22:56:29,083 P48836 INFO Save best model: monitor(max): 0.073406
+2021-01-26 22:56:29,106 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 22:56:29,166 P48836 INFO Train loss: 0.124670
+2021-01-26 22:56:29,166 P48836 INFO ************ Epoch=5 end ************
+2021-01-26 22:56:29,167 P48836 INFO Negative sampling num_negs=800
+2021-01-26 22:56:42,545 P48836 INFO Negative sampling done
+2021-01-26 22:57:57,605 P48836 INFO --- Start evaluation ---
+2021-01-26 22:57:59,007 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 22:58:21,720 P48836 INFO [Metrics] Recall(k=20): 0.082788 - Recall(k=50): 0.138949 - NDCG(k=20): 0.054573 - NDCG(k=50): 0.070907 - HitRate(k=20): 0.256981 - HitRate(k=50): 0.376156
+2021-01-26 22:58:21,732 P48836 INFO Save best model: monitor(max): 0.082788
+2021-01-26 22:58:21,754 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 22:58:21,816 P48836 INFO Train loss: 0.116547
+2021-01-26 22:58:21,817 P48836 INFO ************ Epoch=6 end ************
+2021-01-26 22:58:21,817 P48836 INFO Negative sampling num_negs=800
+2021-01-26 22:58:32,244 P48836 INFO Negative sampling done
+2021-01-26 22:59:49,970 P48836 INFO --- Start evaluation ---
+2021-01-26 22:59:51,294 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:00:12,700 P48836 INFO [Metrics] Recall(k=20): 0.088501 - Recall(k=50): 0.148661 - NDCG(k=20): 0.058424 - NDCG(k=50): 0.075821 - HitRate(k=20): 0.270551 - HitRate(k=50): 0.395801
+2021-01-26 23:00:12,709 P48836 INFO Save best model: monitor(max): 0.088501
+2021-01-26 23:00:12,731 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:00:12,797 P48836 INFO Train loss: 0.112334
+2021-01-26 23:00:12,797 P48836 INFO ************ Epoch=7 end ************
+2021-01-26 23:00:12,798 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:00:23,833 P48836 INFO Negative sampling done
+2021-01-26 23:01:27,156 P48836 INFO --- Start evaluation ---
+2021-01-26 23:01:27,868 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:01:50,190 P48836 INFO [Metrics] Recall(k=20): 0.092777 - Recall(k=50): 0.154591 - NDCG(k=20): 0.060998 - NDCG(k=50): 0.078836 - HitRate(k=20): 0.282297 - HitRate(k=50): 0.408335
+2021-01-26 23:01:50,197 P48836 INFO Save best model: monitor(max): 0.092777
+2021-01-26 23:01:50,222 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:01:50,286 P48836 INFO Train loss: 0.110031
+2021-01-26 23:01:50,286 P48836 INFO ************ Epoch=8 end ************
+2021-01-26 23:01:50,286 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:02:00,844 P48836 INFO Negative sampling done
+2021-01-26 23:03:17,799 P48836 INFO --- Start evaluation ---
+2021-01-26 23:03:18,738 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:03:44,042 P48836 INFO [Metrics] Recall(k=20): 0.096134 - Recall(k=50): 0.159047 - NDCG(k=20): 0.064068 - NDCG(k=50): 0.082286 - HitRate(k=20): 0.287630 - HitRate(k=50): 0.415198
+2021-01-26 23:03:44,051 P48836 INFO Save best model: monitor(max): 0.096134
+2021-01-26 23:03:44,074 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:03:44,147 P48836 INFO Train loss: 0.108664
+2021-01-26 23:03:44,147 P48836 INFO ************ Epoch=9 end ************
+2021-01-26 23:03:44,148 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:03:56,490 P48836 INFO Negative sampling done
+2021-01-26 23:05:26,723 P48836 INFO --- Start evaluation ---
+2021-01-26 23:05:27,881 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:05:50,416 P48836 INFO [Metrics] Recall(k=20): 0.099651 - Recall(k=50): 0.164189 - NDCG(k=20): 0.065561 - NDCG(k=50): 0.084152 - HitRate(k=20): 0.295259 - HitRate(k=50): 0.423727
+2021-01-26 23:05:50,422 P48836 INFO Save best model: monitor(max): 0.099651
+2021-01-26 23:05:50,444 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:05:50,497 P48836 INFO Train loss: 0.107752
+2021-01-26 23:05:50,497 P48836 INFO ************ Epoch=10 end ************
+2021-01-26 23:05:50,498 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:06:00,994 P48836 INFO Negative sampling done
+2021-01-26 23:07:07,348 P48836 INFO --- Start evaluation ---
+2021-01-26 23:07:09,095 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:07:33,420 P48836 INFO [Metrics] Recall(k=20): 0.101492 - Recall(k=50): 0.166621 - NDCG(k=20): 0.067650 - NDCG(k=50): 0.086402 - HitRate(k=20): 0.299602 - HitRate(k=50): 0.430208
+2021-01-26 23:07:33,429 P48836 INFO Save best model: monitor(max): 0.101492
+2021-01-26 23:07:33,451 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:07:33,517 P48836 INFO Train loss: 0.107104
+2021-01-26 23:07:33,517 P48836 INFO ************ Epoch=11 end ************
+2021-01-26 23:07:33,518 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:07:45,439 P48836 INFO Negative sampling done
+2021-01-26 23:09:07,661 P48836 INFO --- Start evaluation ---
+2021-01-26 23:09:08,677 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:09:29,422 P48836 INFO [Metrics] Recall(k=20): 0.103649 - Recall(k=50): 0.170671 - NDCG(k=20): 0.068633 - NDCG(k=50): 0.087882 - HitRate(k=20): 0.305295 - HitRate(k=50): 0.437656
+2021-01-26 23:09:29,430 P48836 INFO Save best model: monitor(max): 0.103649
+2021-01-26 23:09:29,451 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:09:29,507 P48836 INFO Train loss: 0.106694
+2021-01-26 23:09:29,507 P48836 INFO ************ Epoch=12 end ************
+2021-01-26 23:09:29,508 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:09:39,963 P48836 INFO Negative sampling done
+2021-01-26 23:11:00,855 P48836 INFO --- Start evaluation ---
+2021-01-26 23:11:01,923 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:11:23,583 P48836 INFO [Metrics] Recall(k=20): 0.105256 - Recall(k=50): 0.172621 - NDCG(k=20): 0.070305 - NDCG(k=50): 0.089762 - HitRate(k=20): 0.308220 - HitRate(k=50): 0.439546
+2021-01-26 23:11:23,592 P48836 INFO Save best model: monitor(max): 0.105256
+2021-01-26 23:11:23,615 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:11:23,666 P48836 INFO Train loss: 0.106409
+2021-01-26 23:11:23,666 P48836 INFO ************ Epoch=13 end ************
+2021-01-26 23:11:23,666 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:11:34,600 P48836 INFO Negative sampling done
+2021-01-26 23:12:34,549 P48836 INFO --- Start evaluation ---
+2021-01-26 23:12:35,516 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:12:59,644 P48836 INFO [Metrics] Recall(k=20): 0.107649 - Recall(k=50): 0.175416 - NDCG(k=20): 0.071804 - NDCG(k=50): 0.091249 - HitRate(k=20): 0.313621 - HitRate(k=50): 0.444992
+2021-01-26 23:12:59,660 P48836 INFO Save best model: monitor(max): 0.107649
+2021-01-26 23:12:59,693 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:12:59,793 P48836 INFO Train loss: 0.106260
+2021-01-26 23:12:59,793 P48836 INFO ************ Epoch=14 end ************
+2021-01-26 23:12:59,794 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:13:11,509 P48836 INFO Negative sampling done
+2021-01-26 23:14:32,296 P48836 INFO --- Start evaluation ---
+2021-01-26 23:14:33,572 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:14:54,405 P48836 INFO [Metrics] Recall(k=20): 0.110145 - Recall(k=50): 0.177431 - NDCG(k=20): 0.073337 - NDCG(k=50): 0.092673 - HitRate(k=20): 0.318437 - HitRate(k=50): 0.447220
+2021-01-26 23:14:54,414 P48836 INFO Save best model: monitor(max): 0.110145
+2021-01-26 23:14:54,438 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:14:54,497 P48836 INFO Train loss: 0.106178
+2021-01-26 23:14:54,497 P48836 INFO ************ Epoch=15 end ************
+2021-01-26 23:14:54,498 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:15:05,204 P48836 INFO Negative sampling done
+2021-01-26 23:16:29,099 P48836 INFO --- Start evaluation ---
+2021-01-26 23:16:30,118 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:16:52,002 P48836 INFO [Metrics] Recall(k=20): 0.111600 - Recall(k=50): 0.179240 - NDCG(k=20): 0.074501 - NDCG(k=50): 0.093998 - HitRate(k=20): 0.322217 - HitRate(k=50): 0.450753
+2021-01-26 23:16:52,009 P48836 INFO Save best model: monitor(max): 0.111600
+2021-01-26 23:16:52,030 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:16:52,082 P48836 INFO Train loss: 0.106202
+2021-01-26 23:16:52,082 P48836 INFO ************ Epoch=16 end ************
+2021-01-26 23:16:52,082 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:17:02,551 P48836 INFO Negative sampling done
+2021-01-26 23:18:00,213 P48836 INFO --- Start evaluation ---
+2021-01-26 23:18:01,094 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:18:22,194 P48836 INFO [Metrics] Recall(k=20): 0.112883 - Recall(k=50): 0.180225 - NDCG(k=20): 0.075939 - NDCG(k=50): 0.095316 - HitRate(k=20): 0.325210 - HitRate(k=50): 0.453746
+2021-01-26 23:18:22,200 P48836 INFO Save best model: monitor(max): 0.112883
+2021-01-26 23:18:22,222 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:18:22,271 P48836 INFO Train loss: 0.106240
+2021-01-26 23:18:22,271 P48836 INFO ************ Epoch=17 end ************
+2021-01-26 23:18:22,272 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:18:32,711 P48836 INFO Negative sampling done
+2021-01-26 23:19:52,359 P48836 INFO --- Start evaluation ---
+2021-01-26 23:19:53,594 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:20:13,773 P48836 INFO [Metrics] Recall(k=20): 0.113656 - Recall(k=50): 0.182477 - NDCG(k=20): 0.076356 - NDCG(k=50): 0.096096 - HitRate(k=20): 0.326020 - HitRate(k=50): 0.456401
+2021-01-26 23:20:13,780 P48836 INFO Save best model: monitor(max): 0.113656
+2021-01-26 23:20:13,801 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:20:13,858 P48836 INFO Train loss: 0.106341
+2021-01-26 23:20:13,858 P48836 INFO ************ Epoch=18 end ************
+2021-01-26 23:20:13,859 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:20:24,688 P48836 INFO Negative sampling done
+2021-01-26 23:21:43,708 P48836 INFO --- Start evaluation ---
+2021-01-26 23:21:44,959 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:22:06,129 P48836 INFO [Metrics] Recall(k=20): 0.115365 - Recall(k=50): 0.185304 - NDCG(k=20): 0.077513 - NDCG(k=50): 0.097586 - HitRate(k=20): 0.329373 - HitRate(k=50): 0.460969
+2021-01-26 23:22:06,137 P48836 INFO Save best model: monitor(max): 0.115365
+2021-01-26 23:22:06,158 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:22:06,206 P48836 INFO Train loss: 0.106467
+2021-01-26 23:22:06,206 P48836 INFO ************ Epoch=19 end ************
+2021-01-26 23:22:06,207 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:22:16,657 P48836 INFO Negative sampling done
+2021-01-26 23:23:10,856 P48836 INFO --- Start evaluation ---
+2021-01-26 23:23:11,911 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:23:32,746 P48836 INFO [Metrics] Recall(k=20): 0.113835 - Recall(k=50): 0.183647 - NDCG(k=20): 0.077308 - NDCG(k=50): 0.097313 - HitRate(k=20): 0.327730 - HitRate(k=50): 0.459619
+2021-01-26 23:23:32,753 P48836 INFO Monitor(max) STOP: 0.113835 !
+2021-01-26 23:23:32,753 P48836 INFO Reduce learning rate on plateau: 0.000100
+2021-01-26 23:23:32,753 P48836 INFO Load best model: /home/XXX/benchmarks/AmazonMovies/SimpleX_amazonmovies_m1/amazonmovies_m1_88b8a00d/SimpleX_amazonmovies_m1_009_88b07f96.model
+2021-01-26 23:23:32,766 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:23:32,825 P48836 INFO Train loss: 0.106598
+2021-01-26 23:23:32,826 P48836 INFO ************ Epoch=20 end ************
+2021-01-26 23:23:32,826 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:23:43,539 P48836 INFO Negative sampling done
+2021-01-26 23:25:04,076 P48836 INFO --- Start evaluation ---
+2021-01-26 23:25:05,305 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:25:25,010 P48836 INFO [Metrics] Recall(k=20): 0.125336 - Recall(k=50): 0.198805 - NDCG(k=20): 0.085588 - NDCG(k=50): 0.106617 - HitRate(k=20): 0.350345 - HitRate(k=50): 0.485137
+2021-01-26 23:25:25,019 P48836 INFO Save best model: monitor(max): 0.125336
+2021-01-26 23:25:25,040 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:25:25,095 P48836 INFO Train loss: 0.094373
+2021-01-26 23:25:25,095 P48836 INFO ************ Epoch=21 end ************
+2021-01-26 23:25:25,096 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:25:35,974 P48836 INFO Negative sampling done
+2021-01-26 23:26:53,160 P48836 INFO --- Start evaluation ---
+2021-01-26 23:26:54,350 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:27:14,044 P48836 INFO [Metrics] Recall(k=20): 0.129491 - Recall(k=50): 0.203500 - NDCG(k=20): 0.088723 - NDCG(k=50): 0.109901 - HitRate(k=20): 0.359662 - HitRate(k=50): 0.493080
+2021-01-26 23:27:14,053 P48836 INFO Save best model: monitor(max): 0.129491
+2021-01-26 23:27:14,074 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:27:14,129 P48836 INFO Train loss: 0.091751
+2021-01-26 23:27:14,129 P48836 INFO ************ Epoch=22 end ************
+2021-01-26 23:27:14,130 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:27:25,638 P48836 INFO Negative sampling done
+2021-01-26 23:28:11,991 P48836 INFO --- Start evaluation ---
+2021-01-26 23:28:13,051 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:28:33,638 P48836 INFO [Metrics] Recall(k=20): 0.131388 - Recall(k=50): 0.205930 - NDCG(k=20): 0.090253 - NDCG(k=50): 0.111594 - HitRate(k=20): 0.363442 - HitRate(k=50): 0.497153
+2021-01-26 23:28:33,646 P48836 INFO Save best model: monitor(max): 0.131388
+2021-01-26 23:28:33,668 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:28:33,746 P48836 INFO Train loss: 0.090665
+2021-01-26 23:28:33,746 P48836 INFO ************ Epoch=23 end ************
+2021-01-26 23:28:33,747 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:28:44,483 P48836 INFO Negative sampling done
+2021-01-26 23:29:50,081 P48836 INFO --- Start evaluation ---
+2021-01-26 23:29:51,335 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:30:10,901 P48836 INFO [Metrics] Recall(k=20): 0.132320 - Recall(k=50): 0.207551 - NDCG(k=20): 0.091041 - NDCG(k=50): 0.112562 - HitRate(k=20): 0.365242 - HitRate(k=50): 0.499584
+2021-01-26 23:30:10,910 P48836 INFO Save best model: monitor(max): 0.132320
+2021-01-26 23:30:10,931 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:30:10,995 P48836 INFO Train loss: 0.090040
+2021-01-26 23:30:10,995 P48836 INFO ************ Epoch=24 end ************
+2021-01-26 23:30:10,996 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:30:21,393 P48836 INFO Negative sampling done
+2021-01-26 23:31:21,267 P48836 INFO --- Start evaluation ---
+2021-01-26 23:31:22,430 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:31:43,099 P48836 INFO [Metrics] Recall(k=20): 0.132597 - Recall(k=50): 0.208003 - NDCG(k=20): 0.091683 - NDCG(k=50): 0.113244 - HitRate(k=20): 0.366165 - HitRate(k=50): 0.500236
+2021-01-26 23:31:43,106 P48836 INFO Save best model: monitor(max): 0.132597
+2021-01-26 23:31:43,128 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:31:43,184 P48836 INFO Train loss: 0.089643
+2021-01-26 23:31:43,184 P48836 INFO ************ Epoch=25 end ************
+2021-01-26 23:31:43,185 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:31:53,557 P48836 INFO Negative sampling done
+2021-01-26 23:32:24,075 P48836 INFO --- Start evaluation ---
+2021-01-26 23:32:24,797 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:32:44,350 P48836 INFO [Metrics] Recall(k=20): 0.132801 - Recall(k=50): 0.208660 - NDCG(k=20): 0.091994 - NDCG(k=50): 0.113710 - HitRate(k=20): 0.366255 - HitRate(k=50): 0.501136
+2021-01-26 23:32:44,356 P48836 INFO Save best model: monitor(max): 0.132801
+2021-01-26 23:32:44,381 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:32:44,431 P48836 INFO Train loss: 0.089365
+2021-01-26 23:32:44,431 P48836 INFO ************ Epoch=26 end ************
+2021-01-26 23:32:44,432 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:32:54,756 P48836 INFO Negative sampling done
+2021-01-26 23:33:25,836 P48836 INFO --- Start evaluation ---
+2021-01-26 23:33:26,584 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:33:47,159 P48836 INFO [Metrics] Recall(k=20): 0.133509 - Recall(k=50): 0.208728 - NDCG(k=20): 0.092274 - NDCG(k=50): 0.113817 - HitRate(k=20): 0.367470 - HitRate(k=50): 0.501294
+2021-01-26 23:33:47,167 P48836 INFO Save best model: monitor(max): 0.133509
+2021-01-26 23:33:47,192 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:33:47,240 P48836 INFO Train loss: 0.089149
+2021-01-26 23:33:47,240 P48836 INFO ************ Epoch=27 end ************
+2021-01-26 23:33:47,241 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:33:57,708 P48836 INFO Negative sampling done
+2021-01-26 23:34:57,016 P48836 INFO --- Start evaluation ---
+2021-01-26 23:34:57,912 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:35:17,615 P48836 INFO [Metrics] Recall(k=20): 0.133897 - Recall(k=50): 0.208660 - NDCG(k=20): 0.092389 - NDCG(k=50): 0.113825 - HitRate(k=20): 0.368483 - HitRate(k=50): 0.501789
+2021-01-26 23:35:17,623 P48836 INFO Save best model: monitor(max): 0.133897
+2021-01-26 23:35:17,643 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:35:17,712 P48836 INFO Train loss: 0.088979
+2021-01-26 23:35:17,712 P48836 INFO ************ Epoch=28 end ************
+2021-01-26 23:35:17,713 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:35:28,484 P48836 INFO Negative sampling done
+2021-01-26 23:36:20,704 P48836 INFO --- Start evaluation ---
+2021-01-26 23:36:21,596 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:36:42,545 P48836 INFO [Metrics] Recall(k=20): 0.133976 - Recall(k=50): 0.208757 - NDCG(k=20): 0.092568 - NDCG(k=50): 0.113998 - HitRate(k=20): 0.368685 - HitRate(k=50): 0.502217
+2021-01-26 23:36:42,554 P48836 INFO Save best model: monitor(max): 0.133976
+2021-01-26 23:36:42,578 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:36:42,652 P48836 INFO Train loss: 0.088833
+2021-01-26 23:36:42,653 P48836 INFO ************ Epoch=29 end ************
+2021-01-26 23:36:42,653 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:36:53,369 P48836 INFO Negative sampling done
+2021-01-26 23:37:32,225 P48836 INFO --- Start evaluation ---
+2021-01-26 23:37:32,922 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:37:53,566 P48836 INFO [Metrics] Recall(k=20): 0.133964 - Recall(k=50): 0.208802 - NDCG(k=20): 0.092509 - NDCG(k=50): 0.113937 - HitRate(k=20): 0.368865 - HitRate(k=50): 0.501451
+2021-01-26 23:37:53,572 P48836 INFO Monitor(max) STOP: 0.133964 !
+2021-01-26 23:37:53,572 P48836 INFO Reduce learning rate on plateau: 0.000010
+2021-01-26 23:37:53,572 P48836 INFO Load best model: /home/XXX/benchmarks/AmazonMovies/SimpleX_amazonmovies_m1/amazonmovies_m1_88b8a00d/SimpleX_amazonmovies_m1_009_88b07f96.model
+2021-01-26 23:37:53,587 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:37:53,645 P48836 INFO Train loss: 0.088705
+2021-01-26 23:37:53,645 P48836 INFO ************ Epoch=30 end ************
+2021-01-26 23:37:53,646 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:38:04,353 P48836 INFO Negative sampling done
+2021-01-26 23:39:08,302 P48836 INFO --- Start evaluation ---
+2021-01-26 23:39:09,213 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:39:28,838 P48836 INFO [Metrics] Recall(k=20): 0.134125 - Recall(k=50): 0.208918 - NDCG(k=20): 0.092547 - NDCG(k=50): 0.113987 - HitRate(k=20): 0.369158 - HitRate(k=50): 0.501811
+2021-01-26 23:39:28,845 P48836 INFO Save best model: monitor(max): 0.134125
+2021-01-26 23:39:28,869 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:39:28,937 P48836 INFO Train loss: 0.086785
+2021-01-26 23:39:28,937 P48836 INFO ************ Epoch=31 end ************
+2021-01-26 23:39:28,938 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:39:39,301 P48836 INFO Negative sampling done
+2021-01-26 23:40:37,368 P48836 INFO --- Start evaluation ---
+2021-01-26 23:40:38,136 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:40:58,137 P48836 INFO [Metrics] Recall(k=20): 0.134110 - Recall(k=50): 0.208580 - NDCG(k=20): 0.092554 - NDCG(k=50): 0.113918 - HitRate(k=20): 0.369158 - HitRate(k=50): 0.500934
+2021-01-26 23:40:58,144 P48836 INFO Monitor(max) STOP: 0.134110 !
+2021-01-26 23:40:58,144 P48836 INFO Reduce learning rate on plateau: 0.000001
+2021-01-26 23:40:58,144 P48836 INFO Load best model: /home/XXX/benchmarks/AmazonMovies/SimpleX_amazonmovies_m1/amazonmovies_m1_88b8a00d/SimpleX_amazonmovies_m1_009_88b07f96.model
+2021-01-26 23:40:58,158 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:40:58,214 P48836 INFO Train loss: 0.086709
+2021-01-26 23:40:58,214 P48836 INFO ************ Epoch=32 end ************
+2021-01-26 23:40:58,214 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:41:08,544 P48836 INFO Negative sampling done
+2021-01-26 23:41:51,115 P48836 INFO --- Start evaluation ---
+2021-01-26 23:41:51,841 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:42:11,969 P48836 INFO [Metrics] Recall(k=20): 0.134176 - Recall(k=50): 0.208874 - NDCG(k=20): 0.092555 - NDCG(k=50): 0.113966 - HitRate(k=20): 0.369225 - HitRate(k=50): 0.501721
+2021-01-26 23:42:11,976 P48836 INFO Save best model: monitor(max): 0.134176
+2021-01-26 23:42:11,999 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:42:12,055 P48836 INFO Train loss: 0.086516
+2021-01-26 23:42:12,055 P48836 INFO ************ Epoch=33 end ************
+2021-01-26 23:42:12,056 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:42:22,559 P48836 INFO Negative sampling done
+2021-01-26 23:43:12,559 P48836 INFO --- Start evaluation ---
+2021-01-26 23:43:13,493 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:43:34,294 P48836 INFO [Metrics] Recall(k=20): 0.134165 - Recall(k=50): 0.208825 - NDCG(k=20): 0.092566 - NDCG(k=50): 0.113965 - HitRate(k=20): 0.369315 - HitRate(k=50): 0.501586
+2021-01-26 23:43:34,303 P48836 INFO Monitor(max) STOP: 0.134165 !
+2021-01-26 23:43:34,304 P48836 INFO Reduce learning rate on plateau: 0.000001
+2021-01-26 23:43:34,304 P48836 INFO Load best model: /home/XXX/benchmarks/AmazonMovies/SimpleX_amazonmovies_m1/amazonmovies_m1_88b8a00d/SimpleX_amazonmovies_m1_009_88b07f96.model
+2021-01-26 23:43:34,321 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:43:34,414 P48836 INFO Train loss: 0.086512
+2021-01-26 23:43:34,415 P48836 INFO ************ Epoch=34 end ************
+2021-01-26 23:43:34,415 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:43:44,852 P48836 INFO Negative sampling done
+2021-01-26 23:44:17,820 P48836 INFO --- Start evaluation ---
+2021-01-26 23:44:18,546 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:44:38,799 P48836 INFO [Metrics] Recall(k=20): 0.134199 - Recall(k=50): 0.208853 - NDCG(k=20): 0.092571 - NDCG(k=50): 0.113968 - HitRate(k=20): 0.369293 - HitRate(k=50): 0.501586
+2021-01-26 23:44:38,807 P48836 INFO Save best model: monitor(max): 0.134199
+2021-01-26 23:44:38,826 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:44:38,916 P48836 INFO Train loss: 0.086513
+2021-01-26 23:44:38,916 P48836 INFO ************ Epoch=35 end ************
+2021-01-26 23:44:38,916 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:44:49,227 P48836 INFO Negative sampling done
+2021-01-26 23:45:17,294 P48836 INFO --- Start evaluation ---
+2021-01-26 23:45:17,953 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:45:38,940 P48836 INFO [Metrics] Recall(k=20): 0.134152 - Recall(k=50): 0.208815 - NDCG(k=20): 0.092549 - NDCG(k=50): 0.113955 - HitRate(k=20): 0.369180 - HitRate(k=50): 0.501541
+2021-01-26 23:45:38,949 P48836 INFO Monitor(max) STOP: 0.134152 !
+2021-01-26 23:45:38,949 P48836 INFO Reduce learning rate on plateau: 0.000001
+2021-01-26 23:45:38,949 P48836 INFO Load best model: /home/XXX/benchmarks/AmazonMovies/SimpleX_amazonmovies_m1/amazonmovies_m1_88b8a00d/SimpleX_amazonmovies_m1_009_88b07f96.model
+2021-01-26 23:45:38,966 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:45:39,014 P48836 INFO Train loss: 0.086504
+2021-01-26 23:45:39,015 P48836 INFO ************ Epoch=36 end ************
+2021-01-26 23:45:39,015 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:45:49,396 P48836 INFO Negative sampling done
+2021-01-26 23:46:39,046 P48836 INFO --- Start evaluation ---
+2021-01-26 23:46:39,961 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:46:59,474 P48836 INFO [Metrics] Recall(k=20): 0.134152 - Recall(k=50): 0.208838 - NDCG(k=20): 0.092559 - NDCG(k=50): 0.113969 - HitRate(k=20): 0.369248 - HitRate(k=50): 0.501496
+2021-01-26 23:46:59,481 P48836 INFO Monitor(max) STOP: 0.134152 !
+2021-01-26 23:46:59,481 P48836 INFO Reduce learning rate on plateau: 0.000001
+2021-01-26 23:46:59,481 P48836 INFO Load best model: /home/XXX/benchmarks/AmazonMovies/SimpleX_amazonmovies_m1/amazonmovies_m1_88b8a00d/SimpleX_amazonmovies_m1_009_88b07f96.model
+2021-01-26 23:46:59,494 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:46:59,549 P48836 INFO Train loss: 0.086505
+2021-01-26 23:46:59,549 P48836 INFO ************ Epoch=37 end ************
+2021-01-26 23:46:59,550 P48836 INFO Negative sampling num_negs=800
+2021-01-26 23:47:10,218 P48836 INFO Negative sampling done
+2021-01-26 23:47:42,779 P48836 INFO --- Start evaluation ---
+2021-01-26 23:47:43,497 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:48:02,760 P48836 INFO [Metrics] Recall(k=20): 0.134130 - Recall(k=50): 0.208869 - NDCG(k=20): 0.092550 - NDCG(k=50): 0.113974 - HitRate(k=20): 0.369135 - HitRate(k=50): 0.501541
+2021-01-26 23:48:02,767 P48836 INFO Monitor(max) STOP: 0.134130 !
+2021-01-26 23:48:02,767 P48836 INFO Reduce learning rate on plateau: 0.000001
+2021-01-26 23:48:02,767 P48836 INFO Load best model: /home/XXX/benchmarks/AmazonMovies/SimpleX_amazonmovies_m1/amazonmovies_m1_88b8a00d/SimpleX_amazonmovies_m1_009_88b07f96.model
+2021-01-26 23:48:02,778 P48836 INFO Early stopping at epoch=38
+2021-01-26 23:48:02,778 P48836 INFO --- 820/820 batches finished ---
+2021-01-26 23:48:02,834 P48836 INFO Train loss: 0.086504
+2021-01-26 23:48:02,834 P48836 INFO Training finished.
+2021-01-26 23:48:02,834 P48836 INFO Load best model: /home/XXX/benchmarks/AmazonMovies/SimpleX_amazonmovies_m1/amazonmovies_m1_88b8a00d/SimpleX_amazonmovies_m1_009_88b07f96.model
+2021-01-26 23:48:02,851 P48836 INFO ****** Train/validation evaluation ******
+2021-01-26 23:48:02,851 P48836 INFO --- Start evaluation ---
+2021-01-26 23:48:03,566 P48836 INFO Evaluating metrics for 44439 users...
+2021-01-26 23:48:23,254 P48836 INFO [Metrics] Recall(k=20): 0.134199 - Recall(k=50): 0.208853 - NDCG(k=20): 0.092571 - NDCG(k=50): 0.113968 - HitRate(k=20): 0.369293 - HitRate(k=50): 0.501586

@@ -1,0 +1,435 @@
+2021-01-23 01:13:26,147 P11650 INFO {
+    "aggregator": "mean",
+    "attention_dropout": "0",
+    "batch_size": "128",
+    "corpus_index": "corpus_index",
+    "data_format": "csv",
+    "data_root": "../data/CiteUlikeA/",
+    "dataset_id": "citeulikea_m1_4040b2bc",
+    "debug_mode": "False",
+    "embedding_dim": "64",
+    "embedding_regularizer": "0.001",
+    "enable_bias": "True",
+    "epochs": "100",
+    "eval_interval_epochs": "1",
+    "feature_cols": "[{'active': True, 'dtype': 'int', 'name': 'query_index', 'type': 'index'}, {'active': True, 'dtype': 'int', 'name': 'corpus_index', 'type': 'index'}, {'active': True, 'dtype': 'str', 'name': 'user_id', 'source': 'user', 'type': 'categorical'}, {'active': True, 'dtype': 'str', 'embedding_callback': None, 'name': 'user_history', 'padding': 'pre', 'source': 'user', 'splitter': '^', 'type': 'sequence'}, {'active': True, 'dtype': 'str', 'name': 'item_id', 'share_embedding': 'user_history', 'source': 'item', 'type': 'categorical'}]",
+    "fix_sampling_seeds": "True",
+    "gamma": "0.6",
+    "gpu": "1",
+    "ignore_pos_items": "True",
+    "item_corpus": "../data/CiteUlikeA/citeulikea_m1/item_corpus.csv",
+    "item_id_field": "item_id",
+    "label_col": "{'dtype': 'float', 'name': 'label'}",
+    "learning_rate": "0.0005",
+    "loss": "CosineContrastiveLoss",
+    "margin": "0.1",
+    "metrics": "['Precision(k=20)', 'Recall(k=20)', 'Recall(k=50)', 'NDCG(k=20)', 'NDCG(k=50)', 'HitRate(k=20)', 'HitRate(k=50)']",
+    "min_categr_count": "1",
+    "model": "SimpleX",
+    "model_id": "SimpleX_citeulikea_m1_005_fe2b7f3d",
+    "model_root": "./CiteUlikeA/SimpleX_citeulikea_m1/",
+    "monitor": "Recall(k=20)",
+    "monitor_mode": "max",
+    "negative_weight": "2",
+    "net_dropout": "0.2",
+    "net_regularizer": "0",
+    "num_negs": "5000",
+    "num_workers": "3",
+    "optimizer": "adam",
+    "patience": "3",
+    "query_index": "query_index",
+    "sampling_num_process": "1",
+    "save_best_only": "True",
+    "seed": "2019",
+    "shuffle": "True",
+    "similarity_score": "cosine",
+    "train_data": "../data/CiteUlikeA/citeulikea_m1/train.csv",
+    "user_history_field": "user_history",
+    "user_id_field": "user_id",
+    "valid_data": "../data/CiteUlikeA/citeulikea_m1/test.csv",
+    "verbose": "1",
+    "version": "pytorch"
+}
+2021-01-23 01:13:26,147 P11650 INFO Set up feature encoder...
+2021-01-23 01:13:26,148 P11650 INFO Load feature_map from json: ../data/CiteUlikeA/citeulikea_m1_4040b2bc/feature_map.json
+2021-01-23 01:13:30,197 P11650 INFO Total number of parameters: 817312.
+2021-01-23 01:13:30,198 P11650 INFO Loading data...
+2021-01-23 01:13:30,201 P11650 INFO Loading data from h5: ../data/CiteUlikeA/citeulikea_m1_4040b2bc/train.h5
+2021-01-23 01:13:30,205 P11650 INFO Loading data from h5: ../data/CiteUlikeA/citeulikea_m1_4040b2bc/item_corpus.h5
+2021-01-23 01:13:30,213 P11650 INFO Loading data from h5: ../data/CiteUlikeA/citeulikea_m1_4040b2bc/valid.h5
+2021-01-23 01:13:30,284 P11650 INFO Loading data from h5: ../data/CiteUlikeA/citeulikea_m1_4040b2bc/item_corpus.h5
+2021-01-23 01:13:30,286 P11650 INFO Train samples: total/16450, blocks/1
+2021-01-23 01:13:30,286 P11650 INFO Validation samples: total/3277, blocks/1
+2021-01-23 01:13:30,286 P11650 INFO Loading train data done.
+2021-01-23 01:13:30,286 P11650 INFO **** Start training: 129 batches/epoch ****
+2021-01-23 01:13:30,288 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:13:47,493 P11650 INFO Negative sampling done
+2021-01-23 01:15:23,698 P11650 INFO --- Start evaluation ---
+2021-01-23 01:15:24,281 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:15:27,117 P11650 INFO [Metrics] Precision(k=20): 0.026381 - Recall(k=20): 0.008212 - Recall(k=50): 0.018388 - NDCG(k=20): 0.027554 - NDCG(k=50): 0.028336 - HitRate(k=20): 0.188587 - HitRate(k=50): 0.304852
+2021-01-23 01:15:27,118 P11650 INFO Save best model: monitor(max): 0.008212
+2021-01-23 01:15:27,333 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:15:27,382 P11650 INFO Train loss: 0.871501
+2021-01-23 01:15:27,382 P11650 INFO ************ Epoch=1 end ************
+2021-01-23 01:15:27,382 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:15:44,190 P11650 INFO Negative sampling done
+2021-01-23 01:16:42,335 P11650 INFO --- Start evaluation ---
+2021-01-23 01:16:43,003 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:16:45,163 P11650 INFO [Metrics] Precision(k=20): 0.034803 - Recall(k=20): 0.011625 - Recall(k=50): 0.023692 - NDCG(k=20): 0.038527 - NDCG(k=50): 0.037827 - HitRate(k=20): 0.260909 - HitRate(k=50): 0.386939
+2021-01-23 01:16:45,164 P11650 INFO Save best model: monitor(max): 0.011625
+2021-01-23 01:16:45,168 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:16:45,223 P11650 INFO Train loss: 0.467201
+2021-01-23 01:16:45,224 P11650 INFO ************ Epoch=2 end ************
+2021-01-23 01:16:45,224 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:17:02,417 P11650 INFO Negative sampling done
+2021-01-23 01:18:00,457 P11650 INFO --- Start evaluation ---
+2021-01-23 01:18:01,049 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:18:03,141 P11650 INFO [Metrics] Precision(k=20): 0.042218 - Recall(k=20): 0.014567 - Recall(k=50): 0.028196 - NDCG(k=20): 0.047136 - NDCG(k=50): 0.045096 - HitRate(k=20): 0.314617 - HitRate(k=50): 0.441257
+2021-01-23 01:18:03,142 P11650 INFO Save best model: monitor(max): 0.014567
+2021-01-23 01:18:03,147 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:18:03,199 P11650 INFO Train loss: 0.306856
+2021-01-23 01:18:03,199 P11650 INFO ************ Epoch=3 end ************
+2021-01-23 01:18:03,200 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:18:20,443 P11650 INFO Negative sampling done
+2021-01-23 01:19:18,463 P11650 INFO --- Start evaluation ---
+2021-01-23 01:19:19,141 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:19:21,592 P11650 INFO [Metrics] Precision(k=20): 0.047315 - Recall(k=20): 0.016418 - Recall(k=50): 0.032210 - NDCG(k=20): 0.052857 - NDCG(k=50): 0.050641 - HitRate(k=20): 0.352151 - HitRate(k=50): 0.494965
+2021-01-23 01:19:21,593 P11650 INFO Save best model: monitor(max): 0.016418
+2021-01-23 01:19:21,598 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:19:21,654 P11650 INFO Train loss: 0.260730
+2021-01-23 01:19:21,654 P11650 INFO ************ Epoch=4 end ************
+2021-01-23 01:19:21,655 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:19:38,695 P11650 INFO Negative sampling done
+2021-01-23 01:20:36,705 P11650 INFO --- Start evaluation ---
+2021-01-23 01:20:37,348 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:20:39,501 P11650 INFO [Metrics] Precision(k=20): 0.052807 - Recall(k=20): 0.018649 - Recall(k=50): 0.035038 - NDCG(k=20): 0.059150 - NDCG(k=50): 0.055580 - HitRate(k=20): 0.389381 - HitRate(k=50): 0.520293
+2021-01-23 01:20:39,502 P11650 INFO Save best model: monitor(max): 0.018649
+2021-01-23 01:20:39,507 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:20:39,562 P11650 INFO Train loss: 0.241232
+2021-01-23 01:20:39,562 P11650 INFO ************ Epoch=5 end ************
+2021-01-23 01:20:39,563 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:20:56,355 P11650 INFO Negative sampling done
+2021-01-23 01:21:54,251 P11650 INFO --- Start evaluation ---
+2021-01-23 01:21:54,883 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:21:57,007 P11650 INFO [Metrics] Precision(k=20): 0.056301 - Recall(k=20): 0.019826 - Recall(k=50): 0.037046 - NDCG(k=20): 0.062806 - NDCG(k=50): 0.058695 - HitRate(k=20): 0.409216 - HitRate(k=50): 0.534940
+2021-01-23 01:21:57,008 P11650 INFO Save best model: monitor(max): 0.019826
+2021-01-23 01:21:57,013 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:21:57,071 P11650 INFO Train loss: 0.228330
+2021-01-23 01:21:57,071 P11650 INFO ************ Epoch=6 end ************
+2021-01-23 01:21:57,071 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:22:13,758 P11650 INFO Negative sampling done
+2021-01-23 01:23:11,673 P11650 INFO --- Start evaluation ---
+2021-01-23 01:23:12,277 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:23:14,473 P11650 INFO [Metrics] Precision(k=20): 0.059048 - Recall(k=20): 0.020894 - Recall(k=50): 0.039757 - NDCG(k=20): 0.065997 - NDCG(k=50): 0.062033 - HitRate(k=20): 0.421117 - HitRate(k=50): 0.553250
+2021-01-23 01:23:14,474 P11650 INFO Save best model: monitor(max): 0.020894
+2021-01-23 01:23:14,479 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:23:14,540 P11650 INFO Train loss: 0.219939
+2021-01-23 01:23:14,540 P11650 INFO ************ Epoch=7 end ************
+2021-01-23 01:23:14,541 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:23:31,403 P11650 INFO Negative sampling done
+2021-01-23 01:24:29,255 P11650 INFO --- Start evaluation ---
+2021-01-23 01:24:29,893 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:24:32,044 P11650 INFO [Metrics] Precision(k=20): 0.062069 - Recall(k=20): 0.021843 - Recall(k=50): 0.041350 - NDCG(k=20): 0.069312 - NDCG(k=50): 0.064717 - HitRate(k=20): 0.436680 - HitRate(k=50): 0.563015
+2021-01-23 01:24:32,045 P11650 INFO Save best model: monitor(max): 0.021843
+2021-01-23 01:24:32,050 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:24:32,102 P11650 INFO Train loss: 0.212700
+2021-01-23 01:24:32,102 P11650 INFO ************ Epoch=8 end ************
+2021-01-23 01:24:32,103 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:24:48,970 P11650 INFO Negative sampling done
+2021-01-23 01:25:46,911 P11650 INFO --- Start evaluation ---
+2021-01-23 01:25:47,510 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:25:49,878 P11650 INFO [Metrics] Precision(k=20): 0.063808 - Recall(k=20): 0.022354 - Recall(k=50): 0.042350 - NDCG(k=20): 0.071369 - NDCG(k=50): 0.066644 - HitRate(k=20): 0.445529 - HitRate(k=50): 0.574916
+2021-01-23 01:25:49,879 P11650 INFO Save best model: monitor(max): 0.022354
+2021-01-23 01:25:49,884 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:25:49,940 P11650 INFO Train loss: 0.207069
+2021-01-23 01:25:49,940 P11650 INFO ************ Epoch=9 end ************
+2021-01-23 01:25:49,940 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:26:06,915 P11650 INFO Negative sampling done
+2021-01-23 01:27:04,847 P11650 INFO --- Start evaluation ---
+2021-01-23 01:27:05,486 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:27:07,690 P11650 INFO [Metrics] Precision(k=20): 0.065624 - Recall(k=20): 0.023204 - Recall(k=50): 0.043809 - NDCG(k=20): 0.073396 - NDCG(k=50): 0.068431 - HitRate(k=20): 0.455294 - HitRate(k=50): 0.587122
+2021-01-23 01:27:07,691 P11650 INFO Save best model: monitor(max): 0.023204
+2021-01-23 01:27:07,696 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:27:07,755 P11650 INFO Train loss: 0.203949
+2021-01-23 01:27:07,755 P11650 INFO ************ Epoch=10 end ************
+2021-01-23 01:27:07,756 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:27:24,563 P11650 INFO Negative sampling done
+2021-01-23 01:28:22,479 P11650 INFO --- Start evaluation ---
+2021-01-23 01:28:23,103 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:28:25,324 P11650 INFO [Metrics] Precision(k=20): 0.066723 - Recall(k=20): 0.023280 - Recall(k=50): 0.044119 - NDCG(k=20): 0.075074 - NDCG(k=50): 0.069633 - HitRate(k=20): 0.455600 - HitRate(k=50): 0.591089
+2021-01-23 01:28:25,325 P11650 INFO Save best model: monitor(max): 0.023280
+2021-01-23 01:28:25,330 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:28:25,387 P11650 INFO Train loss: 0.201554
+2021-01-23 01:28:25,388 P11650 INFO ************ Epoch=11 end ************
+2021-01-23 01:28:25,388 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:28:42,014 P11650 INFO Negative sampling done
+2021-01-23 01:29:39,845 P11650 INFO --- Start evaluation ---
+2021-01-23 01:29:40,475 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:29:42,656 P11650 INFO [Metrics] Precision(k=20): 0.068340 - Recall(k=20): 0.023991 - Recall(k=50): 0.045402 - NDCG(k=20): 0.076121 - NDCG(k=50): 0.070855 - HitRate(k=20): 0.463839 - HitRate(k=50): 0.603601
+2021-01-23 01:29:42,657 P11650 INFO Save best model: monitor(max): 0.023991
+2021-01-23 01:29:42,662 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:29:42,723 P11650 INFO Train loss: 0.199384
+2021-01-23 01:29:42,723 P11650 INFO ************ Epoch=12 end ************
+2021-01-23 01:29:42,723 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:29:59,410 P11650 INFO Negative sampling done
+2021-01-23 01:30:57,299 P11650 INFO --- Start evaluation ---
+2021-01-23 01:30:57,921 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:31:00,103 P11650 INFO [Metrics] Precision(k=20): 0.069301 - Recall(k=20): 0.024359 - Recall(k=50): 0.045856 - NDCG(k=20): 0.077706 - NDCG(k=50): 0.072021 - HitRate(k=20): 0.469637 - HitRate(k=50): 0.605127
+2021-01-23 01:31:00,104 P11650 INFO Save best model: monitor(max): 0.024359
+2021-01-23 01:31:00,110 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:31:00,169 P11650 INFO Train loss: 0.197694
+2021-01-23 01:31:00,169 P11650 INFO ************ Epoch=13 end ************
+2021-01-23 01:31:00,170 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:31:17,199 P11650 INFO Negative sampling done
+2021-01-23 01:32:15,082 P11650 INFO --- Start evaluation ---
+2021-01-23 01:32:15,707 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:32:18,026 P11650 INFO [Metrics] Precision(k=20): 0.070018 - Recall(k=20): 0.024466 - Recall(k=50): 0.046880 - NDCG(k=20): 0.078783 - NDCG(k=50): 0.073294 - HitRate(k=20): 0.467196 - HitRate(k=50): 0.602685
+2021-01-23 01:32:18,027 P11650 INFO Save best model: monitor(max): 0.024466
+2021-01-23 01:32:18,032 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:32:18,091 P11650 INFO Train loss: 0.195657
+2021-01-23 01:32:18,091 P11650 INFO ************ Epoch=14 end ************
+2021-01-23 01:32:18,092 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:32:34,912 P11650 INFO Negative sampling done
+2021-01-23 01:33:32,803 P11650 INFO --- Start evaluation ---
+2021-01-23 01:33:33,435 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:33:35,574 P11650 INFO [Metrics] Precision(k=20): 0.070064 - Recall(k=20): 0.024792 - Recall(k=50): 0.047393 - NDCG(k=20): 0.078458 - NDCG(k=50): 0.073499 - HitRate(k=20): 0.470857 - HitRate(k=50): 0.599023
+2021-01-23 01:33:35,576 P11650 INFO Save best model: monitor(max): 0.024792
+2021-01-23 01:33:35,581 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:33:35,640 P11650 INFO Train loss: 0.195704
+2021-01-23 01:33:35,641 P11650 INFO ************ Epoch=15 end ************
+2021-01-23 01:33:35,641 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:33:52,521 P11650 INFO Negative sampling done
+2021-01-23 01:34:50,455 P11650 INFO --- Start evaluation ---
+2021-01-23 01:34:51,090 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:34:53,204 P11650 INFO [Metrics] Precision(k=20): 0.070262 - Recall(k=20): 0.024805 - Recall(k=50): 0.047371 - NDCG(k=20): 0.077910 - NDCG(k=50): 0.073243 - HitRate(k=20): 0.480317 - HitRate(k=50): 0.608483
+2021-01-23 01:34:53,205 P11650 INFO Save best model: monitor(max): 0.024805
+2021-01-23 01:34:53,210 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:34:53,272 P11650 INFO Train loss: 0.194940
+2021-01-23 01:34:53,272 P11650 INFO ************ Epoch=16 end ************
+2021-01-23 01:34:53,273 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:35:09,935 P11650 INFO Negative sampling done
+2021-01-23 01:36:07,802 P11650 INFO --- Start evaluation ---
+2021-01-23 01:36:08,434 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:36:10,603 P11650 INFO [Metrics] Precision(k=20): 0.071086 - Recall(k=20): 0.025233 - Recall(k=50): 0.048112 - NDCG(k=20): 0.079311 - NDCG(k=50): 0.074416 - HitRate(k=20): 0.475435 - HitRate(k=50): 0.614281
+2021-01-23 01:36:10,604 P11650 INFO Save best model: monitor(max): 0.025233
+2021-01-23 01:36:10,609 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:36:10,679 P11650 INFO Train loss: 0.194849
+2021-01-23 01:36:10,680 P11650 INFO ************ Epoch=17 end ************
+2021-01-23 01:36:10,680 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:36:27,412 P11650 INFO Negative sampling done
+2021-01-23 01:37:25,302 P11650 INFO --- Start evaluation ---
+2021-01-23 01:37:25,935 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:37:28,226 P11650 INFO [Metrics] Precision(k=20): 0.071575 - Recall(k=20): 0.025391 - Recall(k=50): 0.048326 - NDCG(k=20): 0.079350 - NDCG(k=50): 0.074123 - HitRate(k=20): 0.478181 - HitRate(k=50): 0.610314
+2021-01-23 01:37:28,227 P11650 INFO Save best model: monitor(max): 0.025391
+2021-01-23 01:37:28,231 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:37:28,288 P11650 INFO Train loss: 0.195837
+2021-01-23 01:37:28,288 P11650 INFO ************ Epoch=18 end ************
+2021-01-23 01:37:28,289 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:37:44,973 P11650 INFO Negative sampling done
+2021-01-23 01:38:42,951 P11650 INFO --- Start evaluation ---
+2021-01-23 01:38:43,588 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:38:45,740 P11650 INFO [Metrics] Precision(k=20): 0.072017 - Recall(k=20): 0.025638 - Recall(k=50): 0.048604 - NDCG(k=20): 0.080219 - NDCG(k=50): 0.074990 - HitRate(k=20): 0.476350 - HitRate(k=50): 0.610314
+2021-01-23 01:38:45,741 P11650 INFO Save best model: monitor(max): 0.025638
+2021-01-23 01:38:45,746 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:38:45,808 P11650 INFO Train loss: 0.193806
+2021-01-23 01:38:45,808 P11650 INFO ************ Epoch=19 end ************
+2021-01-23 01:38:45,808 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:39:02,732 P11650 INFO Negative sampling done
+2021-01-23 01:40:00,684 P11650 INFO --- Start evaluation ---
+2021-01-23 01:40:01,314 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:40:03,551 P11650 INFO [Metrics] Precision(k=20): 0.073665 - Recall(k=20): 0.026259 - Recall(k=50): 0.049202 - NDCG(k=20): 0.081560 - NDCG(k=50): 0.075865 - HitRate(k=20): 0.483064 - HitRate(k=50): 0.616723
+2021-01-23 01:40:03,552 P11650 INFO Save best model: monitor(max): 0.026259
+2021-01-23 01:40:03,557 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:40:03,616 P11650 INFO Train loss: 0.194083
+2021-01-23 01:40:03,617 P11650 INFO ************ Epoch=20 end ************
+2021-01-23 01:40:03,617 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:40:20,537 P11650 INFO Negative sampling done
+2021-01-23 01:41:18,450 P11650 INFO --- Start evaluation ---
+2021-01-23 01:41:19,064 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:41:21,172 P11650 INFO [Metrics] Precision(k=20): 0.074336 - Recall(k=20): 0.026397 - Recall(k=50): 0.049160 - NDCG(k=20): 0.082406 - NDCG(k=50): 0.076194 - HitRate(k=20): 0.483979 - HitRate(k=50): 0.617638
+2021-01-23 01:41:21,173 P11650 INFO Save best model: monitor(max): 0.026397
+2021-01-23 01:41:21,178 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:41:21,238 P11650 INFO Train loss: 0.195871
+2021-01-23 01:41:21,238 P11650 INFO ************ Epoch=21 end ************
+2021-01-23 01:41:21,239 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:41:37,899 P11650 INFO Negative sampling done
+2021-01-23 01:42:35,825 P11650 INFO --- Start evaluation ---
+2021-01-23 01:42:36,452 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:42:38,642 P11650 INFO [Metrics] Precision(k=20): 0.074153 - Recall(k=20): 0.026434 - Recall(k=50): 0.049329 - NDCG(k=20): 0.081560 - NDCG(k=50): 0.075896 - HitRate(k=20): 0.480928 - HitRate(k=50): 0.616723
+2021-01-23 01:42:38,643 P11650 INFO Save best model: monitor(max): 0.026434
+2021-01-23 01:42:38,649 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:42:38,708 P11650 INFO Train loss: 0.194827
+2021-01-23 01:42:38,708 P11650 INFO ************ Epoch=22 end ************
+2021-01-23 01:42:38,709 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:42:55,618 P11650 INFO Negative sampling done
+2021-01-23 01:43:53,567 P11650 INFO --- Start evaluation ---
+2021-01-23 01:43:54,201 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:43:56,517 P11650 INFO [Metrics] Precision(k=20): 0.074611 - Recall(k=20): 0.026635 - Recall(k=50): 0.049983 - NDCG(k=20): 0.082051 - NDCG(k=50): 0.076549 - HitRate(k=20): 0.490998 - HitRate(k=50): 0.626182
+2021-01-23 01:43:56,518 P11650 INFO Save best model: monitor(max): 0.026635
+2021-01-23 01:43:56,523 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:43:56,585 P11650 INFO Train loss: 0.195158
+2021-01-23 01:43:56,585 P11650 INFO ************ Epoch=23 end ************
+2021-01-23 01:43:56,586 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:44:13,669 P11650 INFO Negative sampling done
+2021-01-23 01:45:11,761 P11650 INFO --- Start evaluation ---
+2021-01-23 01:45:12,363 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:45:14,477 P11650 INFO [Metrics] Precision(k=20): 0.073772 - Recall(k=20): 0.026068 - Recall(k=50): 0.049381 - NDCG(k=20): 0.081650 - NDCG(k=50): 0.076255 - HitRate(k=20): 0.487336 - HitRate(k=50): 0.617333
+2021-01-23 01:45:14,478 P11650 INFO Monitor(max) STOP: 0.026068 !
+2021-01-23 01:45:14,478 P11650 INFO Reduce learning rate on plateau: 0.000050
+2021-01-23 01:45:14,478 P11650 INFO Load best model: /home/XXX/benchmarks/CiteUlikeA/SimpleX_citeulikea_m1/citeulikea_m1_4040b2bc/SimpleX_citeulikea_m1_005_fe2b7f3d.model
+2021-01-23 01:45:14,483 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:45:14,563 P11650 INFO Train loss: 0.193897
+2021-01-23 01:45:14,563 P11650 INFO ************ Epoch=24 end ************
+2021-01-23 01:45:14,563 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:45:31,874 P11650 INFO Negative sampling done
+2021-01-23 01:46:29,901 P11650 INFO --- Start evaluation ---
+2021-01-23 01:46:30,558 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:46:33,141 P11650 INFO [Metrics] Precision(k=20): 0.074825 - Recall(k=20): 0.026700 - Recall(k=50): 0.049962 - NDCG(k=20): 0.082265 - NDCG(k=50): 0.076650 - HitRate(k=20): 0.489167 - HitRate(k=50): 0.625877
+2021-01-23 01:46:33,142 P11650 INFO Save best model: monitor(max): 0.026700
+2021-01-23 01:46:33,148 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:46:33,210 P11650 INFO Train loss: 0.177748
+2021-01-23 01:46:33,211 P11650 INFO ************ Epoch=25 end ************
+2021-01-23 01:46:33,211 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:46:50,497 P11650 INFO Negative sampling done
+2021-01-23 01:47:48,490 P11650 INFO --- Start evaluation ---
+2021-01-23 01:47:49,073 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:47:51,342 P11650 INFO [Metrics] Precision(k=20): 0.075038 - Recall(k=20): 0.026787 - Recall(k=50): 0.050178 - NDCG(k=20): 0.082412 - NDCG(k=50): 0.076868 - HitRate(k=20): 0.491913 - HitRate(k=50): 0.623741
+2021-01-23 01:47:51,343 P11650 INFO Save best model: monitor(max): 0.026787
+2021-01-23 01:47:51,348 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:47:51,396 P11650 INFO Train loss: 0.172602
+2021-01-23 01:47:51,397 P11650 INFO ************ Epoch=26 end ************
+2021-01-23 01:47:51,397 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:48:08,325 P11650 INFO Negative sampling done
+2021-01-23 01:49:06,208 P11650 INFO --- Start evaluation ---
+2021-01-23 01:49:06,791 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:49:09,138 P11650 INFO [Metrics] Precision(k=20): 0.075191 - Recall(k=20): 0.026824 - Recall(k=50): 0.050268 - NDCG(k=20): 0.082678 - NDCG(k=50): 0.077100 - HitRate(k=20): 0.491303 - HitRate(k=50): 0.621300
+2021-01-23 01:49:09,139 P11650 INFO Save best model: monitor(max): 0.026824
+2021-01-23 01:49:09,144 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:49:09,198 P11650 INFO Train loss: 0.168035
+2021-01-23 01:49:09,198 P11650 INFO ************ Epoch=27 end ************
+2021-01-23 01:49:09,199 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:49:26,318 P11650 INFO Negative sampling done
+2021-01-23 01:50:24,274 P11650 INFO --- Start evaluation ---
+2021-01-23 01:50:24,901 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:50:27,251 P11650 INFO [Metrics] Precision(k=20): 0.075160 - Recall(k=20): 0.026721 - Recall(k=50): 0.050396 - NDCG(k=20): 0.082554 - NDCG(k=50): 0.077155 - HitRate(k=20): 0.488251 - HitRate(k=50): 0.623741
+2021-01-23 01:50:27,252 P11650 INFO Monitor(max) STOP: 0.026721 !
+2021-01-23 01:50:27,252 P11650 INFO Reduce learning rate on plateau: 0.000005
+2021-01-23 01:50:27,253 P11650 INFO Load best model: /home/XXX/benchmarks/CiteUlikeA/SimpleX_citeulikea_m1/citeulikea_m1_4040b2bc/SimpleX_citeulikea_m1_005_fe2b7f3d.model
+2021-01-23 01:50:27,257 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:50:27,312 P11650 INFO Train loss: 0.164970
+2021-01-23 01:50:27,312 P11650 INFO ************ Epoch=28 end ************
+2021-01-23 01:50:27,313 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:50:44,184 P11650 INFO Negative sampling done
+2021-01-23 01:51:42,127 P11650 INFO --- Start evaluation ---
+2021-01-23 01:51:42,753 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:51:44,911 P11650 INFO [Metrics] Precision(k=20): 0.075252 - Recall(k=20): 0.026854 - Recall(k=50): 0.050302 - NDCG(k=20): 0.082760 - NDCG(k=50): 0.077137 - HitRate(k=20): 0.490082 - HitRate(k=50): 0.622521
+2021-01-23 01:51:44,911 P11650 INFO Save best model: monitor(max): 0.026854
+2021-01-23 01:51:44,916 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:51:44,972 P11650 INFO Train loss: 0.164405
+2021-01-23 01:51:44,972 P11650 INFO ************ Epoch=29 end ************
+2021-01-23 01:51:44,973 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:52:01,770 P11650 INFO Negative sampling done
+2021-01-23 01:52:59,661 P11650 INFO --- Start evaluation ---
+2021-01-23 01:53:00,283 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:53:02,433 P11650 INFO [Metrics] Precision(k=20): 0.075206 - Recall(k=20): 0.026834 - Recall(k=50): 0.050296 - NDCG(k=20): 0.082668 - NDCG(k=50): 0.077105 - HitRate(k=20): 0.490388 - HitRate(k=50): 0.622521
+2021-01-23 01:53:02,435 P11650 INFO Monitor(max) STOP: 0.026834 !
+2021-01-23 01:53:02,435 P11650 INFO Reduce learning rate on plateau: 0.000001
+2021-01-23 01:53:02,435 P11650 INFO Load best model: /home/XXX/benchmarks/CiteUlikeA/SimpleX_citeulikea_m1/citeulikea_m1_4040b2bc/SimpleX_citeulikea_m1_005_fe2b7f3d.model
+2021-01-23 01:53:02,439 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:53:02,495 P11650 INFO Train loss: 0.163957
+2021-01-23 01:53:02,495 P11650 INFO ************ Epoch=30 end ************
+2021-01-23 01:53:02,495 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:53:19,088 P11650 INFO Negative sampling done
+2021-01-23 01:54:16,971 P11650 INFO --- Start evaluation ---
+2021-01-23 01:54:17,588 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:54:19,649 P11650 INFO [Metrics] Precision(k=20): 0.075298 - Recall(k=20): 0.026873 - Recall(k=50): 0.050286 - NDCG(k=20): 0.082796 - NDCG(k=50): 0.077147 - HitRate(k=20): 0.490388 - HitRate(k=50): 0.623131
+2021-01-23 01:54:19,650 P11650 INFO Save best model: monitor(max): 0.026873
+2021-01-23 01:54:19,655 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:54:19,709 P11650 INFO Train loss: 0.164567
+2021-01-23 01:54:19,709 P11650 INFO ************ Epoch=31 end ************
+2021-01-23 01:54:19,709 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:54:36,266 P11650 INFO Negative sampling done
+2021-01-23 01:55:34,115 P11650 INFO --- Start evaluation ---
+2021-01-23 01:55:34,734 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:55:36,911 P11650 INFO [Metrics] Precision(k=20): 0.075282 - Recall(k=20): 0.026874 - Recall(k=50): 0.050275 - NDCG(k=20): 0.082795 - NDCG(k=50): 0.077150 - HitRate(k=20): 0.490082 - HitRate(k=50): 0.622826
+2021-01-23 01:55:36,912 P11650 INFO Save best model: monitor(max): 0.026874
+2021-01-23 01:55:36,917 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:55:36,981 P11650 INFO Train loss: 0.163079
+2021-01-23 01:55:36,981 P11650 INFO ************ Epoch=32 end ************
+2021-01-23 01:55:36,982 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:55:54,132 P11650 INFO Negative sampling done
+2021-01-23 01:56:52,057 P11650 INFO --- Start evaluation ---
+2021-01-23 01:56:52,667 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:56:54,972 P11650 INFO [Metrics] Precision(k=20): 0.075236 - Recall(k=20): 0.026844 - Recall(k=50): 0.050248 - NDCG(k=20): 0.082756 - NDCG(k=50): 0.077125 - HitRate(k=20): 0.490082 - HitRate(k=50): 0.623131
+2021-01-23 01:56:54,973 P11650 INFO Monitor(max) STOP: 0.026844 !
+2021-01-23 01:56:54,973 P11650 INFO Reduce learning rate on plateau: 0.000001
+2021-01-23 01:56:54,973 P11650 INFO Load best model: /home/XXX/benchmarks/CiteUlikeA/SimpleX_citeulikea_m1/citeulikea_m1_4040b2bc/SimpleX_citeulikea_m1_005_fe2b7f3d.model
+2021-01-23 01:56:54,978 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:56:55,034 P11650 INFO Train loss: 0.163692
+2021-01-23 01:56:55,034 P11650 INFO ************ Epoch=33 end ************
+2021-01-23 01:56:55,035 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:57:12,504 P11650 INFO Negative sampling done
+2021-01-23 01:58:10,519 P11650 INFO --- Start evaluation ---
+2021-01-23 01:58:11,111 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:58:13,222 P11650 INFO [Metrics] Precision(k=20): 0.075313 - Recall(k=20): 0.026894 - Recall(k=50): 0.050234 - NDCG(k=20): 0.082814 - NDCG(k=50): 0.077120 - HitRate(k=20): 0.490082 - HitRate(k=50): 0.622826
+2021-01-23 01:58:13,223 P11650 INFO Save best model: monitor(max): 0.026894
+2021-01-23 01:58:13,229 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:58:13,283 P11650 INFO Train loss: 0.163595
+2021-01-23 01:58:13,284 P11650 INFO ************ Epoch=34 end ************
+2021-01-23 01:58:13,284 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:58:30,145 P11650 INFO Negative sampling done
+2021-01-23 01:59:28,032 P11650 INFO --- Start evaluation ---
+2021-01-23 01:59:28,599 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 01:59:30,985 P11650 INFO [Metrics] Precision(k=20): 0.075298 - Recall(k=20): 0.026897 - Recall(k=50): 0.050225 - NDCG(k=20): 0.082786 - NDCG(k=50): 0.077105 - HitRate(k=20): 0.490388 - HitRate(k=50): 0.622826
+2021-01-23 01:59:30,987 P11650 INFO Save best model: monitor(max): 0.026897
+2021-01-23 01:59:30,993 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 01:59:31,044 P11650 INFO Train loss: 0.163555
+2021-01-23 01:59:31,044 P11650 INFO ************ Epoch=35 end ************
+2021-01-23 01:59:31,045 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 01:59:47,808 P11650 INFO Negative sampling done
+2021-01-23 02:00:45,678 P11650 INFO --- Start evaluation ---
+2021-01-23 02:00:46,264 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 02:00:48,474 P11650 INFO [Metrics] Precision(k=20): 0.075359 - Recall(k=20): 0.026932 - Recall(k=50): 0.050266 - NDCG(k=20): 0.082818 - NDCG(k=50): 0.077116 - HitRate(k=20): 0.490388 - HitRate(k=50): 0.622521
+2021-01-23 02:00:48,475 P11650 INFO Save best model: monitor(max): 0.026932
+2021-01-23 02:00:48,480 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 02:00:48,533 P11650 INFO Train loss: 0.163683
+2021-01-23 02:00:48,533 P11650 INFO ************ Epoch=36 end ************
+2021-01-23 02:00:48,534 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 02:01:05,787 P11650 INFO Negative sampling done
+2021-01-23 02:02:03,636 P11650 INFO --- Start evaluation ---
+2021-01-23 02:02:04,225 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 02:02:06,347 P11650 INFO [Metrics] Precision(k=20): 0.075343 - Recall(k=20): 0.026925 - Recall(k=50): 0.050264 - NDCG(k=20): 0.082827 - NDCG(k=50): 0.077128 - HitRate(k=20): 0.490998 - HitRate(k=50): 0.622215
+2021-01-23 02:02:06,348 P11650 INFO Monitor(max) STOP: 0.026925 !
+2021-01-23 02:02:06,349 P11650 INFO Reduce learning rate on plateau: 0.000001
+2021-01-23 02:02:06,349 P11650 INFO Load best model: /home/XXX/benchmarks/CiteUlikeA/SimpleX_citeulikea_m1/citeulikea_m1_4040b2bc/SimpleX_citeulikea_m1_005_fe2b7f3d.model
+2021-01-23 02:02:06,353 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 02:02:06,408 P11650 INFO Train loss: 0.163443
+2021-01-23 02:02:06,409 P11650 INFO ************ Epoch=37 end ************
+2021-01-23 02:02:06,409 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 02:02:23,048 P11650 INFO Negative sampling done
+2021-01-23 02:03:20,950 P11650 INFO --- Start evaluation ---
+2021-01-23 02:03:21,530 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 02:03:23,667 P11650 INFO [Metrics] Precision(k=20): 0.075282 - Recall(k=20): 0.026898 - Recall(k=50): 0.050260 - NDCG(k=20): 0.082780 - NDCG(k=50): 0.077119 - HitRate(k=20): 0.490693 - HitRate(k=50): 0.622215
+2021-01-23 02:03:23,668 P11650 INFO Monitor(max) STOP: 0.026898 !
+2021-01-23 02:03:23,668 P11650 INFO Reduce learning rate on plateau: 0.000001
+2021-01-23 02:03:23,668 P11650 INFO Load best model: /home/XXX/benchmarks/CiteUlikeA/SimpleX_citeulikea_m1/citeulikea_m1_4040b2bc/SimpleX_citeulikea_m1_005_fe2b7f3d.model
+2021-01-23 02:03:23,672 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 02:03:23,731 P11650 INFO Train loss: 0.163375
+2021-01-23 02:03:23,731 P11650 INFO ************ Epoch=38 end ************
+2021-01-23 02:03:23,731 P11650 INFO Negative sampling num_negs=5000
+2021-01-23 02:03:40,271 P11650 INFO Negative sampling done
+2021-01-23 02:04:38,287 P11650 INFO --- Start evaluation ---
+2021-01-23 02:04:38,934 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 02:04:41,176 P11650 INFO [Metrics] Precision(k=20): 0.075267 - Recall(k=20): 0.026880 - Recall(k=50): 0.050255 - NDCG(k=20): 0.082760 - NDCG(k=50): 0.077118 - HitRate(k=20): 0.490082 - HitRate(k=50): 0.622521
+2021-01-23 02:04:41,177 P11650 INFO Monitor(max) STOP: 0.026880 !
+2021-01-23 02:04:41,177 P11650 INFO Reduce learning rate on plateau: 0.000001
+2021-01-23 02:04:41,177 P11650 INFO Load best model: /home/XXX/benchmarks/CiteUlikeA/SimpleX_citeulikea_m1/citeulikea_m1_4040b2bc/SimpleX_citeulikea_m1_005_fe2b7f3d.model
+2021-01-23 02:04:41,181 P11650 INFO Early stopping at epoch=39
+2021-01-23 02:04:41,181 P11650 INFO --- 129/129 batches finished ---
+2021-01-23 02:04:41,242 P11650 INFO Train loss: 0.162865
+2021-01-23 02:04:41,242 P11650 INFO Training finished.
+2021-01-23 02:04:41,242 P11650 INFO Load best model: /home/XXX/benchmarks/CiteUlikeA/SimpleX_citeulikea_m1/citeulikea_m1_4040b2bc/SimpleX_citeulikea_m1_005_fe2b7f3d.model
+2021-01-23 02:04:41,248 P11650 INFO ****** Train/validation evaluation ******
+2021-01-23 02:04:41,248 P11650 INFO --- Start evaluation ---
+2021-01-23 02:04:41,833 P11650 INFO Evaluating metrics for 3277 users...
+2021-01-23 02:04:43,912 P11650 INFO [Metrics] Precision(k=20): 0.075359 - Recall(k=20): 0.026932 - Recall(k=50): 0.050266 - NDCG(k=20): 0.082818 - NDCG(k=50): 0.077116 - HitRate(k=20): 0.490388 - HitRate(k=50): 0.622521

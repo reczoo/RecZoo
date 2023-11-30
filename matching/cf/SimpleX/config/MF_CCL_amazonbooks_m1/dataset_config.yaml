@@ -1,0 +1,15 @@
+amazonbooks_m1_37e049e0:
+    data_root: ./data/Amazon/
+    data_format: csv
+    train_data: ./data/Amazon/AmazonBooks_m1/train.csv
+    valid_data: ./data/Amazon/AmazonBooks_m1/test.csv
+    item_corpus: ./data/Amazon/AmazonBooks_m1/item_corpus.csv
+    min_categr_count: 1
+    query_index: query_index
+    corpus_index: corpus_index
+    feature_cols:
+        - {'name': 'query_index', 'active': True, 'dtype': int, 'type': 'index'}
+        - {'name': 'corpus_index', 'active': True, 'dtype': int, 'type': 'index'}
+        - {'name': 'user_id', 'active': True, 'dtype': str, 'type': 'categorical', 'source': 'user'}
+        - {'name': 'item_id', 'active': True, 'dtype': str, 'type': 'categorical', 'source': 'item'}
+    label_col: {name: label, dtype: float}

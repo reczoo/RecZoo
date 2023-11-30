@@ -1,0 +1,8 @@
+fuxictr==2.0.1
+torch==1.11.0
+PyYAML
+pandas
+scikit-learn
+numpy
+h5py
+tqdm
