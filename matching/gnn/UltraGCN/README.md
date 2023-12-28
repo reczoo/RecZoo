@@ -92,7 +92,7 @@ To reproduce our experimental results, we strongly suggest to use the following 
   
   ```bash
   # convert data format
-  cd data/AmazonElectronics_m1
+  cd data/Movielens1M_m1
   python convert_data.py
   
   python main.py --config_file ./config/ultragcn_movielens1m_m1.ini
