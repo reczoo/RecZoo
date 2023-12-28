@@ -289,9 +289,13 @@ class UltraGCN(nn.Module):
         self.user_embeds = nn.Embedding(self.user_num, self.embedding_dim)
         self.item_embeds = nn.Embedding(self.item_num, self.embedding_dim)
 
-        self.constraint_mat = constraint_mat
-        self.ii_constraint_mat = ii_constraint_mat
-        self.ii_neighbor_mat = ii_neighbor_mat
+        self.constraint_mat = {}
+
+        self.constraint_mat['beta_uD'] = constraint_mat['beta_uD'].to(params['device'])
+        self.constraint_mat['beta_iD'] = constraint_mat['beta_iD'].to(params['device'])
+
+        self.ii_constraint_mat = ii_constraint_mat.to( params['device'])
+        self.ii_neighbor_mat = ii_neighbor_mat.to( params['device'])
 
         self.initial_weight = params['initial_weight']
         self.initial_weights()
@@ -544,6 +548,7 @@ def test(model, test_loader, test_ground_truth_list, mask, topk, n_user):
             batch_users = batch_users.to(model.get_device())
             rating = model.test_foward(batch_users) 
             rating = rating.cpu()
+            batch_users = batch_users.cpu()
             rating += mask[batch_users]
             
             _, rating_K = torch.topk(rating, k=topk)
