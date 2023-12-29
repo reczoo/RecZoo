@@ -14,13 +14,7 @@ Graph Convolutional Networks (GCN) have been widely used for collaborative filte
 
 ## Environments
 
-To reproduce our experimental results, we strongly suggest to use the following package settings.
-
-* python 3.7.9
-* pytorch 1.4.0
-* numpy 1.19.2
-* scipy 1.1.0
-* tensorboard 2.4.0
+For reproducibility, please follow the instructions [#31](https://github.com/reczoo/RecZoo/discussions/31) to install the dependent packages. Otherwise, you may encounter [runtime errors](#FAQ).
 
 ## Code Structure
 
@@ -92,7 +86,7 @@ To reproduce our experimental results, we strongly suggest to use the following 
   
   ```bash
   # convert data format
-  cd data/AmazonElectronics_m1
+  cd data/Movielens1M_m1
   python convert_data.py
   
   python main.py --config_file ./config/ultragcn_movielens1m_m1.ini
@@ -135,3 +129,14 @@ To reproduce our experimental results, we strongly suggest to use the following 
   ```
 
 + See the running log: [results/ultragcn_amazoncds_m1.log](./results/ultragcn_amazoncds_m1.log)
+
+## FAQ
+
++ If you encounter the following errors, please ensure [the same environment](https://github.com/reczoo/RecZoo/discussions/31). Or, you can try the fix [here](https://github.com/reczoo/RecZoo/pull/30) or [here](https://github.com/reczoo/RecZoo/issues/28#issuecomment-1704407967).
+
+```
+IndexError: tensors used as indices must be long, byte or bool tensors
+```
+```
+RuntimeError: RuntimeError: indices should be either on cpu or on the same device as the indexed tensor (cpu)
+```

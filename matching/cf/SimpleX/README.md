@@ -15,7 +15,7 @@ SimpleX presents a simple unified CF model, which follows the commonly-used two-
 
 ## Environments
 
-Note that our experiments were conducted in the following environment settings. To reproduce our results, we strongly suggest to use the same settings. However, the source code may be compatible with some higher Pytorch versions (e.g., Pytorch 1.11.0). 
+Our experiments were conducted in the following environment settings. For reproducibility, please follow the instructions [#32](https://github.com/reczoo/RecZoo/discussions/32) to install the dependent packages.
 
 + Hardware
 
@@ -23,13 +23,11 @@ Note that our experiments were conducted in the following environment settings. 
   CPU: Intel(R) Xeon(R) CPU E5-2690 v4 @ 2.60GHz
   GPU: Tesla P100 16G
   RAM: 755G
-
   ```
 
 + Software
 
   ```python
-  CUDA: 10.0
   python: 3.6.5
   pytorch: 1.0.1.post2
   pandas: 0.23.0

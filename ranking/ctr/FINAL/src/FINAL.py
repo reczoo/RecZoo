@@ -151,9 +151,9 @@ class QuadNet(nn.Module):
         self.activation = nn.ModuleList()
         hidden_units = [input_dim] + hidden_units
         for idx in range(len(hidden_units) - 1):
-            self.layer.append(QuadraticInteraction(hidden_units[idx],
-                                                   hidden_units[idx + 1],
-                                                   residual_type=residual_type))
+            self.layer.append(FactorizedQuadraticInteraction(hidden_units[idx],
+                                                             hidden_units[idx + 1],
+                                                             residual_type=residual_type))
             if batch_norm:
                 self.norm.append(nn.BatchNorm1d(hidden_units[idx + 1]))
             if dropout_rates[idx] > 0:
@@ -173,14 +173,14 @@ class QuadNet(nn.Module):
         return X_i
 
 
-class QuadraticInteraction(nn.Module):
+class FactorizedQuadraticInteraction(nn.Module):
     def __init__(self, input_dim, output_dim, bias=True, residual_type="sum"):
-        """ QuadraticInteraction layer is an improvement of nn.Linear to capture quadratic 
+        """ FactorizedQuadraticInteraction layer is an improvement of nn.Linear to capture quadratic 
             interactions between features.
             Setting `residual_type="concat"` keeps the same number of parameters as nn.Linear
             while `residual_type="sum"` doubles the number of parameters.
         """
-        super(QuadraticInteraction, self).__init__()
+        super(FactorizedQuadraticInteraction, self).__init__()
         self.residual_type = residual_type
         if residual_type == "sum":
             output_dim = output_dim * 2
