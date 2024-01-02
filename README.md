@@ -17,7 +17,7 @@ RecZoo: A curated model zoo for recommendation tasks
 | No  | Model                                    | Publication                                                                                                                                                                                                                                       
 |:---:|:----------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | 1   |  [FinalMLP](./ranking/ctr/FinalMLP)               | Kelong Mao, Jieming Zhu, Liangcai Su, Guohao Cai, Yuru Li, Zhenhua Dong. [FinalMLP: An Enhanced Two-Stream MLP Model for CTR Prediction](https://arxiv.org/abs/2304.00902), in AAAI 2023.                                                              
-| 2   |  [FINAL](./ranking/ctr/FINAL)                  | Jieming Zhu, Qinglin Jia, Guohao Cai, Quanyu Dai, Jingjie Li, Zhenhua Dong, Ruiming Tang, Rui Zhang. [FINAL: Factorized Interaction Layer for CTR Prediction](https://dl.acm.org/doi/10.1145/3539618.3591988), in SIGIR 2023.                                                                                                                               
+| 2   |  [FinalNet](./ranking/ctr/FinalNet)                  | Jieming Zhu, Qinglin Jia, Guohao Cai, Quanyu Dai, Jingjie Li, Zhenhua Dong, Ruiming Tang, Rui Zhang. [FINAL: Factorized Interaction Layer for CTR Prediction](https://dl.acm.org/doi/10.1145/3539618.3591988), in SIGIR 2023.                                                                                                                               
 
 
 ## Reranking

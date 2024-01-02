@@ -1,4 +1,4 @@
-FINAL_frappe_x1_001_fab4b7e0:
+FinalNet_frappe_x1_001_fab4b7e0:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -19,9 +19,9 @@ FINAL_frappe_x1_001_fab4b7e0:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -36,7 +36,7 @@ FINAL_frappe_x1_001_fab4b7e0:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_frappe_x1_002_3081a288:
+FinalNet_frappe_x1_002_3081a288:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -57,9 +57,9 @@ FINAL_frappe_x1_002_3081a288:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -74,7 +74,7 @@ FINAL_frappe_x1_002_3081a288:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_frappe_x1_003_c3722b71:
+FinalNet_frappe_x1_003_c3722b71:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -95,9 +95,9 @@ FINAL_frappe_x1_003_c3722b71:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -112,7 +112,7 @@ FINAL_frappe_x1_003_c3722b71:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_frappe_x1_004_4412e5f6:
+FinalNet_frappe_x1_004_4412e5f6:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -133,9 +133,9 @@ FINAL_frappe_x1_004_4412e5f6:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -150,7 +150,7 @@ FINAL_frappe_x1_004_4412e5f6:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_frappe_x1_005_3081a288:
+FinalNet_frappe_x1_005_3081a288:
     batch_size: 4096
     block1_dropout: 0.2
     block1_hidden_activations: ReLU
@@ -171,9 +171,9 @@ FINAL_frappe_x1_005_3081a288:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -188,7 +188,7 @@ FINAL_frappe_x1_005_3081a288:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_frappe_x1_006_2f0da60e:
+FinalNet_frappe_x1_006_2f0da60e:
     batch_size: 4096
     block1_dropout: 0.2
     block1_hidden_activations: ReLU
@@ -209,9 +209,9 @@ FINAL_frappe_x1_006_2f0da60e:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -226,7 +226,7 @@ FINAL_frappe_x1_006_2f0da60e:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_frappe_x1_007_4412e5f6:
+FinalNet_frappe_x1_007_4412e5f6:
     batch_size: 4096
     block1_dropout: 0.2
     block1_hidden_activations: ReLU
@@ -247,9 +247,9 @@ FINAL_frappe_x1_007_4412e5f6:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -264,7 +264,7 @@ FINAL_frappe_x1_007_4412e5f6:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_frappe_x1_008_9b54a401:
+FinalNet_frappe_x1_008_9b54a401:
     batch_size: 4096
     block1_dropout: 0.2
     block1_hidden_activations: ReLU
@@ -285,9 +285,9 @@ FINAL_frappe_x1_008_9b54a401:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -302,7 +302,7 @@ FINAL_frappe_x1_008_9b54a401:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_frappe_x1_009_c3722b71:
+FinalNet_frappe_x1_009_c3722b71:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -323,9 +323,9 @@ FINAL_frappe_x1_009_c3722b71:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -340,7 +340,7 @@ FINAL_frappe_x1_009_c3722b71:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_frappe_x1_010_4412e5f6:
+FinalNet_frappe_x1_010_4412e5f6:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -361,9 +361,9 @@ FINAL_frappe_x1_010_4412e5f6:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -378,7 +378,7 @@ FINAL_frappe_x1_010_4412e5f6:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_frappe_x1_011_9e8953b4:
+FinalNet_frappe_x1_011_9e8953b4:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -399,9 +399,9 @@ FINAL_frappe_x1_011_9e8953b4:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -416,7 +416,7 @@ FINAL_frappe_x1_011_9e8953b4:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_frappe_x1_012_27271336:
+FinalNet_frappe_x1_012_27271336:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -437,9 +437,9 @@ FINAL_frappe_x1_012_27271336:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -454,7 +454,7 @@ FINAL_frappe_x1_012_27271336:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_frappe_x1_013_4412e5f6:
+FinalNet_frappe_x1_013_4412e5f6:
     batch_size: 4096
     block1_dropout: 0.2
     block1_hidden_activations: ReLU
@@ -475,9 +475,9 @@ FINAL_frappe_x1_013_4412e5f6:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -492,7 +492,7 @@ FINAL_frappe_x1_013_4412e5f6:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_frappe_x1_014_9b54a401:
+FinalNet_frappe_x1_014_9b54a401:
     batch_size: 4096
     block1_dropout: 0.2
     block1_hidden_activations: ReLU
@@ -513,9 +513,9 @@ FINAL_frappe_x1_014_9b54a401:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -530,7 +530,7 @@ FINAL_frappe_x1_014_9b54a401:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_frappe_x1_015_27271336:
+FinalNet_frappe_x1_015_27271336:
     batch_size: 4096
     block1_dropout: 0.2
     block1_hidden_activations: ReLU
@@ -551,9 +551,9 @@ FINAL_frappe_x1_015_27271336:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -568,7 +568,7 @@ FINAL_frappe_x1_015_27271336:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_frappe_x1_016_b3bff621:
+FinalNet_frappe_x1_016_b3bff621:
     batch_size: 4096
     block1_dropout: 0.2
     block1_hidden_activations: ReLU
@@ -589,9 +589,9 @@ FINAL_frappe_x1_016_b3bff621:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_frappe_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_frappe_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0

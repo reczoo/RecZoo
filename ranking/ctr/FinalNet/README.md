@@ -1,4 +1,4 @@
-# FINAL
+# FinalNet
 
 Click-through rate (CTR) prediction is one of the fundamental tasks for online advertising and recommendation. Inspired by factorization machines, in this paper, we propose FINAL, a factorized interaction layer that extends the widely-used linear layer and is capable of learning quadratic feature interactions. Similar to MLPs, multiple FINAL layers can be stacked into a FINAL block, yielding feature interactions with an exponential degree growth. We unify feature interactions and MLPs into a single FINAL block and empirically show its effectiveness as a replacement for the MLP block. 
 
@@ -41,7 +41,7 @@ The `model_config.yaml` file contains all the model hyper-parameters as follows.
   
 | Params                  | Type            | Default                 | Description                                                                                                                                                                                                       |
 | ----------------------- | --------------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| model                   | str             | "FINAL"                 | model name,  which should be same with model class name                                                                                                                                                           |
+| model                   | str             | "FinalNet"                 | model name,  which should be same with model class name                                                                                                                                                           |
 | dataset_id              | str             | "TBD"                   | dataset_id to be determined                                                                                                                                                                                       |
 | loss                    | str             | "binary_crossentropy"   | loss function                                                                                                                                                                                                     |
 | metrics                 | list            | ['logloss', 'AUC']      | a list of metrics for evaluation                                                                                                                                                                                  |
@@ -61,7 +61,7 @@ The `model_config.yaml` file contains all the model hyper-parameters as follows.
 | block_type         | str            | "2B"                   | block type: ```"1B"```, ```"2B"```                                                                                                                                                                               |
 | batch_norm         | bool            | True                   | whether to use BN                                                                                                                                                                                       |
 | use_feature_gating                  | bool            | True                    | whether to use feature gating                                                                                                                                                                                   |
-| residual_type         | str            | "concat"                |  residual type in QuadraticInteraction: ```"concat"```, ```"sum"```                                                                                                                                                          |
+| residual_type         | str            | "concat"                |  residual type in FINAL: ```"concat"```, ```"sum"```                                                                                                                                                          |
 | epochs                  | int             | 100                     | the max number of epochs for training, which can early stop via monitor metrics.                                                                                                                                  |
 | shuffle                 | bool            | True                    | whether shuffle the data samples for each epoch of training                                                                                                                                                       |
 | seed                    | int             | 2021                    | the random seed used for reproducibility                                                                                                                                                                          |
@@ -86,16 +86,16 @@ The evaluation results on AUC:
 |   DCNv2  |   81.42   |   76.54   |   96.91   |   98.45   |
 |   EDCN   |   81.47   |   76.52   |   96.71   |   98.50   |
 | FinalMLP |   81.49   |   76.66   |   97.20   | **98.61** |
-| FINAL_1B |   81.44   |   76.60   |   97.06   |   98.52   |
-| FINAL_2B | **81.54** | **76.71** | **97.25** |   98.57   |
+| FinalNet_1B |   81.44   |   76.60   |   97.06   |   98.52   |
+| FinalNet_2B | **81.54** | **76.71** | **97.25** |   98.57   |
 
 ### Reproduce the results on Criteo_x1
 
 1. Get the dataset in `data\Criteo\Criteo_x1` and then run the models:
 
     ```bash
-    python run_expid.py --config ./config/FINAL_1B_criteo_x1_tuner_config_04 --expid FINAL_criteo_x1_007_b4783421 --gpu 0
-    python run_expid.py --config ./config/FINAL_2B_criteo_x1_tuner_config_01 --expid FINAL_criteo_x1_028_b6c861e4 --gpu 0
+    python run_expid.py --config ./config/FinalNet_1B_criteo_x1_tuner_config_04 --expid FinalNet_criteo_x1_007_b4783421 --gpu 0
+    python run_expid.py --config ./config/FinalNet_2B_criteo_x1_tuner_config_01 --expid FinalNet_criteo_x1_028_b6c861e4 --gpu 0
     ```
 
     Note that we run the experiment in the following environment.
@@ -108,16 +108,16 @@ The evaluation results on AUC:
     ```
 
 2. See the running logs: 
-    - [results/FINAL_1B_criteo_x1/FINAL_criteo_x1_007_b4783421.log](./results/FINAL_1B_criteo_x1/FINAL_criteo_x1_007_b4783421.log) 
-    - [results/FINAL_2B_criteo_x1/FINAL_criteo_x1_028_b6c861e4.log](./results/FINAL_2B_criteo_x1/FINAL_criteo_x1_028_b6c861e4.log)
+    - [results/FinalNet_1B_criteo_x1/FinalNet_criteo_x1_007_b4783421.log](./results/FinalNet_1B_criteo_x1/FinalNet_criteo_x1_007_b4783421.log) 
+    - [results/FinalNet_2B_criteo_x1/FinalNet_criteo_x1_028_b6c861e4.log](./results/FinalNet_2B_criteo_x1/FinalNet_criteo_x1_028_b6c861e4.log)
 
 ### Reproduce the results on Avazu_x1
 
 1. Get the dataset in `data\Avazu\Avazu_x1` and then run the models:
 
     ```bash
-    python run_expid.py --config ./config/FINAL_1B_avazu_x1_tuner_config_01 --expid FINAL_avazu_x1_030_3ad8933e --gpu 0
-    python run_expid.py --config ./config/FINAL_2B_avazu_x1_tuner_config_04 --expid FINAL_avazu_x1_023_9d3d37bd --gpu 0
+    python run_expid.py --config ./config/FinalNet_1B_avazu_x1_tuner_config_01 --expid FinalNet_avazu_x1_030_3ad8933e --gpu 0
+    python run_expid.py --config ./config/FinalNet_2B_avazu_x1_tuner_config_04 --expid FinalNet_avazu_x1_023_9d3d37bd --gpu 0
     ```
 
     Note that we run the experiment in the following environment.
@@ -130,8 +130,8 @@ The evaluation results on AUC:
     ```
 
 2. See the running logs: 
-    - [results/FINAL_1B_avazu_x1/FINAL_avazu_x1_030_3ad8933e.log](./results/FINAL_1B_avazu_x1/FINAL_avazu_x1_030_3ad8933e.log) 
-    - [results/FINAL_2B_avazu_x1/FINAL_avazu_x1_023_9d3d37bd.log](./results/FINAL_2B_avazu_x1/FINAL_avazu_x1_023_9d3d37bd.log)
+    - [results/FinalNet_1B_avazu_x1/FinalNet_avazu_x1_030_3ad8933e.log](./results/FinalNet_1B_avazu_x1/FinalNet_avazu_x1_030_3ad8933e.log) 
+    - [results/FinalNet_2B_avazu_x1/FinalNet_avazu_x1_023_9d3d37bd.log](./results/FinalNet_2B_avazu_x1/FinalNet_avazu_x1_023_9d3d37bd.log)
 
 
 ### Reproduce the results on MovielensLatest_x1
@@ -139,8 +139,8 @@ The evaluation results on AUC:
 1. Get the dataset in `data\Movielens\MovielensLatest_x1` and then run the models:
 
     ```bash
-    python run_expid.py --config ./config/FINAL_1B_movielenslatest_x1_tuner_config_02 --expid FINAL_movielenslatest_x1_008_f8e20ee7 --gpu 0
-    python run_expid.py --config ./config/FINAL_2B_movielenslatest_x1_tuner_config_03 --expid FINAL_movielenslatest_x1_014_50fc5f7f --gpu 0
+    python run_expid.py --config ./config/FinalNet_1B_movielenslatest_x1_tuner_config_02 --expid FinalNet_movielenslatest_x1_008_f8e20ee7 --gpu 0
+    python run_expid.py --config ./config/FinalNet_2B_movielenslatest_x1_tuner_config_03 --expid FinalNet_movielenslatest_x1_014_50fc5f7f --gpu 0
     ```
 
     Note that we run the experiment in the following environment.
@@ -153,8 +153,8 @@ The evaluation results on AUC:
     ```
 
 2. See the running logs: 
-    - [results/FINAL_1B_movielenslatest_x1/FINAL_movielenslatest_x1_008_f8e20ee7.log](./results/FINAL_1B_movielenslatest_x1/FINAL_movielenslatest_x1_008_f8e20ee7.log) 
-    - [results/FINAL_2B_movielenslatest_x1/FINAL_movielenslatest_x1_014_50fc5f7f.log](./results/FINAL_2B_movielenslatest_x1/FINAL_movielenslatest_x1_014_50fc5f7f.log)
+    - [results/FinalNet_1B_movielenslatest_x1/FinalNet_movielenslatest_x1_008_f8e20ee7.log](./results/FinalNet_1B_movielenslatest_x1/FinalNet_movielenslatest_x1_008_f8e20ee7.log) 
+    - [results/FinalNet_2B_movielenslatest_x1/FinalNet_movielenslatest_x1_014_50fc5f7f.log](./results/FinalNet_2B_movielenslatest_x1/FinalNet_movielenslatest_x1_014_50fc5f7f.log)
 
 
 ### Reproduce the results on Frappe_x1
@@ -162,8 +162,8 @@ The evaluation results on AUC:
 1. Get the dataset in `data\Frappe\Frappe_x1` and then run the models:
 
     ```bash
-    python run_expid.py --config ./config/FINAL_1B_frappe_x1 --expid FINAL_frappe_x1_006_75be0578 --gpu 0
-    python run_expid.py --config ./config/FINAL_2B_frappe_x1 --expid FINAL_frappe_x1_003_c3722b71 --gpu 0
+    python run_expid.py --config ./config/FinalNet_1B_frappe_x1 --expid FinalNet_frappe_x1_006_75be0578 --gpu 0
+    python run_expid.py --config ./config/FinalNet_2B_frappe_x1 --expid FinalNet_frappe_x1_003_c3722b71 --gpu 0
     ```
 
     Note that we run the experiment in the following environment.
@@ -176,8 +176,8 @@ The evaluation results on AUC:
     ```
 
 2. See the running logs: 
-    - [results/FINAL_1B_frappe_x1/FINAL_frappe_x1_006_75be0578.log](./results/FINAL_1B_frappe_x1/FINAL_frappe_x1_006_75be0578.log) 
-    - [results/FINAL_2B_frappe_x1/FINAL_frappe_x1_003_c3722b71.log](./results/FINAL_2B_frappe_x1/FINAL_frappe_x1_003_c3722b71.log)
+    - [results/FinalNet_1B_frappe_x1/FinalNet_frappe_x1_006_75be0578.log](./results/FinalNet_1B_frappe_x1/FinalNet_frappe_x1_006_75be0578.log) 
+    - [results/FinalNet_2B_frappe_x1/FinalNet_frappe_x1_003_c3722b71.log](./results/FinalNet_2B_frappe_x1/FinalNet_frappe_x1_003_c3722b71.log)
 
 
 ### Reproduce other baseline results

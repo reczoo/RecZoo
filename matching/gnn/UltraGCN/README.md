@@ -132,7 +132,7 @@ For reproducibility, please follow the instructions [#31](https://github.com/rec
 
 ## FAQ
 
-+ If you encounter the following errors, please ensure [the same environment](https://github.com/reczoo/RecZoo/discussions/31). Or, you can try the fix [here](https://github.com/reczoo/RecZoo/pull/30) or [here](https://github.com/reczoo/RecZoo/issues/28#issuecomment-1704407967).
++ If your environment is not aligned with [ours](https://github.com/reczoo/RecZoo/discussions/31), you may encounter the following errors. We strongly recommend you to create the virtual environment following our instructions. Alternatively, you can try the fix [here](https://github.com/reczoo/RecZoo/pull/30) or [here](https://github.com/reczoo/RecZoo/issues/28#issuecomment-1704407967).
 
 ```
 IndexError: tensors used as indices must be long, byte or bool tensors

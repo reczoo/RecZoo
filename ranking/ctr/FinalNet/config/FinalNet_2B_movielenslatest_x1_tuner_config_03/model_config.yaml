@@ -1,4 +1,4 @@
-FINAL_movielenslatest_x1_001_966e0aa5:
+FinalNet_movielenslatest_x1_001_966e0aa5:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -19,9 +19,9 @@ FINAL_movielenslatest_x1_001_966e0aa5:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -36,7 +36,7 @@ FINAL_movielenslatest_x1_001_966e0aa5:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_002_a0c10916:
+FinalNet_movielenslatest_x1_002_a0c10916:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -57,9 +57,9 @@ FINAL_movielenslatest_x1_002_a0c10916:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -74,7 +74,7 @@ FINAL_movielenslatest_x1_002_a0c10916:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_003_9bbdc3a8:
+FinalNet_movielenslatest_x1_003_9bbdc3a8:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -95,9 +95,9 @@ FINAL_movielenslatest_x1_003_9bbdc3a8:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -112,7 +112,7 @@ FINAL_movielenslatest_x1_003_9bbdc3a8:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_004_8d234591:
+FinalNet_movielenslatest_x1_004_8d234591:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -133,9 +133,9 @@ FINAL_movielenslatest_x1_004_8d234591:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -150,7 +150,7 @@ FINAL_movielenslatest_x1_004_8d234591:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_005_a0c10916:
+FinalNet_movielenslatest_x1_005_a0c10916:
     batch_size: 4096
     block1_dropout: 0
     block1_hidden_activations: ReLU
@@ -171,9 +171,9 @@ FINAL_movielenslatest_x1_005_a0c10916:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -188,7 +188,7 @@ FINAL_movielenslatest_x1_005_a0c10916:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_006_1cbb6bb4:
+FinalNet_movielenslatest_x1_006_1cbb6bb4:
     batch_size: 4096
     block1_dropout: 0
     block1_hidden_activations: ReLU
@@ -209,9 +209,9 @@ FINAL_movielenslatest_x1_006_1cbb6bb4:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -226,7 +226,7 @@ FINAL_movielenslatest_x1_006_1cbb6bb4:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_007_8d234591:
+FinalNet_movielenslatest_x1_007_8d234591:
     batch_size: 4096
     block1_dropout: 0
     block1_hidden_activations: ReLU
@@ -247,9 +247,9 @@ FINAL_movielenslatest_x1_007_8d234591:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -264,7 +264,7 @@ FINAL_movielenslatest_x1_007_8d234591:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_008_86b3f656:
+FinalNet_movielenslatest_x1_008_86b3f656:
     batch_size: 4096
     block1_dropout: 0
     block1_hidden_activations: ReLU
@@ -285,9 +285,9 @@ FINAL_movielenslatest_x1_008_86b3f656:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -302,7 +302,7 @@ FINAL_movielenslatest_x1_008_86b3f656:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_009_b4ad7f29:
+FinalNet_movielenslatest_x1_009_b4ad7f29:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -323,9 +323,9 @@ FINAL_movielenslatest_x1_009_b4ad7f29:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -340,7 +340,7 @@ FINAL_movielenslatest_x1_009_b4ad7f29:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_010_5366eb5b:
+FinalNet_movielenslatest_x1_010_5366eb5b:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -361,9 +361,9 @@ FINAL_movielenslatest_x1_010_5366eb5b:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -378,7 +378,7 @@ FINAL_movielenslatest_x1_010_5366eb5b:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_011_2ac8dcf9:
+FinalNet_movielenslatest_x1_011_2ac8dcf9:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -399,9 +399,9 @@ FINAL_movielenslatest_x1_011_2ac8dcf9:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -416,7 +416,7 @@ FINAL_movielenslatest_x1_011_2ac8dcf9:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_012_1f634a35:
+FinalNet_movielenslatest_x1_012_1f634a35:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -437,9 +437,9 @@ FINAL_movielenslatest_x1_012_1f634a35:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -454,7 +454,7 @@ FINAL_movielenslatest_x1_012_1f634a35:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_013_5366eb5b:
+FinalNet_movielenslatest_x1_013_5366eb5b:
     batch_size: 4096
     block1_dropout: 0
     block1_hidden_activations: ReLU
@@ -475,9 +475,9 @@ FINAL_movielenslatest_x1_013_5366eb5b:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -492,7 +492,7 @@ FINAL_movielenslatest_x1_013_5366eb5b:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_014_50fc5f7f:
+FinalNet_movielenslatest_x1_014_50fc5f7f:
     batch_size: 4096
     block1_dropout: 0
     block1_hidden_activations: ReLU
@@ -513,9 +513,9 @@ FINAL_movielenslatest_x1_014_50fc5f7f:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -530,7 +530,7 @@ FINAL_movielenslatest_x1_014_50fc5f7f:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_015_1f634a35:
+FinalNet_movielenslatest_x1_015_1f634a35:
     batch_size: 4096
     block1_dropout: 0
     block1_hidden_activations: ReLU
@@ -551,9 +551,9 @@ FINAL_movielenslatest_x1_015_1f634a35:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -568,7 +568,7 @@ FINAL_movielenslatest_x1_015_1f634a35:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_016_0d9584d1:
+FinalNet_movielenslatest_x1_016_0d9584d1:
     batch_size: 4096
     block1_dropout: 0
     block1_hidden_activations: ReLU
@@ -589,9 +589,9 @@ FINAL_movielenslatest_x1_016_0d9584d1:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -606,7 +606,7 @@ FINAL_movielenslatest_x1_016_0d9584d1:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_017_0004b7e7:
+FinalNet_movielenslatest_x1_017_0004b7e7:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -627,9 +627,9 @@ FINAL_movielenslatest_x1_017_0004b7e7:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -644,7 +644,7 @@ FINAL_movielenslatest_x1_017_0004b7e7:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_018_b2cdc7bb:
+FinalNet_movielenslatest_x1_018_b2cdc7bb:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -665,9 +665,9 @@ FINAL_movielenslatest_x1_018_b2cdc7bb:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -682,7 +682,7 @@ FINAL_movielenslatest_x1_018_b2cdc7bb:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_019_790e2e05:
+FinalNet_movielenslatest_x1_019_790e2e05:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -703,9 +703,9 @@ FINAL_movielenslatest_x1_019_790e2e05:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -720,7 +720,7 @@ FINAL_movielenslatest_x1_019_790e2e05:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_020_74421bec:
+FinalNet_movielenslatest_x1_020_74421bec:
     batch_size: 4096
     block1_dropout: 0.1
     block1_hidden_activations: ReLU
@@ -741,9 +741,9 @@ FINAL_movielenslatest_x1_020_74421bec:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -758,7 +758,7 @@ FINAL_movielenslatest_x1_020_74421bec:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_021_b2cdc7bb:
+FinalNet_movielenslatest_x1_021_b2cdc7bb:
     batch_size: 4096
     block1_dropout: 0
     block1_hidden_activations: ReLU
@@ -779,9 +779,9 @@ FINAL_movielenslatest_x1_021_b2cdc7bb:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -796,7 +796,7 @@ FINAL_movielenslatest_x1_021_b2cdc7bb:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_022_41a01ef4:
+FinalNet_movielenslatest_x1_022_41a01ef4:
     batch_size: 4096
     block1_dropout: 0
     block1_hidden_activations: ReLU
@@ -817,9 +817,9 @@ FINAL_movielenslatest_x1_022_41a01ef4:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -834,7 +834,7 @@ FINAL_movielenslatest_x1_022_41a01ef4:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_023_74421bec:
+FinalNet_movielenslatest_x1_023_74421bec:
     batch_size: 4096
     block1_dropout: 0
     block1_hidden_activations: ReLU
@@ -855,9 +855,9 @@ FINAL_movielenslatest_x1_023_74421bec:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
@@ -872,7 +872,7 @@ FINAL_movielenslatest_x1_023_74421bec:
     task: binary_classification
     use_feature_gating: true
     verbose: 1
-FINAL_movielenslatest_x1_024_e14fa29e:
+FinalNet_movielenslatest_x1_024_e14fa29e:
     batch_size: 4096
     block1_dropout: 0
     block1_hidden_activations: ReLU
@@ -893,9 +893,9 @@ FINAL_movielenslatest_x1_024_e14fa29e:
     learning_rate: 0.001
     loss: binary_crossentropy
     metrics: [AUC, logloss]
-    model: FINAL
-    model_id: FINAL_default
-    model_root: ./checkpoints/FINAL_movielenslatest_x1/
+    model: FinalNet
+    model_id: FinalNet_default
+    model_root: ./checkpoints/FinalNet_movielenslatest_x1/
     monitor: AUC
     monitor_mode: max
     net_regularizer: 0
