@@ -208,6 +208,6 @@ The evaluation results on AUC:
     - [results/FinalMLP_frappe_x1_004_e1ab402f.log](./results/FinalMLP_frappe_x1_004_e1ab402f.log)
 
 
-### Reproduce other baseline results
+### Reproduce baseline results
 
-For reproducing our baseline results, please refer to the BARS benchmark at https://github.com/reczoo/BARS/tree/main/ctr/benchmarks
+For reproducing our baselines, please refer to the BARS benchmark at https://github.com/reczoo/BARS/tree/main/ranking/ctr

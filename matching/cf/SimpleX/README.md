@@ -348,3 +348,6 @@ Our experiments were conducted in the following environment settings. For reprod
 
 + See the running log: [results/SimpleX_movielens1m_m1_021_6b1eda86.log](./results/SimpleX_movielens1m_m1_021_6b1eda86.log)
 
+### Reproduce baseline results
+
+For reproducing our baselines, please refer to the BARS benchmark at https://github.com/reczoo/BARS/tree/main/matching

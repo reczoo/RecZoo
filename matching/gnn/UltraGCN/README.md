@@ -130,6 +130,10 @@ For reproducibility, please follow the instructions [#31](https://github.com/rec
 
 + See the running log: [results/ultragcn_amazoncds_m1.log](./results/ultragcn_amazoncds_m1.log)
 
+### Reproduce baseline results
+
+For reproducing our baselines, please refer to the BARS benchmark at https://github.com/reczoo/BARS/tree/main/matching
+
 ## FAQ
 
 + If your environment is not aligned with [ours](https://github.com/reczoo/RecZoo/discussions/31), you may encounter the following errors. We strongly recommend you to create the virtual environment following our instructions. Alternatively, you can try the fix [here](https://github.com/reczoo/RecZoo/pull/30) or [here](https://github.com/reczoo/RecZoo/issues/28#issuecomment-1704407967).

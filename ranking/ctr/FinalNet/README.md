@@ -180,6 +180,6 @@ The evaluation results on AUC:
     - [results/FinalNet_2B_frappe_x1/FinalNet_frappe_x1_003_c3722b71.log](./results/FinalNet_2B_frappe_x1/FinalNet_frappe_x1_003_c3722b71.log)
 
 
-### Reproduce other baseline results
+### Reproduce baseline results
 
-For reproducing our baseline results, please refer to the BARS benchmark at https://github.com/reczoo/BARS/tree/main/ctr/benchmarks
+For reproducing our baselines, please refer to the BARS benchmark at https://github.com/reczoo/BARS/tree/main/ranking/ctr
